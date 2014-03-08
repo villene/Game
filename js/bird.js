@@ -1,7 +1,9 @@
 var Bird = Class.extend({
     init: function(){
+        this.midi = 60;
         this.sprite = false;
         this.draw();
+        this.move();
     }
 
     , draw: function(){
@@ -12,20 +14,26 @@ var Bird = Class.extend({
     }
 
     , onKeyPressed: function(key){
-        var deltaY = 5;
-        var newY = this.sprite.y;
+        var deltaMidi = 0.25;
+        var newMidi = this.midi;
         if(key == Phaser.Keyboard.UP){
-            newY -=  deltaY;
+            newMidi +=  deltaMidi;
         }
         if(key == Phaser.Keyboard.DOWN){
-            newY += deltaY;
+            newMidi -= deltaMidi;
         }
 
-        this.move(newY);
+        this.setMidi(newMidi);
     }
 
-    , move: function(y){
-        this.sprite.y = y;
+    , setMidi: function(midi){
+        this.midi = midi;
+        this.move();
+    }
+
+    , move: function(){
+        this.sprite.y = game.height - (this.midi - CONFIG.bottomMidi) * CONFIG.lineHeight;
+        console.log();
     }
 
     , alpha: function(alpha){

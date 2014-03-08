@@ -3,9 +3,9 @@ var Score = Class.extend({
         this.title = title;
         this.bpm = 120; // beats per minute
         this.bps = this.bpm/60; // beats per second
-        this.bottomMidi = 45;
-        this.noteWidth = 20;
-        this.lineHeight = 20;
+        this.bottomMidi = CONFIG.bottomMidi;
+        this.noteWidth = CONFIG.noteWidth;
+        this.lineHeight = CONFIG.lineHeight;
         this.list = [];
 
         this.time = 0;
