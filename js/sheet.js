@@ -3,9 +3,6 @@ var Sheet = Class.extend({
         this.title = title;
         this.bpm = 120; // beats per minute
         this.bps = this.bpm/60; // beats per second
-        this.bottomMidi = CONFIG.bottomMidi;
-        this.noteWidth = CONFIG.noteWidth;
-        this.lineHeight = CONFIG.lineHeight;
         this.list = [];
 
         this.time = 0;
@@ -34,24 +31,16 @@ var Sheet = Class.extend({
             var octave = octlist[i].childNodes[0].nodeValue-1;
             var alter = altlist[i].childNodes[0].nodeValue;
             var freq = this.noteToFrequency(octave, step, alter);
-            this.list[i] = this.frequencyToNote(freq);
-            this.list[i].midi = Math.round(this.list[i].midi);
-            this.list[i].sprite = this.group.create(0, 0, 'banana');
+            freq = this.frequencyToNote(freq);
 
-            this.list[i].sprite.anchor.setTo(0, 0);
-            this.list[i].sprite.scale.x = 0.2;
-            this.list[i].sprite.scale.y = 0.2;
+            this.list[i] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, this.bps, i);
+            this.group.add(this.list[i].sprite);
         }
     }
 
     , draw: function(){
         for(var i= 0, l=this.list.length; i<l; i++){
-            var deltaX = Math.round((this.time/1000) * this.bps * this.noteWidth);
-            var x = this.noteWidth*i - deltaX;
-            var y = game.height - (this.list[i].midi - this.bottomMidi)*this.lineHeight;
-            this.list[i].sprite.x = x;
-            this.list[i].sprite.y = y;
-
+            this.list[i].draw(this.time);
         }
         this.group.x = 200;
     }

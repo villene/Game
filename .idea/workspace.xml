@@ -2,23 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa957a23-b4ca-49df-935e-447017a6a73a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/score.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/note.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/init.js" afterPath="$PROJECT_DIR$/js/init.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ui/pause.js" afterPath="$PROJECT_DIR$/js/ui/pause.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sheet.js" afterPath="$PROJECT_DIR$/js/sheet.js" />
     </list>
     <ignored path="Game.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="fa957a23-b4ca-49df-935e-447017a6a73a" time="1394276460284" ignored="false" />
-    <file path="/index.html" changelist="fa957a23-b4ca-49df-935e-447017a6a73a" time="1394299540827" ignored="false" />
+    <file path="/index.html" changelist="fa957a23-b4ca-49df-935e-447017a6a73a" time="1394302240586" ignored="false" />
     <file path="/init.js" changelist="fa957a23-b4ca-49df-935e-447017a6a73a" time="1394299592356" ignored="false" />
     <file path="/bird.js" changelist="fa957a23-b4ca-49df-935e-447017a6a73a" time="1394298823303" ignored="false" />
     <file path="/xml.js" changelist="fa957a23-b4ca-49df-935e-447017a6a73a" time="1394288709345" ignored="false" />
     <file path="/score.js" changelist="fa957a23-b4ca-49df-935e-447017a6a73a" time="1394298394704" ignored="false" />
     <file path="/pause.js" changelist="fa957a23-b4ca-49df-935e-447017a6a73a" time="1394299623723" ignored="false" />
     <file path="/config.js" changelist="fa957a23-b4ca-49df-935e-447017a6a73a" time="1394298417067" ignored="false" />
-    <file path="/note.js" changelist="fa957a23-b4ca-49df-935e-447017a6a73a" time="1394299038461" ignored="false" />
-    <file path="/sheet.js" changelist="fa957a23-b4ca-49df-935e-447017a6a73a" time="1394299186873" ignored="false" />
+    <file path="/note.js" changelist="fa957a23-b4ca-49df-935e-447017a6a73a" time="1394302187289" ignored="false" />
+    <file path="/sheet.js" changelist="fa957a23-b4ca-49df-935e-447017a6a73a" time="1394302182107" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,10 +37,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="sheet.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="sheet.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/sheet.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
+            <state line="4" column="51" selection-start="177" selection-end="177" vertical-scroll-proportion="0.09950249">
               <folding />
             </state>
           </provider>
@@ -56,19 +55,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pause.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pause.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/ui/pause.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="28" selection-start="324" selection-end="324" vertical-scroll-proportion="0.3482587">
+            <state line="14" column="28" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="score.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/score.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="42" selection-start="450" selection-end="450" vertical-scroll-proportion="-7.5">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -98,11 +97,11 @@
         <option value="$PROJECT_DIR$/js/ui/config.js" />
         <option value="$PROJECT_DIR$/js/score.js" />
         <option value="$PROJECT_DIR$/js/bird.js" />
-        <option value="$PROJECT_DIR$/js/note.js" />
-        <option value="$PROJECT_DIR$/js/sheet.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/init.js" />
         <option value="$PROJECT_DIR$/js/ui/pause.js" />
+        <option value="$PROJECT_DIR$/js/note.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/sheet.js" />
       </list>
     </option>
   </component>
@@ -327,13 +326,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/note.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="5" selection-start="54" selection-end="54" vertical-scroll-proportion="0.07462686">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="10" selection-start="4" selection-end="10" vertical-scroll-proportion="0.0">
@@ -341,16 +333,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/sheet.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
+        <state line="11" column="43" selection-start="407" selection-end="407" vertical-scroll-proportion="-4.75">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/score.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="42" selection-start="450" selection-end="450" vertical-scroll-proportion="-7.5">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ui/pause.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="28" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -362,9 +361,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/ui/pause.js">
+    <entry file="file://$PROJECT_DIR$/js/sheet.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="28" selection-start="324" selection-end="324" vertical-scroll-proportion="0.3482587">
+        <state line="4" column="51" selection-start="177" selection-end="177" vertical-scroll-proportion="0.09950249">
           <folding />
         </state>
       </provider>
