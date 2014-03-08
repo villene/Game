@@ -15,7 +15,7 @@ var chopper = new Image();
 chopper.src = "assets/heli.png";
 var coin = new Image();
 coin.src = "assets/coin.png";
-var thresholdSilence = Math.pow(10,-2.5);
+var thresholdSilence = Math.pow(10, -5);
 var noteLines = [48, 50, 52, 53, 55, 57, 59, 60];
 
 /*function generateWave()
