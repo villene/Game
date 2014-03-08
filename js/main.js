@@ -15,7 +15,7 @@ var chopper = new Image();
 chopper.src = "assets/heli.png";
 var coin = new Image();
 coin.src = "assets/coin.png";
-var thresholdSilence = Math.pow(10,-2.5);
+var thresholdSilence = Math.pow(10,-4);
 var noteLines = [48, 50, 52, 53, 55, 57, 59, 60];
 
 /*function generateWave()
@@ -87,10 +87,10 @@ function updateAnalysers(time) {
         CurrDB.innerText=frekvence.decibels + "/" + thresholdSilence;
         //if (!isNaN(Note.midi)) MidiElem.innerText=Note.midi;
         
-        if (frekvence.frequency >70 && isFinite(frekvence.frequency) && frekvence.decibels > thresholdSilence)
+        /*if (frekvence.frequency >70 && isFinite(frekvence.frequency) && frekvence.decibels > thresholdSilence)
             {//heardPitchArray[heardPitchCount]=(canvasHeight-((Note.oct*7+Note.note)*10)+100);     
                 heardPitchArray[heardPitchCount]=(canvasHeight-(Note.midi-36)*10);
-            heardPitchCount+=1;}
+            heardPitchCount+=1;}*/
         drawData(frekvence);
         CorrectElem.innerText=correctNotes + '/' + NoteObject.length;
                 
@@ -117,13 +117,13 @@ function drawData(frequency){
     analyserContext.lineWidth = 3;    
     analyserContext.stroke();
     
-    for (var i=0; i<canvasHeight; i+=20)
+    /*for (var i=0; i<canvasHeight; i+=20)
         {
             analyserContext.moveTo(0,i);
             analyserContext.lineTo(canvasWidth,i);
         }
     analyserContext.lineWidth = 1;    
-    analyserContext.stroke();       
+    analyserContext.stroke(); */      
         
      
     /*analyserContext.beginPath();
@@ -135,7 +135,7 @@ function drawData(frequency){
     
     analyserContext.beginPath();
     if (frequency.frequency>70 && isFinite(frequency.frequency) && frequency.decibels>thresholdSilence)
-    analyserContext.drawImage(chopper, canvasWidth/2-54, canvasHeight-(Note.midi-36)*10 );
+    analyserContext.drawImage(chopper, canvasWidth/2-54, drawMidi(Note.midi));
     //else analyserContext.drawImage(chopper, canvasWidth/2-54, heardPitchArray[heardPitchCount-1]++);
     //analyserContext.arc(canvasWidth/2, canvasHeight-((Note.oct*7+Note.note)*10)-10, 5, 0,2*Math.PI);
     analyserContext.stroke();
@@ -178,7 +178,8 @@ function drawData(frequency){
     if (NoteObject[i].correct===false || NoteObject[i].correct===null){
     //analyserContext.arc(canvasWidth-noteLocation+60*i,canvasHeight-(NoteDraw*10)-10,10,0,2*Math.PI);
     //analyserContext.fillText(NoteObject[i].lyric, canvasWidth-noteLocation-14+60*i, canvasHeight-(NoteDraw*10)+18);
-    analyserContext.drawImage(coin, canvasWidth-noteLocation+60*i-10, canvasHeight-(NoteDraw*10)+100);
+   // analyserContext.drawImage(coin, canvasWidth-noteLocation+60*i-10, canvasHeight-(NoteDraw*10)+100);
+   analyserContext.drawImage(coin, canvasWidth-noteLocation+60*i-10, drawMidi(fullnote.midi));
     analyserContext.fillText(freq, canvasWidth-noteLocation-14+60*i, canvasHeight-(NoteDraw*10)+30);   
     analyserContext.fillText(fullnote.string, canvasWidth-noteLocation-14+60*i, canvasHeight-(NoteDraw*10)+42);
     analyserContext.stroke();}
@@ -186,7 +187,14 @@ function drawData(frequency){
          
     noteLocation+=1;
 }
-    
+
+function drawMidi(midi)
+{
+    var maxMidi = 90;
+    var minMidi = 36;
+    return canvasHeight-(midi-minMidi)*(canvasHeight/(maxMidi-minMidi));
+}
+
 /*function autoCorrelate(buf) {
 	var MIN_SAMPLES = 100;	// corresponds to an 11kHz signal
 	var MAX_SAMPLES = 1024; // corresponds to a 44Hz signal
