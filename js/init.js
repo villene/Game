@@ -2,9 +2,14 @@ var game = new Phaser.Game(1024, 500, Phaser.CANVAS, 'phaser', { preload: preloa
 var bird, score;
 
 function preload(){
+    // UI
+    game.load.spritesheet('pauseButton', 'assets/pause.png', 73, 73);
+
+    // gameplay assets
     game.load.image('bg', 'assets/bg.png');
     game.load.image('bird', 'assets/bird.png');
     game.load.image('banana', 'assets/banana.png');
+
 }
 
 function create(){
@@ -12,6 +17,8 @@ function create(){
 
     bird = new Bird();
     score = new Score('sample');
+
+    UI.pause = new Pause();
 
 }
 
@@ -22,6 +29,8 @@ function update(){
     if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)){
         bird.onKeyPressed(Phaser.Keyboard.DOWN);
     }
+
+    score.update();
 }
 
 function render(){
