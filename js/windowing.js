@@ -16,6 +16,7 @@
             }
             return R;
     }
+    
     function normalize(arr)
     {
         var temp = 0;
@@ -51,7 +52,7 @@ function findMax(i, buf)
                 maxInd=j;
             }
         }
-        return maxInd;
+        return {index:maxInd, harmony: buf[maxInd]};
 }
 
 function test(freq)
@@ -129,9 +130,9 @@ function testRealTime(freq)
     var db = normalizeTimeData3(freq);
     var buf=normalize(autoCorrelate(windowing(db)));
     var i=zeroCrossing(buf);
+    var findmax = findMax(i,buf);
     
-    
-    return {frequency:fPitch(findMax(i,buf)), decibels: getDb(db)};
+    return {frequency:fPitch(findmax.index), harmony: findmax.harmony, decibels: getDb(db)};
     
 }
 

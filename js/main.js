@@ -15,7 +15,7 @@ var chopper = new Image();
 chopper.src = "assets/heli.png";
 var coin = new Image();
 coin.src = "assets/coin.png";
-var thresholdSilence = Math.pow(10,-4);
+var thresholdSilence = Math.pow(10,-2.5);
 var noteLines = [48, 50, 52, 53, 55, 57, 59, 60];
 
 /*function generateWave()
@@ -77,7 +77,7 @@ function updateAnalysers(time) {
         var NoteElem = document.getElementById('note');
         var CorrectElem = document.getElementById('correct');
         var CurrDB = document.getElementById('decibels');
-        var MidiElem = document.getElementById('midi');
+        var HarmElem = document.getElementById('mjau');
         var frekvence = testRealTime(freqData);
        // freqData = windowing(freqData);
         Note = frequencyToNote(frekvence.frequency);
@@ -85,7 +85,7 @@ function updateAnalysers(time) {
         FreqElem.innerText=frekvence.frequency;
         NoteElem.innerText=Note.string;
         CurrDB.innerText=frekvence.decibels + "/" + thresholdSilence;
-        //if (!isNaN(Note.midi)) MidiElem.innerText=Note.midi;
+        //HarmElem.innerText=frekvence.harmony;
         
         /*if (frekvence.frequency >70 && isFinite(frekvence.frequency) && frekvence.decibels > thresholdSilence)
             {//heardPitchArray[heardPitchCount]=(canvasHeight-((Note.oct*7+Note.note)*10)+100);     
