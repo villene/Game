@@ -1,5 +1,5 @@
 var CONFIG = {
     bottomMidi: 45
-    , noteWidth: 20
+    , noteWidth: 40
     , lineHeight: 20
 }
