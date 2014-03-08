@@ -4,6 +4,7 @@ var Sheet = Class.extend({
         this.bpm = 120; // beats per minute
         this.bps = this.bpm/60; // beats per second
         this.list = [];
+        this.status = 'active';
 
         this.time = 0;
         this.timeSplit = 0;
@@ -60,12 +61,33 @@ var Sheet = Class.extend({
     }
 
     , update: function(){
+        if(this.status == 'finished'){
+            return;
+        }
         if(this.playing){
             var newTime = new Date().getTime();
             this.time += newTime - this.timeSplit;
             this.timeSplit = newTime;
+
             this.draw();
+            this.checkAccuracy(bird.midi);
         }
+    }
+
+    , checkAccuracy: function(midi){
+        // calculate score being played
+        var scoreNr = Math.floor(this.time/1000 * this.bps);
+        if(scoreNr < this.list.length){
+            this.list[scoreNr].checkAccuracy(midi);
+        } else {
+            this.finished();
+        }
+
+    }
+
+    , finished: function(){
+        this.status = 'finished';
+        console.log('FINISHED');
     }
 
     , noteToFrequency: function(oct, step, alter){
