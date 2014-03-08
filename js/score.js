@@ -25,9 +25,29 @@ var Score = Class.extend({
         this.sprite.y = y;
     }
 
-    , checkAccuracy: function(birdMidi){
+    , checkAccuracyUnit: function(birdMidi){
         var isAccurate = this.midi === Math.round(birdMidi) ? true : false;
         this.accuracyArr.push( isAccurate );
+    }
+
+    , checkAccuracy: function(){
+        if(this.accuracy !== false){
+            return;
+        }
+
+        var accurateSamples = 0;
+        for(var i= 0, l=this.accuracyArr.length; i<l; i++){
+            if(this.accuracyArr[i] === true){
+                accurateSamples++;
+            }
+        }
+        this.accuracy = Math.round( accurateSamples/this.accuracyArr.length * 100 );
+
+//        console.log(this.accuracy, accurateSamples, this.accuracyArr[0]);
+
+        console.log(this.accuracy + '%');
+
+        return this.accuracy;
     }
 
 

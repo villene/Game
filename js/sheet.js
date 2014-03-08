@@ -77,8 +77,11 @@ var Sheet = Class.extend({
     , checkAccuracy: function(midi){
         // calculate score being played
         var scoreNr = Math.floor(this.time/1000 * this.bps);
+        if(scoreNr-1 >= 0){
+            this.list[scoreNr-1].checkAccuracy();
+        }
         if(scoreNr < this.list.length){
-            this.list[scoreNr].checkAccuracy(midi);
+            this.list[scoreNr].checkAccuracyUnit(midi);
         } else {
             this.finished();
         }
