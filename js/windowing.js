@@ -126,17 +126,31 @@ function testRealTime(freq)
 {   
     //var buf=normalize(autoCorrelate(windowing(buf)));
     //var i=zeroCrossing(normalize(autoCorrelate(windowing(buf))));
-    var buf=normalize(autoCorrelate(windowing(normalizeTimeData4(freq))));
+    var db = normalizeTimeData3(freq);
+    var buf=normalize(autoCorrelate(windowing(db)));
     var i=zeroCrossing(buf);
     
-    return fPitch(findMax(i,buf));
     
+    return {frequency:fPitch(findMax(i,buf)), decibels: getDb(db)};
+    
+}
+
+function getDb(db)
+{
+    var l=db.length;
+    var sum=0;
+    for (var i=0; i<l; i++)
+        {
+            sum+=Math.pow(db[i], 2);
+        }
+    return sum/=analyserNode.fftSize;    
+    //return sum/=2048;
 }
 
 function fPitch(maxInd)
 {
     
-    return 48000/maxInd;
+    return audioContext.sampleRate/maxInd;
 }
 
  function windowing (buf){
@@ -149,19 +163,6 @@ function fPitch(maxInd)
         return buf;
 }
 
-function autoCorrelate2(buf){
-    var sum = [];
-    var l = buf.length;
-    for(var i=0; i<2*l-1; i++){
-        sum[i] = 0;
-        for(var j=0; j<l; j++){
-            if(i-l+j>=0){
-                sum[i] += buf[j] + buf[i-l];
-            }
-        }
-    }
-    return sum;
-}
 
 function drawGraph(buf){
     var canvas = document.getElementById("graph");
@@ -184,7 +185,7 @@ function generateWave(frekvence)
     for(var i=0; i<l; i++){
         
         //arr[i]=Math.sin(i/17);
-       arr[i]=Math.sin(2 * Math.PI * (i/48000)*frekvence);
+       arr[i]=Math.sin(2 * Math.PI * (i/audioContext.sampleRate)*frekvence);
     }
     return arr;
 }    
