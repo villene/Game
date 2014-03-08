@@ -1,5 +1,5 @@
 var game = new Phaser.Game(1024, 500, Phaser.CANVAS, 'phaser', { preload: preload, create: create, update: update, render: render });
-var bird, score;
+var bird, sheet;
 
 function preload(){
     // UI
@@ -16,7 +16,7 @@ function create(){
     drawBg();
 
     bird = new Bird();
-    score = new Score('sample');
+    sheet = new Sheet('sample');
 
     UI.pause = new Pause();
 
@@ -30,7 +30,7 @@ function update(){
         bird.onKeyPressed(Phaser.Keyboard.DOWN);
     }
 
-    score.update();
+    sheet.update();
 }
 
 function render(){

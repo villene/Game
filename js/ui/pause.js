@@ -12,7 +12,7 @@ var Pause = Class.extend({
     }
 
     , toggle: function(){
-        score[this.state]();
+        sheet[this.state]();
 
         this.state = this.state == 'play' ? 'pause' : 'play';
         var frame = this.state == 'pause' ? 0 : 1;

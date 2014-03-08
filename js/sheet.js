@@ -1,4 +1,4 @@
-var Score = Class.extend({
+var Sheet = Class.extend({
     init: function(title){
         this.title = title;
         this.bpm = 120; // beats per minute
