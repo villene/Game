@@ -6,7 +6,8 @@ var CONFIG = {
 };
 
 CONFIG.scores =[
-    { title: 'sample' }
+    { title: 'Titanic' }
+    , { title: 'sample' }
     , { title: 'sample2' }
-    , {title: 'hohome'}
+    , { title: 'hohome' }
 ];

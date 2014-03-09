@@ -1,11 +1,12 @@
 var Score = Class.extend({
-    init: function(midi, note, oct, step, bps, nr){
+    init: function(midi, note, oct, step, bps, nr, text){
         this.midi = midi;
         this.note = note;
         this.oct = oct;
         this.step = step;
         this.bps = bps;
         this.nr = nr;
+        this.text = text;
         this.accuracyArr = [];
         this.accuracy = false;
 
@@ -49,7 +50,7 @@ var Score = Class.extend({
             UI.points.add(1);
             this.destroy();
         }
-        console.log(this.accuracy + '%');
+//        console.log(this.accuracy + '%');
 
         return this.accuracy;
     }

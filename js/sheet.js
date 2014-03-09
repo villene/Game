@@ -22,19 +22,33 @@ var Sheet = Class.extend({
         xmlhttp.open("GET","xml/"+this.title+".xml",false);
         xmlhttp.send();
         xmlDoc=xmlhttp.responseXML;
-        var steplist = xmlDoc.getElementsByTagName("step");
-        var octlist = xmlDoc.getElementsByTagName("octave");
-        var altlist = xmlDoc.getElementsByTagName("alter");
 
-        for(var i=0; i<steplist.length; i++)
+        var notes = xmlDoc.getElementsByTagName("note");
+        for(var i=0; i<notes.length; i++)
         {
-            var step = steplist[i].childNodes[0].nodeValue;
-            var octave = octlist[i].childNodes[0].nodeValue-1;
-            var alter = altlist[i].childNodes[0].nodeValue;
+            if(notes[i].getElementsByTagName("step")[0]){
+                var step = notes[i].getElementsByTagName("step")[0].childNodes[0].nodeValue;
+            }
+            if(notes[i].getElementsByTagName("octave")[0]){
+                var octave = notes[i].getElementsByTagName("octave")[0].childNodes[0].nodeValue-1;
+            }
+            if(notes[i].getElementsByTagName("alter")[0]){
+                var alter = notes[i].getElementsByTagName("alter")[0].childNodes[0].nodeValue;
+            }
+            if(duration = notes[i].getElementsByTagName("duration")[0]){
+                var duration = notes[i].getElementsByTagName("duration")[0].childNodes[0].nodeValue;
+            }
+            if(notes[i].getElementsByTagName("text")[0]){
+                var text = notes[i].getElementsByTagName("text")[0].childNodes[0].nodeValue;
+            }
+
+//            console.log(octave, step, alter, duration, text);
+
             var freq = this.noteToFrequency(octave, step, alter);
             freq = this.frequencyToNote(freq);
 
-            this.list[i] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, this.bps, i);
+            var nr = this.list.length;
+            this.list[i] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, this.bps, nr, text);
             this.group.add(this.list[i].sprite);
         }
     }
