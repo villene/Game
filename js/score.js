@@ -45,9 +45,17 @@ var Score = Class.extend({
 
 //        console.log(this.accuracy, accurateSamples, this.accuracyArr[0]);
 
+        if(this.accuracy >= CONFIG.accuracy){
+            UI.points.add(1);
+            this.destroy();
+        }
         console.log(this.accuracy + '%');
 
         return this.accuracy;
+    }
+
+    , destroy: function(){
+        this.sprite.destroy(true);
     }
 
 

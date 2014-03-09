@@ -17,11 +17,6 @@ function preload(){
 function create(){
     drawBg();
 
-    bird = new Bird();
-    sheet = new Sheet('sample');
-
-    UI.pause = new Pause();
-
     UI.menu = new Menu();
 
 }
@@ -34,7 +29,9 @@ function update(){
         bird.onKeyPressed(Phaser.Keyboard.DOWN);
     }
 
-    sheet.update();
+    if(sheet){
+        sheet.update();
+    }
 }
 
 function render(){
