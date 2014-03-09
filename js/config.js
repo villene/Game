@@ -1,7 +1,7 @@
 var CONFIG = {
     accuracy: 10
     , bottomMidi: 45
-    , noteWidth: 40
+    , noteWidth: 10
     , lineHeight: 20
 };
 

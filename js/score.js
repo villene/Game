@@ -10,7 +10,7 @@ var Score = Class.extend({
         this.accuracyArr = [];
         this.accuracy = false;
 
-        this.sprite = game.add.sprite(0, 0, 'banana');
+        this.sprite = game.add.sprite(0, 0, 'heart');
         this.sprite.anchor.setTo(0, 0.5);
         this.sprite.scale.x = 1;
         this.sprite.scale.y = 1;

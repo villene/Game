@@ -1,7 +1,7 @@
 var Sheet = Class.extend({
     init: function(title){
         this.title = title;
-        this.bpm = 120; // beats per minute
+        this.bpm = 120*4; // beats per minute. Divide by 4 because of 1/16 notes
         this.bps = this.bpm/60; // beats per second
         this.list = [];
         this.status = 'active';
@@ -24,7 +24,7 @@ var Sheet = Class.extend({
         xmlDoc=xmlhttp.responseXML;
 
         var notes = xmlDoc.getElementsByTagName("note");
-        for(var i=0; i<notes.length; i++)
+        for(var i= 0, l=notes.length; i<l; i++)
         {
             if(notes[i].getElementsByTagName("step")[0]){
                 var step = notes[i].getElementsByTagName("step")[0].childNodes[0].nodeValue;
@@ -47,9 +47,15 @@ var Sheet = Class.extend({
             var freq = this.noteToFrequency(octave, step, alter);
             freq = this.frequencyToNote(freq);
 
-            var nr = this.list.length;
-            this.list[i] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, this.bps, nr, text);
-            this.group.add(this.list[i].sprite);
+            for(var j=0; j<duration; j++){
+                var nr = this.list.length;
+                this.list[nr] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, this.bps, nr, text);
+                text = false; // add text only to first note
+                this.group.add(this.list[nr].sprite);
+            }
+//            var nr = this.list.length;
+//            this.list[i] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, this.bps, nr, text);
+//            this.group.add(this.list[i].sprite);
         }
     }
 

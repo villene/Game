@@ -11,6 +11,7 @@ function preload(){
     game.load.image('bg', 'assets/bg.png');
     game.load.image('bird', 'assets/bird.png');
     game.load.image('banana', 'assets/banana.png');
+    game.load.image('heart', 'assets/heart.png');
 
 }
 
