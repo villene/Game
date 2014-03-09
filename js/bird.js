@@ -39,4 +39,8 @@ var Bird = Class.extend({
     , alpha: function(alpha){
 
     }
+
+    , destroy: function(){
+        this.sprite.destroy(true);
+    }
 })

@@ -90,7 +90,15 @@ var Sheet = Class.extend({
 
     , finished: function(){
         this.status = 'finished';
-        console.log('FINISHED');
+        Controller.finishGame();
+    }
+
+    , getScoreCount: function(){
+        return this.list.length;
+    }
+
+    , destroy: function(){
+        this.group.destroy();
     }
 
     , noteToFrequency: function(oct, step, alter){
