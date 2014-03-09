@@ -4,6 +4,8 @@ var bird, sheet;
 function preload(){
     // UI
     game.load.spritesheet('pauseButton', 'assets/pause.png', 73, 73);
+    game.load.image('popup_bg', 'assets/popup_bg.png');
+    game.load.spritesheet('title_button', 'assets/title_button.png', 200, 30);
 
     // gameplay assets
     game.load.image('bg', 'assets/bg.png');
@@ -19,6 +21,8 @@ function create(){
     sheet = new Sheet('sample');
 
     UI.pause = new Pause();
+
+    UI.menu = new Menu();
 
 }
 
