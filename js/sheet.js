@@ -35,7 +35,7 @@ var Sheet = Class.extend({
             if(notes[i].getElementsByTagName("alter")[0]){
                 var alter = notes[i].getElementsByTagName("alter")[0].childNodes[0].nodeValue;
             }
-            if(duration = notes[i].getElementsByTagName("duration")[0]){
+            if(notes[i].getElementsByTagName("duration")[0]){
                 var duration = notes[i].getElementsByTagName("duration")[0].childNodes[0].nodeValue;
             }
             if(notes[i].getElementsByTagName("text")[0]){

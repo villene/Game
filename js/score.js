@@ -14,6 +14,10 @@ var Score = Class.extend({
         this.sprite.anchor.setTo(0, 0.5);
         this.sprite.scale.x = 1;
         this.sprite.scale.y = 1;
+        
+        var style = { font: "18px Arial", fill: "#ff0044", align: "center"};
+        this.lyric = game.add.text(220, 450, this.text, style);
+        this.lyric.anchor.setTo (0.5, 0.5);
 
         this.draw(0);
     }
@@ -24,6 +28,8 @@ var Score = Class.extend({
         var y = game.height - (this.midi - CONFIG.bottomMidi) * CONFIG.lineHeight;
         this.sprite.x = x;
         this.sprite.y = y;
+        
+        this.lyric.x = x+220;
     }
 
     , checkAccuracyUnit: function(birdMidi){
