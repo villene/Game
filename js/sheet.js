@@ -41,17 +41,29 @@ var Sheet = Class.extend({
             if(notes[i].getElementsByTagName("text")[0]){
                 var text = notes[i].getElementsByTagName("text")[0].childNodes[0].nodeValue;
             }
-
+            if(notes[i].getElementsByTagName("rest")[0]){ // 'rest' element should be pause
+                var rest = true;
+            } else{
+                var rest = false;
+            }
 //            console.log(octave, step, alter, duration, text);
+            if(rest){
 
-            var freq = this.noteToFrequency(octave, step, alter);
-            freq = this.frequencyToNote(freq);
+            } else {
+                var freq = this.noteToFrequency(octave, step, alter);
+                freq = this.frequencyToNote(freq);
+            }
 
             for(var j=0; j<duration; j++){
                 var nr = this.list.length;
-                this.list[nr] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, this.bps, nr, text);
-                text = false; // add text only to first note
-                this.group.add(this.list[nr].sprite);
+                if(rest){
+                    this.list[nr] = new Rest();
+                } else {
+                    this.list[nr] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, this.bps, nr, text);
+                    text = false; // add text only to first note
+                    this.group.add(this.list[nr].sprite);
+                }
+
             }
 //            var nr = this.list.length;
 //            this.list[i] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, this.bps, nr, text);
@@ -98,10 +110,10 @@ var Sheet = Class.extend({
         // calculate score being played
         var scoreNr = Math.floor(this.time/1000 * this.bps);
         if(scoreNr-1 >= 0){
-            this.list[scoreNr-1].checkAccuracy();
+                this.list[scoreNr-1].checkAccuracy();
         }
         if(scoreNr < this.list.length){
-            this.list[scoreNr].checkAccuracyUnit(midi);
+                this.list[scoreNr].checkAccuracyUnit(midi);
         } else {
             this.finished();
         }
