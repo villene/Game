@@ -10,6 +10,8 @@ var Sheet = Class.extend({
         this.timeSplit = 0;
         this.playing = false;
 
+        this.octaveList = [0, 0, 0, 0, 0, 0, 0, 0];
+
         this.group = game.add.group();
 
         this.getXML();
@@ -31,6 +33,8 @@ var Sheet = Class.extend({
             }
             if(notes[i].getElementsByTagName("octave")[0]){
                 var octave = notes[i].getElementsByTagName("octave")[0].childNodes[0].nodeValue-1;
+            } else {
+                var octave = false;
             }
             if(notes[i].getElementsByTagName("alter")[0]){
                 var alter = notes[i].getElementsByTagName("alter")[0].childNodes[0].nodeValue;
@@ -62,6 +66,10 @@ var Sheet = Class.extend({
                     this.list[nr] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, this.bps, nr, text);
                     text = false; // add text only to first note
                     this.group.add(this.list[nr].sprite);
+                }
+
+                if(octave){
+                    this.octaveList[octave]++;
                 }
 
             }
