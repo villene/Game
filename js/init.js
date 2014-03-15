@@ -10,6 +10,7 @@ function preload(){
     // gameplay assets
     game.load.image('bg', 'assets/bg.png');
     game.load.image('bird', 'assets/bird.png');
+    game.load.spritesheet('bird_eat', 'assets/bird_eat.png', 40, 424/8);
     game.load.image('banana', 'assets/banana.png');
     game.load.image('heart', 'assets/heart.png');
 

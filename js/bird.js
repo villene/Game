@@ -7,10 +7,13 @@ var Bird = Class.extend({
     }
 
     , draw: function(){
-        this.sprite = game.add.sprite(200, game.height/2, 'bird');
+        this.sprite = game.add.sprite(200, game.height/2, 'bird_eat');
         this.sprite.anchor.setTo(1, 0.5);
         this.sprite.scale.x = 1;
         this.sprite.scale.y = 1;
+
+        this.sprite.animations.add('eat');
+        this.sprite.animations.play('eat', 8, true);
     }
 
     , onKeyPressed: function(key){
