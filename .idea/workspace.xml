@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa957a23-b4ca-49df-935e-447017a6a73a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controller.js" afterPath="$PROJECT_DIR$/js/controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/init.js" afterPath="$PROJECT_DIR$/js/init.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ui/list.js" afterPath="$PROJECT_DIR$/js/ui/list.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ui/menu.js" afterPath="$PROJECT_DIR$/js/ui/menu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sheet.js" afterPath="$PROJECT_DIR$/js/sheet.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/songData.js" afterPath="$PROJECT_DIR$/js/songData.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Game.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,7 +17,7 @@
     <file path="/note.js" changelist="fa957a23-b4ca-49df-935e-447017a6a73a" time="1394302187289" ignored="false" />
     <file path="/sheet.js" changelist="fa957a23-b4ca-49df-935e-447017a6a73a" time="1394976079651" ignored="false" />
     <file path="/controller.js" changelist="fa957a23-b4ca-49df-935e-447017a6a73a" time="1394975901910" ignored="false" />
-    <file path="/menu.js" changelist="fa957a23-b4ca-49df-935e-447017a6a73a" time="1394975646467" ignored="false" />
+    <file path="/menu.js" changelist="fa957a23-b4ca-49df-935e-447017a6a73a" time="1394976931889" ignored="false" />
     <file path="/sample2.xml" changelist="fa957a23-b4ca-49df-935e-447017a6a73a" time="1394321771578" ignored="false" />
     <file path="/list.js" changelist="fa957a23-b4ca-49df-935e-447017a6a73a" time="1394975479351" ignored="false" />
     <file path="/points.js" changelist="fa957a23-b4ca-49df-935e-447017a6a73a" time="1394359404512" ignored="false" />
@@ -72,10 +65,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="menu.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/ui/menu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="59" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.0">
+            <state line="24" column="36" selection-start="810" selection-end="810" vertical-scroll-proportion="0.5970149">
               <folding />
             </state>
           </provider>
@@ -84,16 +77,16 @@
       <file leaf-file-name="list.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/ui/list.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="38" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0">
+            <state line="27" column="33" selection-start="913" selection-end="913" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sheet.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sheet.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/sheet.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="42" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.29850745">
+            <state line="39" column="42" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -139,9 +132,9 @@
         <option value="$PROJECT_DIR$/song.php" />
         <option value="$PROJECT_DIR$/js/init.js" />
         <option value="$PROJECT_DIR$/js/ui/list.js" />
-        <option value="$PROJECT_DIR$/js/ui/menu.js" />
         <option value="$PROJECT_DIR$/js/controller.js" />
         <option value="$PROJECT_DIR$/js/sheet.js" />
+        <option value="$PROJECT_DIR$/js/ui/menu.js" />
       </list>
     </option>
   </component>
@@ -415,16 +408,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/ui/menu.js">
+    <entry file="file://$PROJECT_DIR$/js/controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="59" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.0">
+        <state line="13" column="0" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/ui/list.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="38" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0">
+        <state line="27" column="33" selection-start="913" selection-end="913" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -436,16 +429,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/controller.js">
+    <entry file="file://$PROJECT_DIR$/js/sheet.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
+        <state line="39" column="42" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/sheet.js">
+    <entry file="file://$PROJECT_DIR$/js/ui/menu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="42" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.29850745">
+        <state line="24" column="36" selection-start="810" selection-end="810" vertical-scroll-proportion="0.5970149">
           <folding />
         </state>
       </provider>
