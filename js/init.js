@@ -2,7 +2,7 @@ var game = new Phaser.Game(1024, 500, Phaser.CANVAS, 'phaser', { preload: preloa
 var bird, sheet;
 var songData = new SongData();
 
-function preload(){
+function preload() {
     // UI
     game.load.spritesheet('pauseButton', 'assets/pause.png', 73, 73);
     game.load.image('popup_bg', 'assets/popup_bg.png');
@@ -11,34 +11,34 @@ function preload(){
     // gameplay assets
     game.load.image('bg', 'assets/bg.png');
     game.load.image('bird', 'assets/bird.png');
-    game.load.spritesheet('bird_eat', 'assets/bird_eat.png', 40, 424/8);
+    game.load.spritesheet('bird_eat', 'assets/bird_eat.png', 40, 424 / 8);
     game.load.image('banana', 'assets/banana.png');
     game.load.image('heart', 'assets/heart.png');
 
 }
 
-function create(){
+function create() {
     Controller.createGame();
 }
 
-function update(){
-    if (game.input.keyboard.isDown(Phaser.Keyboard.UP)){
+function update() {
+    if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) {
         bird.onKeyPressed(Phaser.Keyboard.UP);
     }
-    if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)){
+    if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
         bird.onKeyPressed(Phaser.Keyboard.DOWN);
     }
 
-    if(sheet){
+    if (sheet) {
         sheet.update();
     }
 }
 
-function render(){
+function render() {
 
 }
 
 
-function drawBg(){
+function drawBg() {
     game.add.sprite(0, 0, 'bg');
 }

@@ -8,16 +8,16 @@
 <body>
 
 <?php
-    if ($handle = opendir('xml/')) {
-        while (false !== ($entry = readdir($handle))) {
-            if ($entry != "." && $entry != "..") {
-                $name = explode('.', $entry);
-                $name = $name[0];
-                echo '<a href="song.php?name='.$name.'">'.$name.'</a><br/>';
-            }
+if ($handle = opendir('xml/')) {
+    while (false !== ($entry = readdir($handle))) {
+        if ($entry != "." && $entry != "..") {
+            $name = explode('.', $entry);
+            $name = $name[0];
+            echo '<a href="song.php?name=' . $name . '">' . $name . '</a><br/>';
         }
-        closedir($handle);
     }
+    closedir($handle);
+}
 ?>
 
 </body>

@@ -1,27 +1,19 @@
 var Controller = {
-    status: false
-
-    , createGame: function(){
+    status: false, createGame: function () {
         drawBg();
-        UI.menu = new Menu( songData.octave );
-    }
-
-    , startGame: function( octave ){
+        UI.menu = new Menu(songData.octave);
+    }, startGame: function (octave) {
         console.log('START GAME - ' + songData.name);
 
         bird = new Bird();
-        sheet = new Sheet( songData.name, octave-songData.octave );
+        sheet = new Sheet(songData.name, octave - songData.octave);
 
         UI.pause = new Pause();
         UI.points = new Points();
-    }
-
-    , finishGame: function(){
+    }, finishGame: function () {
         console.log('GAME FINISHED');
         UI.finish = new Finish();
-    }
-
-    , restartGame: function(){
+    }, restartGame: function () {
 
         bird.destroy();
         delete bird;

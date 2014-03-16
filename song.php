@@ -30,12 +30,12 @@
 
 </head>
 <body>
-    <div id="phaser"></div>
-    <div id="frequency"></div>
-    <div id="note"></div>
-    <div id="correct"></div>
-    <div id="decibels"></div>
-    <div id="mjau"></div>
+<div id="phaser"></div>
+<div id="frequency"></div>
+<div id="note"></div>
+<div id="correct"></div>
+<div id="decibels"></div>
+<div id="mjau"></div>
 
 </body>
 </html>
