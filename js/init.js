@@ -18,10 +18,7 @@ function preload(){
 }
 
 function create(){
-    drawBg();
-
-    UI.menu = new Menu();
-
+    Controller.createGame();
 }
 
 function update(){

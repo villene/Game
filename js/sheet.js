@@ -1,6 +1,7 @@
 var Sheet = Class.extend({
-    init: function(title){
+    init: function(title, octaveDiff){
         this.title = title;
+        this.octaveDiff = octaveDiff;
         this.bpm = 120*4; // beats per minute. Divide by 4 because of 1/16 notes
         this.bps = this.bpm/60; // beats per second
         this.list = [];
@@ -28,6 +29,7 @@ var Sheet = Class.extend({
 //        var notes = xmlDoc.getElementsByTagName("note");
 
         var notes = songData.xml.getElementsByTagName("note");
+
         for(var i= 0, l=notes.length; i<l; i++)
         {
             if(notes[i].getElementsByTagName("step")[0]){
@@ -35,6 +37,7 @@ var Sheet = Class.extend({
             }
             if(notes[i].getElementsByTagName("octave")[0]){
                 var octave = notes[i].getElementsByTagName("octave")[0].childNodes[0].nodeValue-1;
+                octave += this.octaveDiff;
             } else {
                 var octave = false;
             }

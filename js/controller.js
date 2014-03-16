@@ -1,10 +1,16 @@
 var Controller = {
-    status: 'menu'
-    , startGame: function( ){
+    status: false
+
+    , createGame: function(){
+        drawBg();
+        UI.menu = new Menu( songData.octave );
+    }
+
+    , startGame: function( octave ){
         console.log('START GAME - ' + songData.name);
 
         bird = new Bird();
-        sheet = new Sheet( songData.name );
+        sheet = new Sheet( songData.name, octave-songData.octave );
 
         UI.pause = new Pause();
         UI.points = new Points();

@@ -1,5 +1,5 @@
 var List = Class.extend({
-    init: function(x, y, lineHeight, list){
+    init: function(x, y, lineHeight, list, defaultVal){
         this.x = x;
         this.y = y;
         this.lineHeight = lineHeight;
@@ -8,7 +8,7 @@ var List = Class.extend({
         this.iterateList(list);
 
         // select first element
-        this.toggle(0);
+        this.toggle( this.getNrByVal(list, defaultVal) );
     }
 
     , iterateList: function(list){
@@ -30,6 +30,15 @@ var List = Class.extend({
         this.group.add(t);
 
         this.elements.push({ button: button, text: t, title: text });
+    }
+
+    , getNrByVal: function(list, val){
+        for(var i= 0, l=list.length; i<l; i++){
+            if(list[i].title === val){
+                return i;
+            }
+        }
+        return 0;
     }
 
     , toggle: function(elementNr){

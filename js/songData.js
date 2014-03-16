@@ -3,8 +3,47 @@ var SongData = Class.extend({
         this.url = this.parseUrl();
         this.name = this.url.name;
         this.xml = this.getXML(this.name);
+        this.octaveData = this.getOctaveData(this.xml);
+        this.octave = this.getCommonOctave(this.octaveData);
 
         if(!this.xml) console.log('ERROR! XML file does not exist!');
+    }
+
+    , getOctaveData: function(xml){
+        var octaveList = [0, 0, 0, 0, 0, 0, 0, 0];
+        var notes = xml.getElementsByTagName("note");
+
+        for(var i= 0, l=notes.length; i<l; i++){
+            if(notes[i].getElementsByTagName("duration")[0]){
+                var duration = notes[i].getElementsByTagName("duration")[0].childNodes[0].nodeValue;
+            } else {
+                var duration = 0;
+            }
+            if(notes[i].getElementsByTagName("octave")[0]){
+                var octave = notes[i].getElementsByTagName("octave")[0].childNodes[0].nodeValue-1;
+            } else {
+                var octave = false;
+            }
+            for(var j=0; j<duration; j++){
+                if(octave){
+                    octaveList[octave]++;
+                }
+            }
+        }
+        return octaveList;
+    }
+
+    , getCommonOctave: function(arr){
+        // TODO iterate through array and get most used octave
+        var maxVal = 0;
+        var maxIterator = false;
+        for(var i= 0, l=arr.length; i<l; i++){
+            if(arr[i] > maxVal){
+                maxVal = arr[i];
+                maxIterator = i;
+            }
+        }
+        return maxIterator;
     }
 
     , parseUrl: function(){

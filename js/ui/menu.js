@@ -1,8 +1,9 @@
 var Menu = Class.extend({
-    init: function(){
+    init: function( defaultOctave ){
         this.group = game.add.group();
         this.scores;
         this.octaves;
+        this.defaultOctave = defaultOctave;
 
         this.draw();
         this.show();
@@ -21,8 +22,8 @@ var Menu = Class.extend({
 
         // octavesList
         var scoreX = 530;
-        var octavesList = [{title:3}, {title: 4}, {title: 5}];
-        this.octaves = new List(scoreX, scoreY, lineHeight, octavesList);
+        var octavesList = [{title:2}, {title:3}, {title: 4}, {title: 5}];
+        this.octaves = new List(scoreX, scoreY, lineHeight, octavesList, this.defaultOctave);
         this.group.add( this.octaves.group );
 
         var play = game.add.button(game.width/2, 400, 'pauseButton', this.startGame, this, 1, 1, 1);
@@ -33,7 +34,7 @@ var Menu = Class.extend({
 
     , startGame: function(){
 //        Controller.startGame( this.scores.getSelected() );
-        Controller.startGame();
+        Controller.startGame( this.octaves.getSelected() );
         this.hide();
     }
 
