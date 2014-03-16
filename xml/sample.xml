@@ -2,43 +2,89 @@
 
 <score-partwise>
 
+<note>
+    <step>C</step>
+    <octave>4</octave>
+    <alter></alter>
+    <duration>4</duration>
+    </note>
 
-    <step>C</step>
-    <octave>4</octave>
-    <alter></alter>
+    <note>
     <step>C</step>
     <octave>4</octave>
     <alter>1</alter>
+        <duration>4</duration>
+    </note>
+
+    <note>
     <step>D</step>
     <octave>4</octave>
     <alter></alter>
+        <duration>4</duration>
+    </note>
+
+    <note>
     <step>D</step>
     <octave>4</octave>
     <alter>1</alter>
+        <duration>4</duration>
+    </note>
+
+    <note>
     <step>E</step>
     <octave>4</octave>
     <alter></alter>
+        <duration>4</duration>
+    </note>
+
+    <note>
     <step>F</step>
     <octave>4</octave>
     <alter></alter>
+        <duration>4</duration>
+    </note>
+
+    <note>
     <step>F</step>
     <octave>4</octave>
     <alter>1</alter>
+        <duration>4</duration>
+    </note>
+
+    <note>
     <step>G</step>
     <octave>4</octave>
     <alter></alter>
+        <duration>4</duration>
+    </note>
+
+    <note>
     <step>G</step>
     <octave>4</octave>
     <alter>1</alter>
+        <duration>4</duration>
+    </note>
+
+    <note>
     <step>A</step>
     <octave>4</octave>
     <alter></alter>
+        <duration>4</duration>
+    </note>
+
+    <note>
     <step>A</step>
     <octave>4</octave>
     <alter>1</alter>
+        <duration>4</duration>
+    </note>
+
+    <note>
     <step>B</step>
     <octave>4</octave>
     <alter></alter>
+        <duration>4</duration>
+    </note>
 
 
 </score-partwise>

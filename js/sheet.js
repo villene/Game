@@ -31,6 +31,8 @@ var Sheet = Class.extend({
         for (var i = 0, l = notes.length; i < l; i++) {
             if (notes[i].getElementsByTagName("step")[0]) {
                 var step = notes[i].getElementsByTagName("step")[0].childNodes[0].nodeValue;
+            } else {
+                var step = false;
             }
             if (notes[i].getElementsByTagName("octave")[0]) {
                 var octave = notes[i].getElementsByTagName("octave")[0].childNodes[0].nodeValue - 1;
@@ -38,14 +40,20 @@ var Sheet = Class.extend({
             } else {
                 var octave = false;
             }
-            if (notes[i].getElementsByTagName("alter")[0]) {
+            if (notes[i].getElementsByTagName("alter")[0] && notes[i].getElementsByTagName("alter")[0].childNodes[0]) {
                 var alter = notes[i].getElementsByTagName("alter")[0].childNodes[0].nodeValue;
+            } else {
+                var alter = false;
             }
             if (notes[i].getElementsByTagName("duration")[0]) {
                 var duration = notes[i].getElementsByTagName("duration")[0].childNodes[0].nodeValue;
+            } else {
+                var duration = 0;
             }
-            if (notes[i].getElementsByTagName("text")[0]) {
+            if (notes[i].getElementsByTagName("text")[0] && notes[i].getElementsByTagName("text")[0].childNodes[0]) {
                 var text = notes[i].getElementsByTagName("text")[0].childNodes[0].nodeValue;
+            } else {
+                var text = false;
             }
             if (notes[i].getElementsByTagName("rest")[0]) { // 'rest' element should be pause
                 var rest = true;
@@ -58,6 +66,7 @@ var Sheet = Class.extend({
             } else {
                 var freq = this.noteToFrequency(octave, step, alter);
                 freq = this.frequencyToNote(freq);
+                console.log(freq, freq.midi, octave, step, alter);
             }
 
             for (var j = 0; j < duration; j++) {
