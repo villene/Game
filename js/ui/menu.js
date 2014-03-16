@@ -16,8 +16,8 @@ var Menu = Class.extend({
         var scoreX = 280;
         var scoreY = 150;
         var lineHeight = 30;
-        this.scores = new List(scoreX, scoreY, lineHeight, CONFIG.scores);
-        this.group.add( this.scores.group );
+//        this.scores = new List(scoreX, scoreY, lineHeight, CONFIG.scores);
+//        this.group.add( this.scores.group );
 
         // octavesList
         var scoreX = 530;
@@ -32,7 +32,8 @@ var Menu = Class.extend({
     }
 
     , startGame: function(){
-        Controller.startGame( this.scores.getSelected() );
+//        Controller.startGame( this.scores.getSelected() );
+        Controller.startGame();
         this.hide();
     }
 

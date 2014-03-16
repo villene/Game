@@ -1,11 +1,10 @@
 var Controller = {
     status: 'menu'
-
-    , startGame: function( title ){
-        console.log('START GAME - ' + title);
+    , startGame: function( ){
+        console.log('START GAME - ' + songData.name);
 
         bird = new Bird();
-        sheet = new Sheet( title );
+        sheet = new Sheet( songData.name );
 
         UI.pause = new Pause();
         UI.points = new Points();

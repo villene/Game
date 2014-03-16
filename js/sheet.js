@@ -20,12 +20,14 @@ var Sheet = Class.extend({
 
     , getXML: function(){
 
-        xmlhttp=new XMLHttpRequest();
-        xmlhttp.open("GET","xml/"+this.title+".xml",false);
-        xmlhttp.send();
-        xmlDoc=xmlhttp.responseXML;
+//        xmlhttp=new XMLHttpRequest();
+//        xmlhttp.open("GET","xml/"+this.title+".xml",false);
+//        xmlhttp.send();
+//        xmlDoc=xmlhttp.responseXML;
 
-        var notes = xmlDoc.getElementsByTagName("note");
+//        var notes = xmlDoc.getElementsByTagName("note");
+
+        var notes = songData.xml.getElementsByTagName("note");
         for(var i= 0, l=notes.length; i<l; i++)
         {
             if(notes[i].getElementsByTagName("step")[0]){
