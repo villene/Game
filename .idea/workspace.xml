@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa957a23-b4ca-49df-935e-447017a6a73a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xml/sample2.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/sample.xml" afterPath="$PROJECT_DIR$/xml/sample.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controller.js" afterPath="$PROJECT_DIR$/js/controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sheet.js" afterPath="$PROJECT_DIR$/js/sheet.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -37,19 +36,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sheet.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sheet.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/sheet.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="33" selection-start="1131" selection-end="1131" vertical-scroll-proportion="0.22865854" vertical-offset="360" max-vertical-offset="4140">
+            <state line="69" column="13" selection-start="2731" selection-end="2731" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="4140">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controller.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="controller.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+            <state line="29" column="42" selection-start="768" selection-end="768" vertical-scroll-proportion="0.6631098" vertical-offset="0" max-vertical-offset="656">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/ui/menu.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="36" selection-start="928" selection-end="928" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
               <folding />
             </state>
           </provider>
@@ -94,11 +102,11 @@
         <option value="$PROJECT_DIR$/song.php" />
         <option value="$PROJECT_DIR$/js/init.js" />
         <option value="$PROJECT_DIR$/js/ui/list.js" />
-        <option value="$PROJECT_DIR$/js/controller.js" />
         <option value="$PROJECT_DIR$/js/ui/menu.js" />
         <option value="$PROJECT_DIR$/xml/Lukturis.xml" />
         <option value="$PROJECT_DIR$/xml/sample.xml" />
         <option value="$PROJECT_DIR$/js/sheet.js" />
+        <option value="$PROJECT_DIR$/js/controller.js" />
       </list>
     </option>
   </component>
@@ -384,13 +392,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/ui/menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="36" selection-start="810" selection-end="810" vertical-scroll-proportion="0.5970149" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/ui/list.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="33" selection-start="913" selection-end="913" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -412,13 +413,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xml/Lukturis.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="151" column="10" selection-start="2697" selection-end="2697" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4245">
@@ -428,7 +422,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/sheet.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="33" selection-start="1131" selection-end="1131" vertical-scroll-proportion="0.22865854" vertical-offset="360" max-vertical-offset="4140">
+        <state line="69" column="13" selection-start="2731" selection-end="2731" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="4140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ui/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="36" selection-start="928" selection-end="928" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="42" selection-start="768" selection-end="768" vertical-scroll-proportion="0.6631098" vertical-offset="0" max-vertical-offset="656">
           <folding />
         </state>
       </provider>

@@ -27,6 +27,6 @@ var Controller = {
         UI.points.destroy();
         delete UI.points;
 
-        UI.menu = new Menu();
+        UI.menu = new Menu(songData.octave);
     }
 }

@@ -66,7 +66,7 @@ var Sheet = Class.extend({
             } else {
                 var freq = this.noteToFrequency(octave, step, alter);
                 freq = this.frequencyToNote(freq);
-                console.log(freq, freq.midi, octave, step, alter);
+//                console.log(freq, freq.midi, octave, step, alter);
             }
 
             for (var j = 0; j < duration; j++) {
