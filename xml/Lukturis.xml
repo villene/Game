@@ -2,158 +2,278 @@
 
 <score-partwise>
   
-  
+<note>
     <step>G</step>
    
 
        <octave>4</octave>
     <alter> </alter>
- <text>Mau</text>    
+ <text>Mau</text>
+    <duration>4</duration>
+</note>
 
+    <note>
+    <step>G</step>
+          <octave>4</octave>
+    <alter> </alter>
+      <text>ku</text>
+    <duration>4</duration>
+</note>
+
+
+    <note>
 <step>G</step>
           <octave>4</octave>
     <alter> </alter>
-      <text>ku</text>   
+ <text>mā</text>
+    <duration>4</duration>
+</note>
 
-<step>G</step>
-          <octave>4</octave>
-    <alter> </alter>
- <text>mā</text>   
 
+    <note>
 <step>A</step>
           <octave>4</octave>
     <alter> </alter>
+        <text>jā</text>
+<duration>4</duration>
+        </note>
+
       
 
-<text>jā</text><step>G</step>
+
+    <note>
+        <step>G</step>
+          <octave>4</octave>
+    <alter> </alter><text>luk</text>
+        <duration>4</duration>
+        </note>
+
+
+    <note>
+<step>E</step>
           <octave>4</octave>
     <alter> </alter>
-      
+    <text>turs</text>
+<duration>4</duration>
+        </note>
 
-<text>luk</text><step>E</step>
+
+    <note>
+<step>C</step>
           <octave>4</octave>
     <alter> </alter>
- 
+        <text>spīd</text>
+<duration>4</duration>
+        </note>
 
-<text>turs</text><step>C</step>
-          <octave>4</octave>
-    <alter> </alter>
- 
-
-<text>spīd</text>   <step>C</step>
+    <note>
+   <step>C</step>
           <octave>4</octave>
     <alter> </alter> 
 
 <text> </text>
+<duration>4</duration>
+        </note>
 
+    <note>
 <step>C</step>
          <octave>5</octave>
     <alter> </alter>
  <text>Hej</text>
+<duration>4</duration>
+        </note>
 
+    <note>
 <step>C</step>
           <octave>5</octave>
     <alter> </alter>
  <text> </text>
+<duration>4</duration>
+        </note>
 
+
+    <note>
 <step>B</step>
           <octave>4</octave>
     <alter> </alter>
  <text>rum</text>
+<duration>4</duration>
+        </note>
 
+
+    <note>
 <step>A</step>
           <octave>4</octave>
     <alter> </alter>
  <text>pi</text>
+<duration>4</duration>
+        </note>
 
+    <note>
 <step>G</step>
           <octave>4</octave>
     <alter> </alter>
  <text>pum</text>
+<duration>4</duration>
+        </note>
+
+    <note>
 <step>G</step>
           <octave>4</octave>
     <alter> </alter>
       <text> </text>
+<duration>4</duration>
+        </note>
+
+    <note>
 <step>C</step>
           <octave>5</octave>
     <alter> </alter>
       <text>pi</text>
+<duration>4</duration>
+        </note>
+
+    <note>
 <step>C</step>
           <octave>5</octave>
     <alter> </alter>
       <text> </text>
+<duration>4</duration>
+        </note>
+
+    <note>
 <step>A</step>
           <octave>4</octave>
     <alter> </alter>
  <text>Jā</text>
+<duration>4</duration>
+        </note>
+
+
+    <note>
 <step>F</step>
           <octave>4</octave>
     <alter> </alter>
  <text>ie</text>
+<duration>4</duration>
+        </note>
+
+    <note>
 <step>C</step>
           <octave>5</octave>
     <alter> </alter>
  <text>skrien</text>
+<duration>4</duration>
+        </note>
+
+    <note>
 <step>A</step>
           <octave>4</octave>
     <alter> </alter>
       <text>uz</text>
+<duration>4</duration>
+        </note>
+
+    <note>
 <step>A</step>
           <octave>4</octave>
     <alter> </alter>
  <text>ī</text>
+<duration>4</duration>
+        </note>
+
+    <note>
 <step>G</step>
           <octave>4</octave>
     <alter> </alter>
       <text>su</text>
+<duration>4</duration>
+        </note>
+
+    <note>
 <step>G</step>
           <octave>4</octave>
     <alter> </alter>
  <text>brī</text>
+<duration>4</duration>
+        </note>
 
+
+    <note>
 <step>E</step>
           <octave>4</octave>
     <alter> </alter>
  <text>di,</text>
+<duration>4</duration>
+        </note>
 
+    <note>
 <step>G</step>
          <octave>4</octave>
     <alter> </alter>
  <text>trā</text>
+<duration>4</duration>
+        </note>
 
+
+    <note>
 <step>F</step>
           <octave>4</octave>
     <alter> </alter>
  <text>di</text>
+<duration>4</duration>
+        </note>
 
+
+    <note>
 <step>E</step>
           <octave>4</octave>
     <alter> </alter>
  <text>ra</text>
+<duration>4</duration>
+        </note>
 
+
+    <note>
 <step>D</step>
           <octave>4</octave>
     <alter> </alter>
       <text>la</text>
+<duration>4</duration>
+        </note>
 
+
+    <note>
 <step>C</step>
           <octave>4</octave>
     <alter> </alter>
  <text>lā</text>
+<duration>4</duration>
+        </note>
 
+
+    <note>
 <step>C</step>
           <octave>4</octave>
     <alter> </alter>
       <text> </text>
+<duration>4</duration>
+        </note>
 
+    <note>
 <step>C</step>
           <octave>4</octave>
     <alter> </alter>
  <text> </text>
+<duration>4</duration>
+        </note>
 
+    <note>
 <step>C</step>
           <octave>4</octave>
     <alter> </alter>
  <text> </text>
+<duration>4</duration>
+        </note>
 
 </score-partwise>
