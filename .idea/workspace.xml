@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa957a23-b4ca-49df-935e-447017a6a73a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controller.js" afterPath="$PROJECT_DIR$/js/controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sheet.js" afterPath="$PROJECT_DIR$/js/sheet.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/songData.js" afterPath="$PROJECT_DIR$/js/songData.js" />
     </list>
     <ignored path="Game.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,46 +25,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Lukturis.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xml/Lukturis.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="151" column="10" selection-start="2697" selection-end="2697" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4245">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="sheet.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/sheet.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="13" selection-start="2731" selection-end="2731" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="4140">
+            <state line="136" column="12" selection-start="5004" selection-end="5004" vertical-scroll-proportion="0.0" vertical-offset="1770" max-vertical-offset="4140">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controller.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/controller.js">
+      <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="42" selection-start="768" selection-end="768" vertical-scroll-proportion="0.6631098" vertical-offset="0" max-vertical-offset="656">
+            <state line="3" column="0" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/ui/menu.js">
+      <file leaf-file-name="songData.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/songData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="36" selection-start="928" selection-end="928" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sample.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xml/sample.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="22" selection-start="1292" selection-end="1292" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1425">
+            <state line="9" column="21" selection-start="332" selection-end="332" vertical-scroll-proportion="0.14453961" vertical-offset="0" max-vertical-offset="3705">
               <folding />
             </state>
           </provider>
@@ -97,7 +77,6 @@
         <option value="$PROJECT_DIR$/js/bird.js" />
         <option value="$PROJECT_DIR$/song.html" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/js/songData.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/song.php" />
         <option value="$PROJECT_DIR$/js/init.js" />
@@ -107,6 +86,7 @@
         <option value="$PROJECT_DIR$/xml/sample.xml" />
         <option value="$PROJECT_DIR$/js/sheet.js" />
         <option value="$PROJECT_DIR$/js/controller.js" />
+        <option value="$PROJECT_DIR$/js/songData.js" />
       </list>
     </option>
   </component>
@@ -114,8 +94,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="15" />
     <option name="y" value="25" />
-    <option name="width" value="1267" />
-    <option name="height" value="777" />
+    <option name="width" value="1184" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -172,39 +152,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="xml" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -268,11 +216,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="15" y="25" width="1267" height="777" extended-state="0" />
+    <frame x="15" y="25" width="1184" height="1055" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19635788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2101695" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -378,20 +326,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="19" selection-start="72" selection-end="72" vertical-scroll-proportion="0.07462686" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/songData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="60" selection-start="285" selection-end="285" vertical-scroll-proportion="0.14925373" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/ui/list.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="33" selection-start="913" selection-end="913" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -406,13 +340,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xml/sample.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="22" selection-start="1292" selection-end="1292" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1425">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xml/Lukturis.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="151" column="10" selection-start="2697" selection-end="2697" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4245">
@@ -420,23 +347,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/sheet.js">
+    <entry file="file://$PROJECT_DIR$/js/controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="13" selection-start="2731" selection-end="2731" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="4140">
+        <state line="29" column="44" selection-start="770" selection-end="770" vertical-scroll-proportion="0.46573874" vertical-offset="0" max-vertical-offset="934">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/ui/menu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="36" selection-start="928" selection-end="928" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
+        <state line="24" column="36" selection-start="928" selection-end="928" vertical-scroll-proportion="0.38543898" vertical-offset="0" max-vertical-offset="975">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/controller.js">
+    <entry file="file://$PROJECT_DIR$/xml/sample.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="42" selection-start="768" selection-end="768" vertical-scroll-proportion="0.6631098" vertical-offset="0" max-vertical-offset="656">
+        <state line="76" column="22" selection-start="1292" selection-end="1292" vertical-scroll-proportion="1.2205567" vertical-offset="0" max-vertical-offset="1425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sheet.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="136" column="12" selection-start="5004" selection-end="5004" vertical-scroll-proportion="0.0" vertical-offset="1770" max-vertical-offset="4140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/songData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="21" selection-start="332" selection-end="332" vertical-scroll-proportion="0.14453961" vertical-offset="0" max-vertical-offset="3705">
           <folding />
         </state>
       </provider>
