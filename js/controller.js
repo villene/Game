@@ -5,15 +5,22 @@ var Controller = {
     }, startGame: function (octave) {
         console.log('START GAME - ' + songData.name);
 
-        bird = new Bird();
+        songData.setBottomMidi();
+        CONFIG.bottomMidi += (octave - songData.octave) * 12;
+
+        bird = new Bird( CONFIG.bottomMidi + 12 );
         sheet = new Sheet(songData.name, octave - songData.octave);
 
         UI.pause = new Pause();
         UI.points = new Points();
-    }, finishGame: function () {
+    }
+
+    , finishGame: function () {
         console.log('GAME FINISHED');
         UI.finish = new Finish();
-    }, restartGame: function () {
+    }
+
+    , restartGame: function () {
 
         bird.destroy();
         delete bird;

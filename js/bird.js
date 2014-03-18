@@ -1,6 +1,6 @@
 var Bird = Class.extend({
-    init: function () {
-        this.midi = 48;
+    init: function (midi) {
+        this.midi = midi;
         this.sprite = false;
         this.draw();
         this.move();

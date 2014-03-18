@@ -9,6 +9,7 @@ var SongData = Class.extend({
         this.minMidi;
         this.maxMidi;
         this.findMaxMinMidi(this.xml);
+        this.setBottomMidi();
 
         if (!this.xml) console.log('ERROR! XML file does not exist!');
     }, getOctaveData: function (xml) {
@@ -86,6 +87,13 @@ var SongData = Class.extend({
 
         this.minMidi = Math.round(this.minMidi);
         this.maxMidi = Math.round(this.maxMidi);
+    }
+
+    , setBottomMidi: function(){
+        var visibleLines = Math.floor(game.height/CONFIG.lineHeight);
+        var songLines = this.maxMidi - this.minMidi;
+        var linesFromBottom = Math.round((visibleLines - songLines) / 2);
+        CONFIG.bottomMidi = this.minMidi - linesFromBottom;
     }
 
     , parseUrl: function () {

@@ -7,6 +7,8 @@
 </head>
 <body>
 
+    <h1>Song list:</h1>
+
 <?php
 if ($handle = opendir('xml/')) {
     while (false !== ($entry = readdir($handle))) {
