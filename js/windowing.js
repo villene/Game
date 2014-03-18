@@ -55,31 +55,6 @@ function test(freq) {
 
 }
 
-function normalizeTimeData(freqData) {
-    var buf = [];
-    var max = Math.max.apply(Math, freqData);
-
-    max = Math.round(max / 2);
-
-    var l = freqData.length;
-    for (var i = 0; i < l; i++) {
-        if (freqData[i] < max) buf[i] = freqData[i] / (max - 1) - 1;
-        else buf[i] = (freqData[i] - (max - 1)) / max;
-    }
-    return buf;
-}
-
-function normalizeTimeData2(freqData) {
-    var buf = [];
-
-    var l = freqData.length;
-    for (var i = 0; i < l; i++) {
-        if (freqData[i] < 128) buf[i] = freqData[i] / 127 - 1;
-        else buf[i] = (freqData[i] - 127) / 128;
-    }
-    return buf;
-}
-
 function normalizeTimeData3(freqData) {
     var buf = [];
     var l = freqData.length;
@@ -106,8 +81,6 @@ function normalizeTimeData4(freqData) {
 }
 
 function testRealTime(freq) {
-    //var buf=normalize(autoCorrelate(windowing(buf)));
-    //var i=zeroCrossing(normalize(autoCorrelate(windowing(buf))));
     var db = normalizeTimeData3(freq);
     var buf = normalize(autoCorrelate(windowing(db)));
     var i = zeroCrossing(buf);
