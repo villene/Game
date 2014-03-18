@@ -68,7 +68,7 @@ var SongData = Class.extend({
                 var alter = false;
             }
 
-            if(!octave || !step || !alter){
+            if(!octave || !step){
                 continue; // check against rest elements
             }
 

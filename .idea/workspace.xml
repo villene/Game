@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa957a23-b4ca-49df-935e-447017a6a73a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bird.js" afterPath="$PROJECT_DIR$/js/bird.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controller.js" afterPath="$PROJECT_DIR$/js/controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/songData.js" afterPath="$PROJECT_DIR$/js/songData.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -29,6 +26,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Lukturis.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xml/Lukturis.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="151" column="10" selection-start="2697" selection-end="2697" vertical-scroll-proportion="0.0" vertical-offset="2025" max-vertical-offset="4245">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="sheet.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/sheet.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -56,19 +62,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bird.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="bird.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/bird.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="24" selection-start="78" selection-end="78" vertical-scroll-proportion="0.032119915" vertical-offset="0" max-vertical-offset="934">
+            <state line="2" column="24" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="songData.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="songData.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/songData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="40" selection-start="3456" selection-end="3456" vertical-scroll-proportion="0.0" vertical-offset="1080" max-vertical-offset="3825">
+            <state line="70" column="31" selection-start="2626" selection-end="2626" vertical-scroll-proportion="0.40149894" vertical-offset="675" max-vertical-offset="3825">
               <folding />
             </state>
           </provider>
@@ -115,9 +121,9 @@
         <option value="$PROJECT_DIR$/xml/sample.xml" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/js/sheet.js" />
-        <option value="$PROJECT_DIR$/js/songData.js" />
         <option value="$PROJECT_DIR$/js/controller.js" />
         <option value="$PROJECT_DIR$/js/bird.js" />
+        <option value="$PROJECT_DIR$/js/songData.js" />
       </list>
     </option>
   </component>
@@ -170,6 +176,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -310,7 +330,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/xml/Lukturis.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="263" column="14" selection-start="4190" selection-end="4190" vertical-scroll-proportion="0.0" vertical-offset="3945" max-vertical-offset="4260" />
+        <state line="263" column="14" selection-start="4190" selection-end="4190" vertical-scroll-proportion="0.0" vertical-offset="3945" max-vertical-offset="4260">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/sheet.js">
@@ -369,11 +391,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xml/Lukturis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="10" selection-start="2697" selection-end="2697" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4245" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/ui/menu.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="36" selection-start="928" selection-end="928" vertical-scroll-proportion="0.38543898" vertical-offset="0" max-vertical-offset="975">
@@ -383,7 +400,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/xml/sample.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="22" selection-start="1292" selection-end="1292" vertical-scroll-proportion="1.2205567" vertical-offset="0" max-vertical-offset="1425" />
+        <state line="76" column="22" selection-start="1292" selection-end="1292" vertical-scroll-proportion="1.2205567" vertical-offset="0" max-vertical-offset="1425">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/song.php">
@@ -414,13 +433,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/songData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="40" selection-start="3456" selection-end="3456" vertical-scroll-proportion="0.0" vertical-offset="1080" max-vertical-offset="3825">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="61" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
@@ -430,7 +442,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/bird.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="24" selection-start="78" selection-end="78" vertical-scroll-proportion="0.032119915" vertical-offset="0" max-vertical-offset="934">
+        <state line="2" column="24" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/Lukturis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="151" column="10" selection-start="2697" selection-end="2697" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4245">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/songData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="31" selection-start="2626" selection-end="2626" vertical-scroll-proportion="0.40149894" vertical-offset="675" max-vertical-offset="3825">
           <folding />
         </state>
       </provider>
