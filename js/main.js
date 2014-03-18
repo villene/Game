@@ -56,10 +56,18 @@ function getXML() {
     var altlist = xmlDoc.getElementsByTagName("alter");
 
     for (var i = 0; i < steplist.length; i++) {
-        NoteObject[i] = {step: steplist[i].childNodes[0].nodeValue,
-            octave: octlist[i].childNodes[0].nodeValue - 1,
-            alter: altlist[i].childNodes[0].nodeValue,
-            correct: null};
+//        NoteObject[i] = {
+//            step: steplist[i].childNodes[0].nodeValue,
+//            octave: octlist[i].childNodes[0].nodeValue - 1,
+//            alter: altlist[i].childNodes[0].nodeValue,
+//            correct: null
+//        };
+        NoteObject[i] = {
+            step: 'A',
+            octave: 3,
+            alter: 1,
+            correct: null
+        };
     }
     updateAnalysers();
 };
