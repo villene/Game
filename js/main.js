@@ -1,5 +1,10 @@
 window.AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioContext = new AudioContext();
+window.audioContext = new AudioContext();
+window.oscillator = audioContext.createOscillator();
+        oscillator.type = 0; // Sine wave
+        oscillator.frequency.value = 0; // Default frequency in hertz
+        oscillator.connect(audioContext.destination); // Connect sound source 1 to output
+        oscillator.noteOn(0); // Play sound source 1 instantly
 var audioInput = null,
     inputPoint = null;
 var rafID = null;
@@ -25,7 +30,7 @@ function updateAnalysers(time) {
         Note = frequencyToNote(frekvence.frequency);
 
         if (bird) {
-            console.log(Note.midi);
+            //console.log(Note.midi);
             if (frekvence.frequency > 70 && isFinite(frekvence.frequency) && frekvence.decibels > thresholdSilence) {
                 bird.setMidi(Note.midi);
             } else {

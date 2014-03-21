@@ -35,7 +35,8 @@ function update() {
 }
 
 function render() {
-        game.debug.renderCameraInfo(game.camera, 500, 32);
+        //game.debug.renderCameraInfo(game.camera, 500, 32);
+        //game.debug.renderInputInfo(32,32);
 }
 
 

@@ -1,5 +1,6 @@
+var prevFreq = 0;
 var Score = Class.extend({
-    init: function (midi, note, oct, step, bps, nr, text) {
+    init: function (midi, note, oct, step, bps, nr, text, freqGen) {
         this.midi = midi;
         this.note = note;
         this.oct = oct;
@@ -9,6 +10,7 @@ var Score = Class.extend({
         this.text = text;
         this.accuracyArr = [];
         this.accuracy = false;
+        this.frequency = freqGen;
 
         this.sprite = game.add.sprite(0, 0, 'heart');
         this.sprite.anchor.setTo(0, 0.5);
@@ -28,7 +30,18 @@ var Score = Class.extend({
         this.sprite.y = y;
 
         this.lyric.x = x + 220;
-    }, checkAccuracyUnit: function (birdMidi) {
+        
+        if (this.sprite.x===2){            
+            this.generateSound(this.frequency);
+        }
+    },
+        generateSound: function (frequency){
+
+        oscillator.frequency.value=frequency;
+        
+            
+    },    
+        checkAccuracyUnit: function (birdMidi) {
         var isAccurate = this.midi === Math.round(birdMidi) ? true : false;
         this.accuracyArr.push(isAccurate);
     }, checkAccuracy: function () {

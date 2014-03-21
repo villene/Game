@@ -65,6 +65,7 @@ var Sheet = Class.extend({
 
             } else {
                 var freq = this.noteToFrequency(octave, step, alter);
+                var freqGen = freq;
                 freq = this.frequencyToNote(freq);
 //                console.log(freq, freq.midi, octave, step, alter);
             }
@@ -74,7 +75,7 @@ var Sheet = Class.extend({
                 if (rest) {
                     this.list[nr] = new Rest();
                 } else {
-                    this.list[nr] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, this.bps, nr, text);
+                    this.list[nr] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, this.bps, nr, text, freqGen);
                     text = false; // add text only to first note
                     this.group.add(this.list[nr].sprite);
                 }
