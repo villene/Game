@@ -96,14 +96,17 @@ var Sheet = Class.extend({
         this.group.x = 200;
     }, play: function () {
         console.log('play');
+        this.generateSound();
         this.playing = true;
-        this.timeSplit = new Date().getTime();
+        this.timeSplit = new Date().getTime();        
     }, pause: function () {
         console.log('pause');
         this.playing = false;
         var newTime = new Date().getTime();
         this.time += newTime - this.timeSplit;
         this.timeSplit = newTime;
+        
+        oscillator.disconnect();
     }, update: function () {
         if (this.status == 'finished') {
             return;
@@ -116,7 +119,13 @@ var Sheet = Class.extend({
             this.draw();
             this.checkAccuracy(bird.midi);
         }
-    }, checkAccuracy: function (midi) {
+    }, generateSound: function(){
+        window.oscillator = audioContext.createOscillator();
+        oscillator.type = 0; // Sine wave
+        oscillator.frequency.value = 0; // Default frequency in hertz
+        oscillator.connect(audioContext.destination); // Connect sound source 1 to output
+        oscillator.noteOn(0); // Play sound source 1 instantly
+    },checkAccuracy: function (midi) {
         // calculate score being played
         var scoreNr = Math.floor(this.time / 1000 * this.bps);
         if (scoreNr - 1 >= 0) {
@@ -131,6 +140,8 @@ var Sheet = Class.extend({
     }, finished: function () {
         this.status = 'finished';
         Controller.finishGame();
+        
+        oscillator.disconnect();
     }, getScoreCount: function () {
         return this.list.length;
     }, destroy: function () {

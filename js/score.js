@@ -31,17 +31,12 @@ var Score = Class.extend({
 
         this.lyric.x = x + 220;
         
-        if (this.sprite.x===2){            
+        if (this.sprite.x===5){            
             this.generateSound(this.frequency);
         }
-    },
-        generateSound: function (frequency){
-
-        oscillator.frequency.value=frequency;
-        
-            
-    },    
-        checkAccuracyUnit: function (birdMidi) {
+    },generateSound: function (frequency){
+        oscillator.frequency.value=frequency;                  
+    },checkAccuracyUnit: function (birdMidi) {
         var isAccurate = this.midi === Math.round(birdMidi) ? true : false;
         this.accuracyArr.push(isAccurate);
     }, checkAccuracy: function () {
