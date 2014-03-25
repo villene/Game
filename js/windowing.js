@@ -100,6 +100,10 @@ function getDb(db) {
     //return sum/=2048;
 }
 
+ function collectNoise(){
+        thresholdSilence+=mainFreq.decibels;
+    }
+
 function fPitch(maxInd) {
 
     return audioContext.sampleRate / maxInd;

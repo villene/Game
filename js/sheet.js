@@ -96,7 +96,7 @@ var Sheet = Class.extend({
         this.group.x = 200;
     }, play: function () {
         console.log('play');
-        this.generateSound();
+        this.generateOscillator();
         this.playing = true;
         this.timeSplit = new Date().getTime();        
     }, pause: function () {
@@ -119,7 +119,7 @@ var Sheet = Class.extend({
             this.draw();
             this.checkAccuracy(bird.midi);
         }
-    }, generateSound: function(){
+    }, generateOscillator: function(){
         window.oscillator = audioContext.createOscillator();
         oscillator.type = 0; // Sine wave
         oscillator.frequency.value = 0; // Default frequency in hertz

@@ -40,11 +40,26 @@ var Menu = Class.extend({
         var play = game.add.button(game.width / 2, 400, 'pauseButton', this.startGame, this, 1, 1, 1);
         play.anchor.setTo(0.5, 0.5);
         this.group.add(play);
+        
+        var measureText = game.add.text(game.width/2+17, 307, 'Set background noise', {font: "16px Arial", fill: "#333"});
+        this.group.add(measureText);
+        
+        var bgMeasure = game.add.button(game.width/2+200, 315, 'noiseButton', this.measureNoise, this, 1, 1, 1);
+        bgMeasure.anchor.setTo (0.5, 0.5);
+        this.group.add(bgMeasure);
 
     }, startGame: function () {
 //        Controller.startGame( this.scores.getSelected() );
         Controller.startGame(this.octaves.getSelected());
         this.hide();
+    }, measureNoise: function(){
+        if (!mainFreq)return;        
+        else{
+            thresholdSilence=0;
+            var collect = setInterval(function(){collectNoise();}, 50);
+            setTimeout(function(){clearInterval(collect);}, 4050);
+            setTimeout(function(){thresholdSilence/=80;},4055); console.log(thresholdSilence);            
+        }         
     }, toggle: function () {
 
     }, show: function () {

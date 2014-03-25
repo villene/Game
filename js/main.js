@@ -7,8 +7,8 @@ var rafID = null;
 var analyserContext = null;
 var canvasWidth, canvasHeight;
 var Note = null;
-
-var thresholdSilence = Math.pow(10, -2.5);
+window.thresholdSilence = Math.pow(10, -2.5);
+window.mainFreq;
 
 var noteLines = [48, 50, 52, 53, 55, 57, 59, 60];
 
@@ -22,12 +22,12 @@ function updateAnalysers(time) {
         var freqData = new Uint8Array(2048);
         analyserNode.getByteTimeDomainData(freqData);
 
-        var frekvence = testRealTime(freqData);
-        Note = frequencyToNote(frekvence.frequency);
+        mainFreq = testRealTime(freqData);
+        Note = frequencyToNote(mainFreq.frequency);
 
         if (bird) {
             //console.log(Note.midi);
-            if (frekvence.frequency > 70 && isFinite(frekvence.frequency) && frekvence.decibels > thresholdSilence) {
+            if (mainFreq.frequency > 70 && isFinite(mainFreq.frequency) && mainFreq.decibels > thresholdSilence) {
                 bird.setMidi(Note.midi);
             } else {
                 bird.setMidi(1);
