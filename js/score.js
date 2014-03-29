@@ -17,29 +17,32 @@ var Score = Class.extend({
         this.sprite.scale.x = 1;
         this.sprite.scale.y = 1;
 
-        var style = { font: "18px Arial", fill: "#ff0044", align: "center"};
-        this.lyric = game.add.text(220, 450, this.text, style);
-        this.lyric.anchor.setTo(0.5, 0.5);
+        var style = { font: "18px Arial", fill: "#ff0044"};
+        this.lyric = game.add.text(this.sprite.x, game.height-30, this.text, style);
+        this.lyric.anchor.setTo(0, 1);
 
         this.draw(0);
-    }, draw: function (time) {
+    }
+
+    , draw: function (time) {
         var deltaX = Math.round((time / 1000) * this.bps * CONFIG.noteWidth);
         var x = CONFIG.noteWidth * this.nr - deltaX;
         var y = game.height - (this.midi - CONFIG.bottomMidi) * CONFIG.lineHeight;
         this.sprite.x = x;
         this.sprite.y = y;
+        this.lyric.x = x;
+    },
 
-        this.lyric.x = x + 220;
-        
-        if (this.sprite.x===5){            
-            this.generateSound(this.frequency);
-        }
-    },generateSound: function (frequency){
-        oscillator.frequency.value=frequency;                  
-    },checkAccuracyUnit: function (birdMidi) {
+    playNote: function (){
+        oscillator.frequency.value = this.frequency;
+    },
+
+    checkAccuracyUnit: function (birdMidi) {
         var isAccurate = this.midi === Math.round(birdMidi) ? true : false;
         this.accuracyArr.push(isAccurate);
-    }, checkAccuracy: function () {
+    },
+
+    checkAccuracy: function () {
         if (this.accuracy !== false) {
             return;
         }

@@ -64,7 +64,7 @@ var Menu = Class.extend({
 
     }, show: function () {
         this.group.x = -game.width;
-        game.add.tween(this.group).to({x: 0}, 1000).start();
+        game.add.tween(this.group).to({x: 0}, 300).start();
     }, hide: function () {
         var tween = game.add.tween(this.group).to({x: game.width}, 1000).start();
         tween.onComplete.add(this.destroy, this);

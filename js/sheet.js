@@ -15,8 +15,10 @@ var Sheet = Class.extend({
 
         this.group = game.add.group();
 
+        this.generateOscillator();
         this.getXML();
         this.draw();
+
     }, getXML: function () {
 
 //        xmlhttp=new XMLHttpRequest();
@@ -78,6 +80,7 @@ var Sheet = Class.extend({
                     this.list[nr] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, this.bps, nr, text, freqGen);
                     text = false; // add text only to first note
                     this.group.add(this.list[nr].sprite);
+                    if(this.list[nr].lyric) this.group.add(this.list[nr].lyric);
                 }
 
                 if (octave) {
@@ -89,25 +92,32 @@ var Sheet = Class.extend({
 //            this.list[i] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, this.bps, nr, text);
 //            this.group.add(this.list[i].sprite);
         }
-    }, draw: function () {
+    }
+
+    , draw: function () {
         for (var i = 0, l = this.list.length; i < l; i++) {
             this.list[i].draw(this.time);
         }
         this.group.x = 200;
-    }, play: function () {
+    }
+
+    , play: function () {
         console.log('play');
-        this.generateOscillator();
         this.playing = true;
-        this.timeSplit = new Date().getTime();        
-    }, pause: function () {
+        this.timeSplit = new Date().getTime();
+        oscillator.start(0);
+    }
+
+    , pause: function () {
         console.log('pause');
         this.playing = false;
         var newTime = new Date().getTime();
         this.time += newTime - this.timeSplit;
         this.timeSplit = newTime;
-        
-        oscillator.disconnect();
-    }, update: function () {
+        oscillator.stop(0);
+    }
+
+    , update: function () {
         if (this.status == 'finished') {
             return;
         }
@@ -118,14 +128,26 @@ var Sheet = Class.extend({
 
             this.draw();
             this.checkAccuracy(bird.midi);
+            this.playNote();
         }
-    }, generateOscillator: function(){
+    },
+
+    playNote: function(){
+        var scoreNr = Math.floor(this.time / 1000 * this.bps);
+        if (scoreNr - 1 >= 0) {
+            this.list[scoreNr - 1].playNote();
+        }
+    }
+
+    , generateOscillator: function(){
         window.oscillator = audioContext.createOscillator();
         oscillator.type = 0; // Sine wave
         oscillator.frequency.value = 0; // Default frequency in hertz
         oscillator.connect(audioContext.destination); // Connect sound source 1 to output
-        oscillator.noteOn(0); // Play sound source 1 instantly
-    },checkAccuracy: function (midi) {
+//        oscillator.noteOn(0); // Play sound source 1 instantly
+    }
+
+    ,checkAccuracy: function (midi) {
         // calculate score being played
         var scoreNr = Math.floor(this.time / 1000 * this.bps);
         if (scoreNr - 1 >= 0) {
