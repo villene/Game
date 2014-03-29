@@ -105,7 +105,6 @@ var Sheet = Class.extend({
         console.log('play');
         this.playing = true;
         this.timeSplit = new Date().getTime();
-        oscillator.start(0);
     }
 
     , pause: function () {
@@ -114,7 +113,7 @@ var Sheet = Class.extend({
         var newTime = new Date().getTime();
         this.time += newTime - this.timeSplit;
         this.timeSplit = newTime;
-        oscillator.stop(0);
+        oscillator.frequency.value = 0;
     }
 
     , update: function () {
@@ -145,6 +144,7 @@ var Sheet = Class.extend({
         oscillator.frequency.value = 0; // Default frequency in hertz
         oscillator.connect(audioContext.destination); // Connect sound source 1 to output
 //        oscillator.noteOn(0); // Play sound source 1 instantly
+        oscillator.start(0);
     }
 
     ,checkAccuracy: function (midi) {
