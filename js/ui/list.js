@@ -9,11 +9,15 @@ var List = Class.extend({
 
         // select first element
         this.toggle(this.getNrByVal(list, defaultVal));
-    }, iterateList: function (list) {
+    }
+
+    , iterateList: function (list) {
         for (var i = 0, l = list.length; i < l; i++) {
             this.add(list[i].title);
         }
-    }, add: function (text) {
+    }
+
+    , add: function (text) {
         var y = this.y + this.elements.length * this.lineHeight;
         var nr = this.elements.length;
         var button = game.add.button(this.x, y, 'title_button', function () {
@@ -28,19 +32,25 @@ var List = Class.extend({
         this.group.add(t);
 
         this.elements.push({ button: button, text: t, title: text });
-    }, getNrByVal: function (list, val) {
+    }
+
+    , getNrByVal: function (list, val) {
         for (var i = 0, l = list.length; i < l; i++) {
             if (list[i].title === val) {
                 return i;
             }
         }
         return 0;
-    }, toggle: function (elementNr) {
+    }
+
+    , toggle: function (elementNr) {
         for (var i = 0, l = this.elements.length; i < l; i++) {
             this.buttonState(i, 'unselect');
         }
         this.buttonState(elementNr, 'select');
-    }, buttonState: function (nr, state) {
+    }
+
+    , buttonState: function (nr, state) {
         if (state == 'select') {
             this.elements[nr].button.setFrames(1, 1, 1);
             this.elements[nr].active = true;

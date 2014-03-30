@@ -1,8 +1,12 @@
 var Controller = {
-    status: false, createGame: function () {
+    status: false
+
+    , createGame: function () {
         drawBg();
-        UI.menu = new Menu(songData.octave);
-    }, startGame: function (octave) {
+        UI.menu = new Menu( db.get('octave') );
+    }
+
+    , startGame: function (octave) {
         console.log('START GAME - ' + songData.name);
 
         songData.setBottomMidi();

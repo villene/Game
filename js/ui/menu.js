@@ -48,12 +48,18 @@ var Menu = Class.extend({
         bgMeasure.anchor.setTo (0.5, 0.5);
         this.group.add(bgMeasure);
 
-    }, startGame: function () {
+    }
+
+    , startGame: function () {
 //        Controller.startGame( this.scores.getSelected() );
+        // save user selected octave
+        db.set('octave', this.octaves.getSelected());
         Controller.startGame(this.octaves.getSelected());
         this.hide();
-    }, measureNoise: function(){
-        if (!mainFreq)return;        
+    }
+
+    , measureNoise: function(){
+        if (!mainFreq)return;
         else{
             thresholdSilence=0;
             var collect = setInterval(function(){collectNoise();}, 50);

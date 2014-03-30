@@ -8,6 +8,7 @@
     <script src="js/phaser_min.1.1.5.js"></script>
     <script src="js/class.js"></script>
     <script src="js/config.js"></script>
+    <script src="js/db.js"></script>
 
     <script src="js/controller.js"></script>
     <script src="js/songData.js"></script>

@@ -1,5 +1,8 @@
 var game = new Phaser.Game(1024, 500, Phaser.CANVAS, 'phaser', { preload: preload, create: create, update: update, render: render });
+
+// global variables
 var bird, sheet;
+var db = new DB();
 var songData = new SongData();
 
 function preload() {
