@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa957a23-b4ca-49df-935e-447017a6a73a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/arrow.png" afterPath="$PROJECT_DIR$/assets/arrow.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controller.js" afterPath="$PROJECT_DIR$/js/controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/triad.js" afterPath="$PROJECT_DIR$/js/triad.js" />
     </list>
     <ignored path="Game.iws" />
@@ -30,7 +28,7 @@
       <file leaf-file-name="triad.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/triad.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="15" selection-start="453" selection-end="453" vertical-scroll-proportion="0.28969958" vertical-offset="0" max-vertical-offset="932">
+            <state line="18" column="14" selection-start="452" selection-end="452" vertical-scroll-proportion="0.28969958" vertical-offset="0" max-vertical-offset="932">
               <folding />
             </state>
           </provider>
@@ -489,7 +487,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/triad.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="15" selection-start="453" selection-end="453" vertical-scroll-proportion="0.28969958" vertical-offset="0" max-vertical-offset="932">
+        <state line="18" column="14" selection-start="452" selection-end="452" vertical-scroll-proportion="0.28969958" vertical-offset="0" max-vertical-offset="932">
           <folding />
         </state>
       </provider>

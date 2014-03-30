@@ -16,7 +16,7 @@ var Triad = Class.extend({
         setTimeout(function(){
             key++;
             self.play(key);
-        }, 1000);
+        }, 500);
     }
 
     , generateOscillator: function(){
@@ -28,7 +28,8 @@ var Triad = Class.extend({
     }
 
     , destroy: function(){
-        oscillator.disconnect();
+        oscillator.frequency.value = 0;
+//        this.oscillator.disconnect();
     }
 
 })
