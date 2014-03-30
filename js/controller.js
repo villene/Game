@@ -13,10 +13,9 @@ var Controller = {
         CONFIG.bottomMidi += (octave - songData.octave) * 12;
 
         bird = new Bird( CONFIG.bottomMidi + 12 );
-//        sheet = new Sheet(songData.name, octave - songData.octave);
         sheet = new Sheet(songData.name, octave, tempo);
 
-
+        new Triad();
         UI.pause = new Pause();
         UI.points = new Points();
     }
