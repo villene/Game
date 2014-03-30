@@ -3,6 +3,7 @@ var Menu = Class.extend({
         this.group = game.add.group();
         this.scores;
         this.octaves;
+        this.tempo;
         this.defaultOctave = defaultOctave;
 
         this.draw();
@@ -37,9 +38,20 @@ var Menu = Class.extend({
         this.octaves = new List(scoreX, scoreY, lineHeight, octavesList, this.defaultOctave);
         this.group.add(this.octaves.group);
 
+        var scoreX = 280;
+        var scoreY = 240;
+        // value, step, min, max
+        this.tempo = new Range(scoreX, scoreY, 120);
+        this.group.add(this.tempo.group);
+
+
         var play = game.add.button(game.width / 2, 400, 'pauseButton', this.startGame, this, 1, 1, 1);
         play.anchor.setTo(0.5, 0.5);
         this.group.add(play);
+
+
+
+
         
         var measureText = game.add.text(game.width/2+17, 307, 'Set background noise', {font: "16px Arial", fill: "#333"});
         this.group.add(measureText);
@@ -52,9 +64,10 @@ var Menu = Class.extend({
 
     , startGame: function () {
 //        Controller.startGame( this.scores.getSelected() );
+        console.log('octave: ' + this.octaves.getSelected(), 'tempo: ' + this.tempo.getSelected());
         // save user selected octave
         db.set('octave', this.octaves.getSelected());
-        Controller.startGame(this.octaves.getSelected());
+        Controller.startGame(this.octaves.getSelected(), this.tempo.getSelected());
         this.hide();
     }
 

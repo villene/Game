@@ -26,7 +26,7 @@ var List = Class.extend({
         button.anchor.setTo(0, 0);
         this.group.add(button);
 
-        var style = { font: "20px Arial", fill: "#333", align: "center" };
+        var style = { font: "20px Arial", fill: "#333" };
         var t = game.add.text(this.x + 5, y + 2, text, style);
         t.anchor.setTo(0, 0);
         this.group.add(t);

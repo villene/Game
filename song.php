@@ -17,11 +17,13 @@
     <script src="js/sheet.js"></script>
     <script src="js/init.js"></script>
     <script src="js/bird.js"></script>
+    <script src="js/triad.js"></script>
 
     <!-- UI -->
     <script src="js/ui/pause.js"></script>
     <script src="js/ui/menu.js"></script>
     <script src="js/ui/list.js"></script>
+    <script src="js/ui/range.js"></script>
     <script src="js/ui/points.js"></script>
     <script src="js/ui/finish.js"></script>
 

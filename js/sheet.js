@@ -1,9 +1,9 @@
 var Sheet = Class.extend({
-    init: function (title, octaveDiff) {
+    init: function (title, octave, tempo) {
         this.title = title;
-        this.octaveDiff = octaveDiff;
+        this.octaveDiff = octave - songData.octave;
         this.divisions = 4;
-        this.tempo = 120;
+        this.tempo = tempo;
         this.bpm = this.tempo * this.divisions; // 1 beat is 1/16 note by default
         this.bps = this.bpm / 60; // beats per second
         this.list = [];

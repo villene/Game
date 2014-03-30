@@ -11,6 +11,7 @@ function preload() {
     game.load.image('popup_bg', 'assets/popup_bg.png');
     game.load.spritesheet('title_button', 'assets/title_button.png', 200, 30);
     game.load.image('noiseButton', 'assets/noise_button.png', 40, 40);
+    game.load.image('arrow', 'assets/arrow.png');
 
     // gameplay assets
     game.load.image('bg', 'assets/bg.png');

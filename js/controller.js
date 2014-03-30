@@ -6,14 +6,16 @@ var Controller = {
         UI.menu = new Menu( db.get('octave') );
     }
 
-    , startGame: function (octave) {
+    , startGame: function (octave, tempo) {
         console.log('START GAME - ' + songData.name);
 
         songData.setBottomMidi();
         CONFIG.bottomMidi += (octave - songData.octave) * 12;
 
         bird = new Bird( CONFIG.bottomMidi + 12 );
-        sheet = new Sheet(songData.name, octave - songData.octave);
+//        sheet = new Sheet(songData.name, octave - songData.octave);
+        sheet = new Sheet(songData.name, octave, tempo);
+
 
         UI.pause = new Pause();
         UI.points = new Points();
@@ -38,6 +40,6 @@ var Controller = {
         UI.points.destroy();
         delete UI.points;
 
-        UI.menu = new Menu(songData.octave);
+        UI.menu = new Menu( db.get('octave') );
     }
 }
