@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <score-partwise>
     <movement-title>Par spiti grutiem laikiem</movement-title>
+    <attributes>
+        <divisions>4</divisions>
+    </attributes>
     <note>
         <pitch>
             <step>G</step>
@@ -985,7 +988,7 @@
         </pitch>
         <duration>2</duration>
         <lyric>
-            <text>undefined</text>
+            <text></text>
         </lyric>
     </note>
     <note>

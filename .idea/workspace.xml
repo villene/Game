@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa957a23-b4ca-49df-935e-447017a6a73a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/Titanic.xml" afterPath="$PROJECT_DIR$/xml/Titanic.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xml/Echigo-Jishi.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xml/Par spiti grutiem laikiem.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xml/Titanic.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/xml/sekla.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/Put_vejini.xml" afterPath="$PROJECT_DIR$/xml/Put_vejini.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sheet.js" afterPath="$PROJECT_DIR$/js/sheet.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Game.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,55 +31,7 @@
     <favorites_list name="Game" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0" vertical-offset="2398" max-vertical-offset="3330">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sheet.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/sheet.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="845" selection-end="845" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="4725">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Titanic.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/xml/Titanic.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1304" column="27" selection-start="45059" selection-end="45059" vertical-scroll-proportion="0.0839779" vertical-offset="19484" max-vertical-offset="27780">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="score.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/score.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="25" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1155">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/rest.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="39" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -99,7 +57,6 @@
         <option value="$PROJECT_DIR$/js/ui/list.js" />
         <option value="$PROJECT_DIR$/xml/Lukturis.xml" />
         <option value="$PROJECT_DIR$/xml/sample.xml" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/js/controller.js" />
         <option value="$PROJECT_DIR$/js/bird.js" />
         <option value="$PROJECT_DIR$/js/songData.js" />
@@ -107,8 +64,13 @@
         <option value="$PROJECT_DIR$/js/rest.js" />
         <option value="$PROJECT_DIR$/js/score.js" />
         <option value="$PROJECT_DIR$/js/ui/menu.js" />
-        <option value="$PROJECT_DIR$/js/sheet.js" />
         <option value="$PROJECT_DIR$/xml/Titanic.xml" />
+        <option value="$PROJECT_DIR$/js/sheet.js" />
+        <option value="$PROJECT_DIR$/xml/Put_vejini.xml" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/xml/Par_spiti_grutiem_laikiem.xml" />
+        <option value="$PROJECT_DIR$/xml/Vasaras_Vidu.xml" />
+        <option value="$PROJECT_DIR$/xml/Kur_tu_teci.xml" />
       </list>
     </option>
   </component>
@@ -161,20 +123,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xml" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -272,10 +220,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="15" y="25" width="1229" height="1053" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20244898" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20244898" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -367,16 +315,6 @@
         <state line="27" column="33" selection-start="913" selection-end="913" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xml/sample.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="22" selection-start="1292" selection-end="1292" vertical-scroll-proportion="1.2205567" vertical-offset="0" max-vertical-offset="1425" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/song.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="42" selection-start="415" selection-end="415" vertical-scroll-proportion="0.1978022" vertical-offset="0" max-vertical-offset="910" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270" />
@@ -392,38 +330,14 @@
         <state line="2" column="24" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xml/Lukturis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="10" selection-start="2697" selection-end="2697" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4245" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/songData.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="70" column="31" selection-start="2626" selection-end="2626" vertical-scroll-proportion="0.40149894" vertical-offset="675" max-vertical-offset="3825" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="18" selection-start="228" selection-end="228" vertical-scroll-proportion="0.14835165" vertical-offset="0" max-vertical-offset="910" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xml/Echigo-Jishi.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="23" selection-start="5397" selection-end="5407" vertical-scroll-proportion="0.13116592" vertical-offset="1653" max-vertical-offset="38610">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/init.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="19" selection-start="806" selection-end="806" vertical-scroll-proportion="0.3264418" vertical-offset="0" max-vertical-offset="919">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0" vertical-offset="2398" max-vertical-offset="3330">
           <folding />
         </state>
       </provider>
@@ -442,25 +356,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/rest.js">
+    <entry file="file://$PROJECT_DIR$/xml/Put_vejini.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="39" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state line="513" column="19" selection-start="14271" selection-end="14271" vertical-scroll-proportion="2.72103" vertical-offset="5159" max-vertical-offset="29460">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/sheet.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="845" selection-end="845" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="4725">
+        <state line="29" column="53" selection-start="893" selection-end="893" vertical-scroll-proportion="0.36887923" vertical-offset="96" max-vertical-offset="4740">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xml/Titanic.xml">
+    <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1304" column="27" selection-start="45059" selection-end="45059" vertical-scroll-proportion="0.0839779" vertical-offset="19484" max-vertical-offset="27780">
+        <state line="13" column="0" selection-start="369" selection-end="369" vertical-scroll-proportion="-2.363734" vertical-offset="2398" max-vertical-offset="3330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/rest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="39" selection-start="306" selection-end="306" vertical-scroll-proportion="0.16094421" vertical-offset="0" max-vertical-offset="932">
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/sample.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="22" selection-start="1292" selection-end="1292" vertical-scroll-proportion="0.96781117" vertical-offset="238" max-vertical-offset="1425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/Div_dujinas_gaisa_skreja.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="15615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/song.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="42" selection-start="415" selection-end="415" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="61" selection-start="662" selection-end="662" vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="585">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/Lukturis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="151" column="10" selection-start="2697" selection-end="2697" vertical-scroll-proportion="0.8851931" vertical-offset="1440" max-vertical-offset="4245">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/Par_spiti_grutiem_laikiem.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="990" column="18" selection-start="20634" selection-end="20634" vertical-scroll-proportion="0.37231758" vertical-offset="14503" max-vertical-offset="15885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/Vasaras_Vidu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="477" column="18" selection-start="9877" selection-end="9877" vertical-scroll-proportion="7.6770387" vertical-offset="0" max-vertical-offset="12585">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/My_Heart_Will_Go_On.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="25" selection-start="2942" selection-end="2946" vertical-scroll-proportion="0.3325967" vertical-offset="899" max-vertical-offset="27780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/Dzimta_valoda.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="32" selection-start="2085" selection-end="2085" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="40095">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/Kur_tu_teci.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="879" column="19" selection-start="18163" selection-end="18163" vertical-scroll-proportion="0.6781116" vertical-offset="12553" max-vertical-offset="13665">
           <folding />
         </state>
       </provider>

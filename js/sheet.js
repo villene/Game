@@ -2,9 +2,9 @@ var Sheet = Class.extend({
     init: function (title, octaveDiff) {
         this.title = title;
         this.octaveDiff = octaveDiff;
-        this.division = 4;
+        this.divisions = 4;
         this.tempo = 120;
-        this.bpm = this.tempo * this.division; // 1 beat is 1/16 note by default
+        this.bpm = this.tempo * this.divisions; // 1 beat is 1/16 note by default
         this.bps = this.bpm / 60; // beats per second
         this.list = [];
         this.status = 'active';
@@ -25,8 +25,9 @@ var Sheet = Class.extend({
 
     , getXML: function () {
 
-        if (songData.xml.getElementsByTagName("division")[0]){
-            this.division = songData.xml.getElementsByTagName("division")[0].childNodes[0].nodeValue;
+        if (songData.xml.getElementsByTagName("divisions")[0]){
+            this.divisions = songData.xml.getElementsByTagName("divisions")[0].childNodes[0].nodeValue;
+            console.log('divisions', this.divisions);
         }
 
         var notes = songData.xml.getElementsByTagName("note");
@@ -50,9 +51,9 @@ var Sheet = Class.extend({
             }
             if (notes[i].getElementsByTagName("duration")[0]) {
                 var duration = notes[i].getElementsByTagName("duration")[0].childNodes[0].nodeValue;
-                if(this.division != 4){
+                if(this.divisions != 4){
                     // all elements are normalized to 1/16 notes
-                    duration = Math.round(duration * 4/this.division);
+                    duration = Math.round(duration * 4/this.divisions);
                 }
             } else {
                 var duration = 0;

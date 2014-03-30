@@ -1,21 +1,62 @@
 <?xml version="1.0"?>
 <score-partwise>
+    <movement-title>Kur_tu_teci</movement-title>
+    <attributes>
+        <divisions>8</divisions>
+    </attributes>
+    <note>
+        <pitch>
+            <step>E</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+        <lyric>
+            <text>Kur</text>
+        </lyric>
+    </note>
+    <note>
+        <pitch>
+            <step>E</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
     <note>
         <pitch>
             <step>G</step>
-            <octave>3</octave>
+            <octave>4</octave>
         </pitch>
         <duration>2</duration>
         <lyric>
-            <text>Ir</text>
+            <text>tu</text>
         </lyric>
     </note>
     <note>
         <pitch>
             <step>G</step>
-            <octave>3</octave>
+            <octave>4</octave>
         </pitch>
         <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>F</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+        <lyric>
+            <text>te</text>
+        </lyric>
+    </note>
+    <note>
+        <pitch>
+            <step>F</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+        <lyric>
+            <text></text>
+        </lyric>
     </note>
     <note>
         <pitch>
@@ -24,7 +65,7 @@
         </pitch>
         <duration>2</duration>
         <lyric>
-            <text>lī</text>
+            <text>ci</text>
         </lyric>
     </note>
     <note>
@@ -41,12 +82,46 @@
         </pitch>
         <duration>2</duration>
         <lyric>
-            <text>-</text>
+            <text>kur</text>
         </lyric>
     </note>
     <note>
         <pitch>
             <step>E</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>G</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+        <lyric>
+            <text>tu</text>
+        </lyric>
+    </note>
+    <note>
+        <pitch>
+            <step>G</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>F</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+        <lyric>
+            <text>te</text>
+        </lyric>
+    </note>
+    <note>
+        <pitch>
+            <step>F</step>
             <octave>4</octave>
         </pitch>
         <duration>2</duration>
@@ -58,7 +133,7 @@
         </pitch>
         <duration>2</duration>
         <lyric>
-            <text>go</text>
+            <text>ci</text>
         </lyric>
     </note>
     <note>
@@ -70,24 +145,31 @@
     </note>
     <note>
         <pitch>
-            <step>E</step>
+            <step>G</step>
             <octave>4</octave>
         </pitch>
         <duration>2</duration>
         <lyric>
-            <text>vār</text>
+            <text>gai</text>
         </lyric>
     </note>
     <note>
         <pitch>
-            <step>E</step>
+            <step>G</step>
             <octave>4</octave>
         </pitch>
         <duration>2</duration>
     </note>
     <note>
         <pitch>
-            <step>E</step>
+            <step>G</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>G</step>
             <octave>4</octave>
         </pitch>
         <duration>2</duration>
@@ -99,7 +181,7 @@
         </pitch>
         <duration>2</duration>
         <lyric>
-            <text>tos</text>
+            <text>l&#x12B;</text>
         </lyric>
     </note>
     <note>
@@ -116,7 +198,7 @@
         </pitch>
         <duration>2</duration>
         <lyric>
-            <text>klu</text>
+            <text>ti</text>
         </lyric>
     </note>
     <note>
@@ -125,9 +207,30 @@
             <octave>4</octave>
         </pitch>
         <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>D</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
         <lyric>
-            <text>-</text>
+            <text>mans</text>
         </lyric>
+    </note>
+    <note>
+        <pitch>
+            <step>D</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>D</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
     </note>
     <note>
         <pitch>
@@ -145,147 +248,8 @@
         <duration>2</duration>
     </note>
     <note>
-        <pitch>
-            <step>C</step>
-            <octave>4</octave>
-        </pitch>
+        <rest/>
         <duration>2</duration>
-        <lyric>
-            <text>si</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>C</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-    </note>
-    <note>
-        <pitch>
-            <step>C</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>stāv</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>C</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-    </note>
-    <note>
-        <pitch>
-            <step>C</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-    </note>
-    <note>
-        <pitch>
-            <step>C</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-    </note>
-    <note>
-        <pitch>
-            <step>G</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>trīs</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>G</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-    </note>
-    <note>
-        <pitch>
-            <step>C</step>
-            <octave>5</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>Lai</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>C</step>
-            <octave>5</octave>
-        </pitch>
-        <duration>2</duration>
-    </note>
-    <note>
-        <pitch>
-            <step>C</step>
-            <octave>5</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>-</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>C</step>
-            <octave>5</octave>
-        </pitch>
-        <duration>2</duration>
-    </note>
-    <note>
-        <pitch>
-            <step>B</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>ma</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>B</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-    </note>
-    <note>
-        <pitch>
-            <step>A</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>Kār</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>A</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-    </note>
-    <note>
-        <pitch>
-            <step>A</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>-</text>
-        </lyric>
     </note>
     <note>
         <rest/>
@@ -293,34 +257,17 @@
     </note>
     <note>
         <pitch>
-            <step>G</step>
+            <step>D</step>
             <octave>4</octave>
         </pitch>
         <duration>2</duration>
         <lyric>
-            <text>ta</text>
+            <text>kur</text>
         </lyric>
     </note>
     <note>
         <pitch>
-            <step>G</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-    </note>
-    <note>
-        <pitch>
-            <step>G</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>Dēk</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>G</step>
+            <step>D</step>
             <octave>4</octave>
         </pitch>
         <duration>2</duration>
@@ -332,7 +279,7 @@
         </pitch>
         <duration>2</duration>
         <lyric>
-            <text>la</text>
+            <text>tu</text>
         </lyric>
     </note>
     <note>
@@ -341,9 +288,57 @@
             <octave>4</octave>
         </pitch>
         <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>E</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
         <lyric>
-            <text>___</text>
+            <text>te</text>
         </lyric>
+    </note>
+    <note>
+        <pitch>
+            <step>E</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>D</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+        <lyric>
+            <text>ci</text>
+        </lyric>
+    </note>
+    <note>
+        <pitch>
+            <step>D</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>D</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+        <lyric>
+            <text>kur</text>
+        </lyric>
+    </note>
+    <note>
+        <pitch>
+            <step>D</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
     </note>
     <note>
         <pitch>
@@ -352,7 +347,7 @@
         </pitch>
         <duration>2</duration>
         <lyric>
-            <text>___</text>
+            <text>tu</text>
         </lyric>
     </note>
     <note>
@@ -361,9 +356,152 @@
             <octave>4</octave>
         </pitch>
         <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>E</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
         <lyric>
-            <text>___</text>
+            <text>te</text>
         </lyric>
+    </note>
+    <note>
+        <pitch>
+            <step>E</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>D</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+        <lyric>
+            <text>ci</text>
+        </lyric>
+    </note>
+    <note>
+        <pitch>
+            <step>D</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>E</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+        <lyric>
+            <text>gai</text>
+        </lyric>
+    </note>
+    <note>
+        <pitch>
+            <step>E</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>E</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>E</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>C</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+        <lyric>
+            <text>l&#x12B;</text>
+        </lyric>
+    </note>
+    <note>
+        <pitch>
+            <step>C</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>C</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+        <lyric>
+            <text>ti</text>
+        </lyric>
+    </note>
+    <note>
+        <pitch>
+            <step>C</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>C</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+        <lyric>
+            <text>mans</text>
+        </lyric>
+    </note>
+    <note>
+        <pitch>
+            <step>C</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>C</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>C</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <rest/>
+        <duration>2</duration>
+    </note>
+    <note>
+        <rest/>
+        <duration>2</duration>
+    </note>
+    <note>
+        <rest/>
+        <duration>2</duration>
+    </note>
+    <note>
+        <rest/>
+        <duration>2</duration>
     </note>
     <note>
         <pitch>
@@ -372,7 +510,7 @@
         </pitch>
         <duration>2</duration>
         <lyric>
-            <text>___</text>
+            <text>no</text>
         </lyric>
     </note>
     <note>
@@ -381,9 +519,6 @@
             <octave>4</octave>
         </pitch>
         <duration>2</duration>
-        <lyric>
-            <text>___</text>
-        </lyric>
     </note>
     <note>
         <pitch>
@@ -391,9 +526,6 @@
             <octave>4</octave>
         </pitch>
         <duration>2</duration>
-        <lyric>
-            <text>___</text>
-        </lyric>
     </note>
     <note>
         <pitch>
@@ -401,24 +533,66 @@
             <octave>4</octave>
         </pitch>
         <duration>2</duration>
-        <lyric>
-            <text>_</text>
-        </lyric>
     </note>
     <note>
         <pitch>
-            <step>F</step>
+            <step>A</step>
             <octave>4</octave>
         </pitch>
         <duration>2</duration>
         <lyric>
-            <text>un</text>
+            <text>r&#x12B;</text>
         </lyric>
     </note>
     <note>
         <pitch>
-            <step>F</step>
+            <step>A</step>
             <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>A</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>A</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>C</step>
+            <octave>5</octave>
+        </pitch>
+        <duration>2</duration>
+        <lyric>
+            <text>ti</text>
+        </lyric>
+    </note>
+    <note>
+        <pitch>
+            <step>C</step>
+            <octave>5</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>C</step>
+            <octave>5</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>C</step>
+            <octave>5</octave>
         </pitch>
         <duration>2</duration>
     </note>
@@ -428,26 +602,6 @@
             <octave>4</octave>
         </pitch>
         <duration>2</duration>
-        <lyric>
-            <text>dzi</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>B</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-    </note>
-    <note>
-        <pitch>
-            <step>B</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>-</text>
-        </lyric>
     </note>
     <note>
         <pitch>
@@ -463,7 +617,7 @@
         </pitch>
         <duration>2</duration>
         <lyric>
-            <text>ļi</text>
+            <text>&#x146;a</text>
         </lyric>
     </note>
     <note>
@@ -472,9 +626,37 @@
             <octave>4</octave>
         </pitch>
         <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>A</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
         <lyric>
-            <text>undefined</text>
+            <text>ag</text>
         </lyric>
+    </note>
+    <note>
+        <pitch>
+            <step>A</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>A</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>A</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
     </note>
     <note>
         <pitch>
@@ -483,8 +665,22 @@
         </pitch>
         <duration>2</duration>
         <lyric>
-            <text>dzi</text>
+            <text>ru</text>
         </lyric>
+    </note>
+    <note>
+        <pitch>
+            <step>G</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>G</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
     </note>
     <note>
         <pitch>
@@ -500,8 +696,112 @@
         </pitch>
         <duration>2</duration>
         <lyric>
-            <text>-</text>
+            <text>m&#x101;</text>
         </lyric>
+    </note>
+    <note>
+        <pitch>
+            <step>G</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>G</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>G</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>G</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>G</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>G</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>G</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>A</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+        <lyric>
+            <text>no</text>
+        </lyric>
+    </note>
+    <note>
+        <pitch>
+            <step>A</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>A</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>A</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>G</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+        <lyric>
+            <text>r&#x12B;</text>
+        </lyric>
+    </note>
+    <note>
+        <pitch>
+            <step>G</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
+    </note>
+    <note>
+        <pitch>
+            <step>G</step>
+            <octave>4</octave>
+        </pitch>
+        <duration>2</duration>
     </note>
     <note>
         <pitch>
@@ -517,7 +817,7 @@
         </pitch>
         <duration>2</duration>
         <lyric>
-            <text>ļi</text>
+            <text>ti</text>
         </lyric>
     </note>
     <note>
@@ -529,146 +829,10 @@
     </note>
     <note>
         <pitch>
-            <step>G</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>dzī</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>G</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-    </note>
-    <note>
-        <pitch>
-            <step>G</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>-</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>G</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-    </note>
-    <note>
-        <pitch>
-            <step>C</step>
-            <octave>5</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>lē</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>C</step>
-            <octave>5</octave>
-        </pitch>
-        <duration>2</duration>
-    </note>
-    <note>
-        <pitch>
-            <step>C</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>briest</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>C</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-    </note>
-    <note>
-        <pitch>
-            <step>C</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-    </note>
-    <note>
-        <pitch>
-            <step>C</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-    </note>
-    <note>
-        <pitch>
-            <step>E</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>šai</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>E</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-    </note>
-    <note>
-        <pitch>
-            <step>G</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>cil</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>G</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-    </note>
-    <note>
-        <pitch>
-            <step>G</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>-</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>G</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-    </note>
-    <note>
-        <pitch>
             <step>F</step>
             <octave>4</octave>
         </pitch>
         <duration>2</duration>
-        <lyric>
-            <text>tij</text>
-        </lyric>
     </note>
     <note>
         <pitch>
@@ -683,26 +847,6 @@
             <octave>4</octave>
         </pitch>
         <duration>2</duration>
-        <lyric>
-            <text>tē</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>E</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-    </note>
-    <note>
-        <pitch>
-            <step>E</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>-</text>
-        </lyric>
     </note>
     <note>
         <pitch>
@@ -717,8 +861,8 @@
             <octave>4</octave>
         </pitch>
         <duration>2</duration>
-		<lyric>
-            <text>va</text>
+        <lyric>
+            <text>&#x146;a</text>
         </lyric>
     </note>
     <note>
@@ -730,12 +874,12 @@
     </note>
     <note>
         <pitch>
-            <step>D</step>
+            <step>E</step>
             <octave>4</octave>
         </pitch>
-        <duration>2</duration>
+        <duration>8</duration>
         <lyric>
-            <text>sēk</text>
+            <text>ag</text>
         </lyric>
     </note>
     <note>
@@ -743,9 +887,9 @@
             <step>D</step>
             <octave>4</octave>
         </pitch>
-        <duration>2</duration>
+        <duration>8</duration>
         <lyric>
-            <text>-</text>
+            <text>ru</text>
         </lyric>
     </note>
     <note>
@@ -753,79 +897,9 @@
             <step>C</step>
             <octave>4</octave>
         </pitch>
-        <duration>2</duration>
+        <duration>16</duration>
         <lyric>
-            <text>la</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>C</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>___</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>C</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>___</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>C</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>___</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>C</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>___</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>C</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>___</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>C</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>___</text>
-        </lyric>
-    </note>
-    <note>
-        <pitch>
-            <step>C</step>
-            <octave>4</octave>
-        </pitch>
-        <duration>2</duration>
-        <lyric>
-            <text>__.</text>
+            <text>mā</text>
         </lyric>
     </note>
 </score-partwise>

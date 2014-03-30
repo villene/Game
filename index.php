@@ -10,16 +10,23 @@
     <h1>Song list:</h1>
 
 <?php
-if ($handle = opendir('xml/')) {
-    while (false !== ($entry = readdir($handle))) {
-        if ($entry != "." && $entry != "..") {
-            $name = explode('.', $entry);
-            $name = $name[0];
-            echo '<a href="song.php?name=' . $name . '">' . $name . '</a><br/>';
+
+    $songs = [];
+    if ($handle = opendir('xml/')) {
+        while (false !== ($entry = readdir($handle))) {
+            if ($entry != "." && $entry != "..") {
+                $name = explode('.', $entry);
+                array_push($songs, $name[0]);
+            }
         }
+        closedir($handle);
     }
-    closedir($handle);
-}
+
+    sort($songs);
+    foreach($songs as $song){
+        echo '<a href="song.php?name=' . $song . '">' . $song . '</a><br/>';
+    }
+
 ?>
 
 </body>
