@@ -5,8 +5,6 @@ var Sound = Class.extend({
         this.button = null;
         this.x = 200;
         this.y = 60;
-
-//        this.generateOscillator();
     }
 
     , play: function(sound){
@@ -44,6 +42,14 @@ var Sound = Class.extend({
         oscillator.connect(audioContext.destination); // Connect sound source 1 to output
 //        oscillator.noteOn(0); // Play sound source 1 instantly
         oscillator.start(0);
+    }
+
+    , oscillatorPause: function(){
+        oscillator.frequency.value = 0;
+    }
+
+    , oscillatorPlay: function(freq){
+        oscillator.frequency.value = freq;
     }
 
     , destroy: function(){

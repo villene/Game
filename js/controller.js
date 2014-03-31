@@ -70,6 +70,8 @@ var Controller = {
             sheet = null;
         }
 
+        // hack because oscillator is async
+        setTimeout( function(){ sound.oscillatorPause() }, 100);
 
     }
 }

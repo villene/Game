@@ -9,7 +9,8 @@ var Pause = Class.extend({
 
     , draw: function () {
         var frame = this.state == 'pause' ? 0 : 1;
-        this.sprite = game.add.button(20, 20, 'pauseButton', this.toggle, this, frame, frame, frame);
+        this.sprite = game.add.button(60, 60, 'pauseButton', this.toggle, this, frame, frame, frame);
+        this.sprite.anchor.setTo(0.5, 0.5);
     }
 
     , toggle: function () {

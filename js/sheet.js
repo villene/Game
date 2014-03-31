@@ -23,7 +23,6 @@ var Sheet = Class.extend({
 
         this.group = game.add.group();
 
-//        this.generateOscillator();
         this.getXML();
         this.draw();
 
@@ -126,11 +125,12 @@ var Sheet = Class.extend({
         var newTime = new Date().getTime();
         this.time += newTime - this.timeSplit;
         this.timeSplit = newTime;
-        oscillator.frequency.value = 0;
+        sound.oscillatorPause();
     }
 
     , update: function () {
         if (this.status == 'finished') {
+            sound.oscillatorPause();
             return;
         }
         if (this.playing) {
@@ -161,15 +161,6 @@ var Sheet = Class.extend({
         }
     }
 
-//    , generateOscillator: function(){
-//        window.oscillator = audioContext.createOscillator();
-//        oscillator.type = 0; // Sine wave
-//        oscillator.frequency.value = 0; // Default frequency in hertz
-//        oscillator.connect(audioContext.destination); // Connect sound source 1 to output
-////        oscillator.noteOn(0); // Play sound source 1 instantly
-//        oscillator.start(0);
-//    }
-
     ,checkAccuracy: function (midi) {
         // calculate score being played
         var scoreNr = Math.floor(this.time / 1000 * this.bps);
@@ -182,12 +173,15 @@ var Sheet = Class.extend({
             this.finished();
         }
 
-    }, finished: function () {
+    }
+
+    , finished: function () {
         this.status = 'finished';
+        this.playing = false;
         Controller.finishGame();
-        
-        oscillator.disconnect();
-    }, getScoreCount: function () {
+    }
+
+    , getScoreCount: function () {
         return this.list.length;
     }, destroy: function () {
         this.group.destroy();

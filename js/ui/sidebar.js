@@ -16,7 +16,7 @@ var Sidebar = Class.extend({
 
         // buttons
         UI.pause.draw();
-        this.group.add( new Replay(20, 110).getPointer() );
+        this.group.add( new Replay(60, 150).getPointer() );
 
         // music on/off button
         // triad on/off button
