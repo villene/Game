@@ -14,6 +14,7 @@ function preload() {
     game.load.spritesheet('title_button', 'assets/title_button.png', 200, 30);
     game.load.image('noiseButton', 'assets/noise_button.png', 40, 40);
     game.load.image('arrow', 'assets/arrow.png');
+    game.load.spritesheet('checkbox', 'assets/checkbox.png', 32, 32);
 
     // gameplay assets
     game.load.image('bg', 'assets/bg.png');
@@ -29,7 +30,7 @@ function preload() {
 
 function create() {
     drawBg();
-    sound.generateOscillator();
+    sound.createOscillator();
     Controller.lobby();
 }
 

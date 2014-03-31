@@ -71,7 +71,7 @@ var Controller = {
         }
 
         // hack because oscillator is async
-        setTimeout( function(){ sound.oscillatorPause() }, 100);
+        setTimeout( function(){ sound.oscillator.pause() }, 100);
 
     }
 }

@@ -3,14 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="fa957a23-b4ca-49df-935e-447017a6a73a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controller.js" afterPath="$PROJECT_DIR$/js/controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ui/finish.js" afterPath="$PROJECT_DIR$/js/ui/finish.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ui/pause.js" afterPath="$PROJECT_DIR$/js/ui/pause.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ui/replay.js" afterPath="$PROJECT_DIR$/js/ui/replay.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/init.js" afterPath="$PROJECT_DIR$/js/init.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/score.js" afterPath="$PROJECT_DIR$/js/score.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sheet.js" afterPath="$PROJECT_DIR$/js/sheet.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ui/sidebar.js" afterPath="$PROJECT_DIR$/js/ui/sidebar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/song.php" afterPath="$PROJECT_DIR$/song.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sound.js" afterPath="$PROJECT_DIR$/js/sound.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Game.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,37 +31,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controller.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/controller.js">
+      <file leaf-file-name="sidebar.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/ui/sidebar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="43" selection-start="1614" selection-end="1614" vertical-scroll-proportion="0.0" vertical-offset="283" max-vertical-offset="1230">
+            <state line="20" column="0" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="init.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/init.js">
+      <file leaf-file-name="checkbox.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/ui/checkbox.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="23" selection-start="1414" selection-end="1414" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sheet.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/sheet.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="142" column="28" selection-start="5187" selection-end="5187" vertical-scroll-proportion="0.0" vertical-offset="1806" max-vertical-offset="4905">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="score.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/score.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="26" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1155">
+            <state line="41" column="48" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
               <folding />
             </state>
           </provider>
@@ -72,43 +52,16 @@
       <file leaf-file-name="sound.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/sound.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="34" selection-start="1415" selection-end="1415" vertical-scroll-proportion="0.6781116" vertical-offset="58" max-vertical-offset="990">
+            <state line="59" column="46" selection-start="1570" selection-end="1570" vertical-scroll-proportion="0.16309012" vertical-offset="733" max-vertical-offset="1815">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="finish.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/ui/finish.js">
+      <file leaf-file-name="sheet.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/sheet.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="72" selection-start="796" selection-end="796" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="replay.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/ui/replay.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="43" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sidebar.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/ui/sidebar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="42" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pause.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/ui/pause.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="44" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+            <state line="159" column="35" selection-start="5716" selection-end="5716" vertical-scroll-proportion="0.0" vertical-offset="1845" max-vertical-offset="4905">
               <folding />
             </state>
           </provider>
@@ -148,21 +101,22 @@
         <option value="$PROJECT_DIR$/js/db.js" />
         <option value="$PROJECT_DIR$/js/ui/list.js" />
         <option value="$PROJECT_DIR$/js/ui/range.js" />
-        <option value="$PROJECT_DIR$/song.php" />
         <option value="$PROJECT_DIR$/xml/sample2.js" />
         <option value="$PROJECT_DIR$/xml/sample2.xml" />
         <option value="$PROJECT_DIR$/js/bird.js" />
         <option value="$PROJECT_DIR$/js/config.js" />
         <option value="$PROJECT_DIR$/js/triad.js" />
-        <option value="$PROJECT_DIR$/js/init.js" />
         <option value="$PROJECT_DIR$/js/ui/menu.js" />
-        <option value="$PROJECT_DIR$/js/score.js" />
-        <option value="$PROJECT_DIR$/js/sheet.js" />
-        <option value="$PROJECT_DIR$/js/controller.js" />
         <option value="$PROJECT_DIR$/js/ui/finish.js" />
         <option value="$PROJECT_DIR$/js/ui/replay.js" />
-        <option value="$PROJECT_DIR$/js/ui/sidebar.js" />
         <option value="$PROJECT_DIR$/js/ui/pause.js" />
+        <option value="$PROJECT_DIR$/song.php" />
+        <option value="$PROJECT_DIR$/js/ui/sidebar.js" />
+        <option value="$PROJECT_DIR$/js/init.js" />
+        <option value="$PROJECT_DIR$/js/score.js" />
+        <option value="$PROJECT_DIR$/js/controller.js" />
+        <option value="$PROJECT_DIR$/js/sheet.js" />
+        <option value="$PROJECT_DIR$/js/ui/checkbox.js" />
         <option value="$PROJECT_DIR$/js/sound.js" />
       </list>
     </option>
@@ -475,13 +429,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/db.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="27" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/ui/range.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="50" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.64377683" vertical-offset="0" max-vertical-offset="975">
@@ -510,13 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/song.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="27" selection-start="1223" selection-end="1223" vertical-scroll-proportion="-24.375" vertical-offset="0" max-vertical-offset="735">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/bird.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="4" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
@@ -538,44 +478,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/ui/menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="70" selection-start="3185" selection-end="3185" vertical-scroll-proportion="0.80686694" vertical-offset="553" max-vertical-offset="1485">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/rest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="39" selection-start="306" selection-end="306" vertical-scroll-proportion="0.15503876" vertical-offset="0" max-vertical-offset="774">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="23" selection-start="1414" selection-end="1414" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/score.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="26" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1155">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="43" selection-start="1614" selection-end="1614" vertical-scroll-proportion="0.0" vertical-offset="283" max-vertical-offset="1230">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/sheet.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="28" selection-start="5187" selection-end="5187" vertical-scroll-proportion="0.0" vertical-offset="1806" max-vertical-offset="4905">
           <folding />
         </state>
       </provider>
@@ -594,23 +499,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/ui/sidebar.js">
+    <entry file="file://$PROJECT_DIR$/js/db.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="42" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+        <state line="14" column="27" selection-start="300" selection-end="300" vertical-scroll-proportion="0.22532189" vertical-offset="0" max-vertical-offset="932">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ui/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="122" selection-start="1921" selection-end="1921" vertical-scroll-proportion="0.48497853" vertical-offset="373" max-vertical-offset="1485">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="1103" selection-end="1103" vertical-scroll-proportion="0.4733406" vertical-offset="0" max-vertical-offset="945">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/song.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="43" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.4955947" vertical-offset="0" max-vertical-offset="908">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="0" selection-start="1681" selection-end="1681" vertical-scroll-proportion="0.88733906" vertical-offset="283" max-vertical-offset="1230">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/score.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="19" selection-start="1439" selection-end="1439" vertical-scroll-proportion="0.74034333" vertical-offset="0" max-vertical-offset="1155">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/ui/pause.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="44" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+        <state line="11" column="73" selection-start="301" selection-end="301" vertical-scroll-proportion="0.17703862" vertical-offset="0" max-vertical-offset="932">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sheet.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="159" column="35" selection-start="5716" selection-end="5716" vertical-scroll-proportion="0.0" vertical-offset="1845" max-vertical-offset="4905">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ui/sidebar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ui/checkbox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="48" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/sound.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="34" selection-start="1415" selection-end="1415" vertical-scroll-proportion="0.6781116" vertical-offset="58" max-vertical-offset="990">
+        <state line="59" column="46" selection-start="1570" selection-end="1570" vertical-scroll-proportion="0.16309012" vertical-offset="733" max-vertical-offset="1815">
           <folding />
         </state>
       </provider>

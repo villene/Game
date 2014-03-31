@@ -125,12 +125,12 @@ var Sheet = Class.extend({
         var newTime = new Date().getTime();
         this.time += newTime - this.timeSplit;
         this.timeSplit = newTime;
-        sound.oscillatorPause();
+        sound.oscillator.pause();
     }
 
     , update: function () {
         if (this.status == 'finished') {
-            sound.oscillatorPause();
+            sound.oscillator.pause();
             return;
         }
         if (this.playing) {
@@ -157,7 +157,7 @@ var Sheet = Class.extend({
         if(this.time >= this.lastBeat+this.beatTime){
             this.lastBeat = Math.round(this.beatCount*this.beatTime);
             this.beatCount++;
-            sound.play('metronome');
+            sound.metronome.play();
         }
     }
 

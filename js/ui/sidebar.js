@@ -18,6 +18,8 @@ var Sidebar = Class.extend({
         UI.pause.draw();
         this.group.add( new Replay(60, 150).getPointer() );
 
+        this.music = new MusicCheck(20, 220);
+        this.metronome = new MetronomeCheck(20, 260);
         // music on/off button
         // triad on/off button
         // metronome on/off button
@@ -29,6 +31,16 @@ var Sidebar = Class.extend({
         if(this.group){
             this.group.destroy(true);
             this.group = null;
+        }
+
+        if(this.music){
+            this.music.destroy();
+            this.music = null;
+        }
+
+        if(this.metronome){
+            this.metronome.destroy();
+            this.metronome = null;
         }
     }
 })

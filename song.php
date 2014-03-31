@@ -30,6 +30,7 @@
     <script src="js/ui/points.js"></script>
     <script src="js/ui/finish.js"></script>
     <script src="js/ui/sidebar.js"></script>
+    <script src="js/ui/checkbox.js"></script>
 
 
     <script src="js/main.js"></script>

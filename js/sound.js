@@ -5,17 +5,13 @@ var Sound = Class.extend({
         this.button = null;
         this.x = 200;
         this.y = 60;
+
+        this.metronome = new Metronome();
     }
 
     , play: function(sound){
         if(this.mute) return;
         game.sound.play(sound);
-    }
-
-    , playMusic: function(){
-        if(this.mute || this.music) return;
-        this.music = game.add.audio('music', 1, true);
-        this.music.play('',0,1,true);
     }
 
     , toggle: function(){
@@ -35,21 +31,8 @@ var Sound = Class.extend({
 //        blurpEffect(this.button);
     }
 
-    , generateOscillator: function(){
-        window.oscillator = audioContext.createOscillator();
-        oscillator.type = 0; // Sine wave
-        oscillator.frequency.value = 0; // Default frequency in hertz
-        oscillator.connect(audioContext.destination); // Connect sound source 1 to output
-//        oscillator.noteOn(0); // Play sound source 1 instantly
-        oscillator.start(0);
-    }
-
-    , oscillatorPause: function(){
-        oscillator.frequency.value = 0;
-    }
-
-    , oscillatorPlay: function(freq){
-        oscillator.frequency.value = freq;
+    , createOscillator: function(){
+        this.oscillator = new Oscillator();
     }
 
     , destroy: function(){
@@ -57,5 +40,76 @@ var Sound = Class.extend({
             this.button.destroy(true);
             this.button = null;
         }
+    }
+});
+
+
+var Oscillator = Class.extend({
+    init: function(){
+        this.enabled = this.get();
+
+        window.oscillator = audioContext.createOscillator();
+        oscillator.type = 0; // Sine wave
+        oscillator.frequency.value = 0; // Default frequency in hertz
+        oscillator.connect(audioContext.destination); // Connect sound source 1 to output
+        oscillator.start(0);
+    }
+
+    , play: function(freq){
+        if(this.enabled){
+            oscillator.frequency.value = freq;
+        }
+
+    }
+
+    , pause: function(){
+        oscillator.frequency.value = 0;
+    }
+
+    , get: function(){
+        if(db.get('isMusic')){
+            var value = db.get('isMusic') === 'true' ? true : false;
+        } else {
+            var value = true;
+            db.set('isMusic', value);
+        }
+        return value;
+    }
+
+    , toggle: function(value){
+        db.set('isMusic', value);
+        this.enabled = value;
+
+        if(!this.enabled){
+            oscillator.frequency.value = 0;
+        }
+    }
+})
+
+
+var Metronome = Class.extend({
+    init: function(){
+        this.enabled = this.get();
+    }
+
+    , play: function(){
+        if(this.enabled){
+            sound.play('metronome');
+        }
+    }
+
+    , get: function(){
+        if(db.get('isMetronome')){
+            var value = db.get('isMetronome') === 'true' ? true : false;
+        } else {
+            var value = true;
+            db.set('isMetronome', value);
+        }
+        return value;
+    }
+
+    , toggle: function(value){
+        db.set('isMetronome', value);
+        this.enabled = value;
     }
 })
