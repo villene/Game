@@ -2,10 +2,12 @@ var Sheet = Class.extend({
     init: function (title, octave, tempo) {
         this.title = title;
         this.octaveDiff = octave - songData.octave;
+        // TODO divisions are hardcoded need to refactor this so all variables are recalculated if divisions are changed
         this.divisions = 4;
         this.tempo = tempo;
         this.bpm = this.tempo * this.divisions; // 1 beat is 1/16 note by default
         this.bps = this.bpm / 60; // beats per second
+
         this.list = [];
         this.status = 'active';
 
@@ -13,11 +15,15 @@ var Sheet = Class.extend({
         this.timeSplit = 0;
         this.playing = false;
 
+        this.beatTime = this.divisions * 1000 / this.bps;
+        this.beatCount = 0;
+        this.lastBeat = -1000;
+
         this.octaveList = [0, 0, 0, 0, 0, 0, 0, 0];
 
         this.group = game.add.group();
 
-        this.generateOscillator();
+//        this.generateOscillator();
         this.getXML();
         this.draw();
 
@@ -27,6 +33,7 @@ var Sheet = Class.extend({
 
         if (songData.xml.getElementsByTagName("divisions")[0]){
             this.divisions = songData.xml.getElementsByTagName("divisions")[0].childNodes[0].nodeValue;
+            this.divisions = parseInt(this.divisions);
             console.log('divisions', this.divisions);
         }
 
@@ -134,24 +141,34 @@ var Sheet = Class.extend({
             this.draw();
             this.checkAccuracy(bird.midi);
             this.playNote();
+            this.playBeat();
         }
-    },
+    }
 
-    playNote: function(){
+    , playNote: function(){
         var scoreNr = Math.floor(this.time / 1000 * this.bps);
         if (scoreNr - 1 >= 0) {
             this.list[scoreNr - 1].playNote();
         }
     }
 
-    , generateOscillator: function(){
-        window.oscillator = audioContext.createOscillator();
-        oscillator.type = 0; // Sine wave
-        oscillator.frequency.value = 0; // Default frequency in hertz
-        oscillator.connect(audioContext.destination); // Connect sound source 1 to output
-//        oscillator.noteOn(0); // Play sound source 1 instantly
-        oscillator.start(0);
+    , playBeat: function(){
+//        console.log(this.beatTime, this.bps, this.tempo, this.divisions);
+        if(this.time >= this.lastBeat+this.beatTime){
+            this.lastBeat = Math.round(this.beatCount*this.beatTime);
+            this.beatCount++;
+            sound.play('metronome');
+        }
     }
+
+//    , generateOscillator: function(){
+//        window.oscillator = audioContext.createOscillator();
+//        oscillator.type = 0; // Sine wave
+//        oscillator.frequency.value = 0; // Default frequency in hertz
+//        oscillator.connect(audioContext.destination); // Connect sound source 1 to output
+////        oscillator.noteOn(0); // Play sound source 1 instantly
+//        oscillator.start(0);
+//    }
 
     ,checkAccuracy: function (midi) {
         // calculate score being played

@@ -1,44 +1,75 @@
 var Controller = {
     status: false
 
-    , createGame: function () {
-        drawBg();
+    , lobby: function () {
         UI.menu = new Menu( db.get('octave') );
+    }
+
+    , initGame: function(){
+
     }
 
     , startGame: function (octave, tempo) {
         console.log('START GAME - ' + songData.name);
+        this.octave = octave ? octave : this.octave;
+        this.tempo = tempo ? tempo : this.tempo;
 
         songData.setBottomMidi();
-        CONFIG.bottomMidi += (octave - songData.octave) * 12;
+        CONFIG.bottomMidi += (this.octave - songData.octave) * 12;
 
         bird = new Bird( CONFIG.bottomMidi + 12 );
-        sheet = new Sheet(songData.name, octave, tempo);
+        sheet = new Sheet(songData.name, this.octave, this.tempo);
 
         new Triad();
         UI.pause = new Pause();
         UI.points = new Points();
+        UI.sidebar = new Sidebar();
     }
 
     , finishGame: function () {
         console.log('GAME FINISHED');
         UI.finish = new Finish();
+
+        this.clearGame();
     }
 
-    , restartGame: function () {
+    , replayGame: function () {
+        this.clearGame();
+        this.startGame();
+//        UI.menu = new Menu( db.get('octave') );
 
-        bird.destroy();
-        delete bird;
+        if(UI.finish){
+            UI.finish.destroy();
+            UI.finish = null;
+        }
+    }
 
-        sheet.destroy();
-        delete sheet;
+    , clearGame: function(){
+        if(UI.pause){
+            UI.pause.destroy();
+            UI.pause = null;
+        }
 
-        UI.pause.destroy();
-        delete UI.pause;
+        if(UI.points){
+            UI.points.destroy();
+            UI.points = null;
+        }
 
-        UI.points.destroy();
-        delete UI.points;
+        if(UI.sidebar){
+            UI.sidebar.destroy();
+            UI.sidebar = null;
+        }
 
-        UI.menu = new Menu( db.get('octave') );
+        if(bird){
+            bird.destroy();
+            bird = null;
+        }
+
+        if(sheet){
+            sheet.destroy();
+            sheet = null;
+        }
+
+
     }
 }

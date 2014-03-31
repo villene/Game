@@ -2,8 +2,8 @@ var Triad = Class.extend({
     init: function(rootNote){
         this.hertzList = [110, 220, 440, 480];
 
-        this.generateOscillator();
-        this.play(0);
+//        this.generateOscillator();
+//        this.play(0);
     }
 
     , play: function(key){
@@ -19,13 +19,13 @@ var Triad = Class.extend({
         }, 500);
     }
 
-    , generateOscillator: function(){
-        window.oscillator = audioContext.createOscillator();
-        oscillator.type = 0; // Sine wave
-        oscillator.frequency.value = 0; // Default frequency in hertz
-        oscillator.connect(audioContext.destination); // Connect sound source 1 to output
-        oscillator.start(0);
-    }
+//    , generateOscillator: function(){
+//        window.oscillator = audioContext.createOscillator();
+//        oscillator.type = 0; // Sine wave
+//        oscillator.frequency.value = 0; // Default frequency in hertz
+//        oscillator.connect(audioContext.destination); // Connect sound source 1 to output
+//        oscillator.start(0);
+//    }
 
     , destroy: function(){
         oscillator.frequency.value = 0;

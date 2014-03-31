@@ -4,10 +4,12 @@ var game = new Phaser.Game(1024, 500, Phaser.CANVAS, 'phaser', { preload: preloa
 var bird, sheet;
 var db = new DB();
 var songData = new SongData();
+var sound = new Sound();
 
 function preload() {
     // UI
     game.load.spritesheet('pauseButton', 'assets/pause.png', 73, 73);
+    game.load.image('replayButton', 'assets/replay.png');
     game.load.image('popup_bg', 'assets/popup_bg.png');
     game.load.spritesheet('title_button', 'assets/title_button.png', 200, 30);
     game.load.image('noiseButton', 'assets/noise_button.png', 40, 40);
@@ -20,10 +22,15 @@ function preload() {
     game.load.image('banana', 'assets/banana.png');
     game.load.image('heart', 'assets/heart.png');
 
+    // audio
+    game.load.audio('metronome', ['assets/metronome.ogg']);
+
 }
 
 function create() {
-    Controller.createGame();
+    drawBg();
+    sound.generateOscillator();
+    Controller.lobby();
 }
 
 function update() {

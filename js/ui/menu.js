@@ -85,7 +85,7 @@ var Menu = Class.extend({
         this.group.x = -game.width;
         game.add.tween(this.group).to({x: 0}, 300).start();
     }, hide: function () {
-        var tween = game.add.tween(this.group).to({x: game.width}, 1000).start();
+        var tween = game.add.tween(this.group).to({x: game.width}, 300).start();
         tween.onComplete.add(this.destroy, this);
     }, destroy: function () {
         // TODO destroy nested groups. Something when you try to do it in a regular way

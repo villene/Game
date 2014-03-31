@@ -5,16 +5,32 @@ var Pause = Class.extend({
         this.state = 'play';
         this.sprite = false;
         this.draw();
-    }, draw: function () {
-        this.sprite = game.add.button(20, 20, 'pauseButton', this.toggle, this, 1, 1, 1);
-    }, toggle: function () {
+    }
+
+    , draw: function () {
+        var frame = this.state == 'pause' ? 0 : 1;
+        this.sprite = game.add.button(20, 20, 'pauseButton', this.toggle, this, frame, frame, frame);
+    }
+
+    , toggle: function () {
         sheet[this.state]();
 
         this.state = this.state == 'play' ? 'pause' : 'play';
         var frame = this.state == 'pause' ? 0 : 1;
         this.sprite.setFrames(frame, frame, frame);
 
-    }, destroy: function () {
-        this.sprite.destroy(true);
+        if(this.state == 'play'){
+            this.destroy();
+            UI.sidebar.draw();
+        } else {
+            UI.sidebar.destroy();
+        }
+    }
+
+    , destroy: function () {
+        if(this.sprite){
+            this.sprite.destroy(true);
+            this.sprite = null;
+        }
     }
 })

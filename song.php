@@ -12,6 +12,7 @@
 
     <script src="js/controller.js"></script>
     <script src="js/songData.js"></script>
+    <script src="js/sound.js"></script>
     <script src="js/score.js"></script>
     <script src="js/rest.js"></script>
     <script src="js/sheet.js"></script>
@@ -19,13 +20,16 @@
     <script src="js/bird.js"></script>
     <script src="js/triad.js"></script>
 
+
     <!-- UI -->
     <script src="js/ui/pause.js"></script>
+    <script src="js/ui/replay.js"></script>
     <script src="js/ui/menu.js"></script>
     <script src="js/ui/list.js"></script>
     <script src="js/ui/range.js"></script>
     <script src="js/ui/points.js"></script>
     <script src="js/ui/finish.js"></script>
+    <script src="js/ui/sidebar.js"></script>
 
 
     <script src="js/main.js"></script>
@@ -33,12 +37,7 @@
 
 </head>
 <body>
-<div id="phaser"></div>
-<div id="frequency"></div>
-<div id="note"></div>
-<div id="correct"></div>
-<div id="decibels"></div>
-<div id="mjau"></div>
+    <div id="phaser"></div>
 
 </body>
 </html>

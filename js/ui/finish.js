@@ -16,6 +16,8 @@ var Finish = Class.extend({
         var play = game.add.button(game.width / 2, 400, 'pauseButton', this.hide, this, 1, 1, 1);
         play.anchor.setTo(0.5, 0.5);
         this.group.add(play);
+
+        this.group.add( new Replay(game.width/2 + 100, 400).getPointer() );
     }
 
     , show: function () {
@@ -26,10 +28,14 @@ var Finish = Class.extend({
     , hide: function () {
         var tween = game.add.tween(this.group).to({ x: game.width }, 300).start();
         tween.onComplete.add(this.destroy, this);
-        Controller.restartGame();
+        Controller.lobby();
     }
 
     , destroy: function () {
-        this.group.destroy(true);
+        if(this.group){
+//            this.group.destroy(true);
+            this.group = null;
+        }
+
     }
 })
