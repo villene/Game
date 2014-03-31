@@ -33,7 +33,7 @@ var Finish = Class.extend({
 
     , destroy: function () {
         if(this.group){
-//            this.group.destroy(true);
+            this.group.destroy(true);
             this.group = null;
         }
 
