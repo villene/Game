@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#phaser {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+
+/*  +++++++++++++++++++++++++ PLAYLIST ++++++++++++++++++++++++++ */
+
+#playlist {
+    width: 250px;
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background-color: #c9c49c;
+    border-right: 5px solid #423e20;
+}
+
+#playlist a {
+    text-decoration: none;
+    color: #423e20;
+    margin: 3px 5px;
+}
+
+#playlist.close { display: none; }
+
+#playlist.open { display: block; }
+
+#playlist.hide { display: none; }
+
+#list_icon {
+    width: 48px;
+    height: 48px;
+    background-image: url(assets/list_icon.png);
+    position: absolute;
+    z-index: 10;
+}
+
+#list_icon.close {
+    display: block;
+    left: 0;
+}
+
+#list_icon.open {
+    display: block;
+    left: 200px;
+}
+
+#list_icon.hide { display: none; }
+
+/*  ----------------------------- PLAYLIST ------------------------ */

@@ -8,7 +8,9 @@ var Menu = Class.extend({
 
         this.draw();
         this.show();
-    }, draw: function () {
+    }
+
+    , draw: function () {
         var bg = this.group.create(game.width / 2, game.height / 2, 'popup_bg');
         bg.anchor.setTo(0.5, 0.5);
 
@@ -87,8 +89,24 @@ var Menu = Class.extend({
     }, hide: function () {
         var tween = game.add.tween(this.group).to({x: game.width}, 300).start();
         tween.onComplete.add(this.destroy, this);
-    }, destroy: function () {
+    }
+
+    , destroy: function () {
         // TODO destroy nested groups. Something when you try to do it in a regular way
 //        this.group.destroy(true);
+        if(this.octaves){
+            this.octaves.destroy(true);
+            this.octaves = null;
+        }
+
+        if(this.tempo){
+            this.tempo.destroy(true);
+            this.tempo = null;
+        }
+
+        if(this.group){
+            this.group.destroy(true);
+            this.group = null;
+        }
     }
 })

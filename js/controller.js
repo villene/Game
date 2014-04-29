@@ -2,7 +2,9 @@ var Controller = {
     status: false
 
     , lobby: function () {
+        this.clearGame();
         UI.menu = new Menu( db.get('octave') );
+        playlist.close();
     }
 
     , initGame: function(){
@@ -24,6 +26,8 @@ var Controller = {
         UI.pause = new Pause();
         UI.points = new Points();
         UI.sidebar = new Sidebar();
+
+        playlist.hide();
     }
 
     , finishGame: function () {

@@ -1,15 +1,16 @@
 var game = new Phaser.Game(1024, 500, Phaser.CANVAS, 'phaser', { preload: preload, create: create, update: update, render: render });
 
 // global variables
-var bird, sheet;
+var bird, sheet, playlist;
 var db = new DB();
-var songData = new SongData();
+var songData = new SongData('Put_vejini');
 var sound = new Sound();
 
 function preload() {
     // UI
     game.load.spritesheet('pauseButton', 'assets/pause.png', 73, 73);
     game.load.image('replayButton', 'assets/replay.png');
+    game.load.image('homeButton', 'assets/home.png');
     game.load.image('popup_bg', 'assets/popup_bg.png');
     game.load.spritesheet('title_button', 'assets/title_button.png', 200, 30);
     game.load.image('noiseButton', 'assets/noise_button.png', 40, 40);
@@ -31,6 +32,7 @@ function preload() {
 function create() {
     drawBg();
     sound.createOscillator();
+    playlist = new Playlist();
     Controller.lobby();
 }
 

@@ -1,7 +1,12 @@
 var SongData = Class.extend({
-    init: function (xml) {
-        this.url = this.parseUrl();
-        this.name = this.url.name;
+    init: function (song) {
+        if(song){
+            this.name = song;
+        } else {
+            this.url = this.parseUrl();
+            this.name = this.url.name;
+        }
+
         this.xml = this.getXML(this.name);
         this.octaveData = this.getOctaveData(this.xml);
         this.octave = this.getCommonOctave(this.octaveData);
@@ -12,7 +17,9 @@ var SongData = Class.extend({
         this.setBottomMidi();
 
         if (!this.xml) console.log('ERROR! XML file does not exist!');
-    }, getOctaveData: function (xml) {
+    }
+
+    , getOctaveData: function (xml) {
         var octaveList = [0, 0, 0, 0, 0, 0, 0, 0];
         var notes = xml.getElementsByTagName("note");
 
@@ -34,7 +41,9 @@ var SongData = Class.extend({
             }
         }
         return octaveList;
-    }, getCommonOctave: function (arr) {
+    }
+
+    , getCommonOctave: function (arr) {
         var maxVal = 0;
         var maxIterator = false;
         for (var i = 0, l = arr.length; i < l; i++) {

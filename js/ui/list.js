@@ -69,6 +69,6 @@ var List = Class.extend({
     }, draw: function () {
 
     }, destroy: function () {
-        this.group.destroy;
+        this.group.destroy(true);
     }
 })
