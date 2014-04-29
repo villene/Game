@@ -9,7 +9,7 @@ var Finish = Class.extend({
     , draw: function () {
         var style = { font: "48px Arial", fill: "#fff", align: "center", stroke: "#333", strokeThickness: 8 };
         var text = 'CONGRATULATIONS!\n Your score is ' + UI.points.get() + '\n out of ' + sheet.getScoreCount();
-        this.sprite = game.add.text(game.width / 2, game.height / 2, text, style);
+        this.sprite = game.add.text(game.width / 2, game.height / 2 - 50, text, style);
         this.sprite.anchor.setTo(0.5, 0.5);
         this.group.add(this.sprite);
 
@@ -17,9 +17,9 @@ var Finish = Class.extend({
 //        play.anchor.setTo(0.5, 0.5);
 //        this.group.add(play);
 
-        this.group.add( new Home(game.width/7 * 3, 400).getPointer() );
+        this.group.add( new Home(game.width/7 * 3, game.height/2+110).getPointer() );
 
-        this.group.add( new Replay(game.width/7 * 4, 400).getPointer() );
+        this.group.add( new Replay(game.width/7 * 4, game.height/2+110).getPointer() );
 
     }
 

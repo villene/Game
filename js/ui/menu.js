@@ -14,13 +14,13 @@ var Menu = Class.extend({
         var bg = this.group.create(game.width / 2, game.height / 2, 'popup_bg');
         bg.anchor.setTo(0.5, 0.5);
 
-        var heading = game.add.text(game.width / 2, 60, 'FortaNota', {font: "50px Arial", fill: "#fff"});
+        var heading = game.add.text(game.width / 2, game.height/2-190, 'FortaNota', {font: "50px Arial", fill: "#fff"});
         heading.anchor.setTo(0.5, 0);
         this.group.add(heading);
 
         // scoresList
-        var scoreX = 280;
-        var scoreY = 180;
+        var scoreX = game.width/2-230;
+        var scoreY = game.height/2-70;
         var lineHeight = 30;
         var description = game.add.text(scoreX, scoreY, 'Song: ' + songData.name, { font: "20px Arial", fill: "#333" });
         this.group.add(description);
@@ -28,7 +28,7 @@ var Menu = Class.extend({
 //        this.group.add( this.scores.group );
 
         // octavesList
-        var scoreX = 530;
+        var scoreX = game.width/2+20;
         var octaveText = game.add.text(scoreX, scoreY - 30, 'Select Octave', { font: "20px Arial", fill: "#333" });
         this.group.add(octaveText);
         var octavesList = [
@@ -40,14 +40,13 @@ var Menu = Class.extend({
         this.octaves = new List(scoreX, scoreY, lineHeight, octavesList, this.defaultOctave);
         this.group.add(this.octaves.group);
 
-        var scoreX = 280;
-        var scoreY = 240;
+        var scoreX = game.width/2-230;
+        var scoreY = game.height/2;
         // value, step, min, max
         this.tempo = new Range(scoreX, scoreY, 120);
         this.group.add(this.tempo.group);
 
-
-        var play = game.add.button(game.width / 2, 400, 'pauseButton', this.startGame, this, 1, 1, 1);
+        var play = game.add.button(game.width / 2, scoreY+150, 'pauseButton', this.startGame, this, 1, 1, 1);
         play.anchor.setTo(0.5, 0.5);
         this.group.add(play);
 
@@ -55,10 +54,10 @@ var Menu = Class.extend({
 
 
         
-        var measureText = game.add.text(game.width/2+17, 307, 'Set background noise', {font: "16px Arial", fill: "#333"});
+        var measureText = game.add.text(game.width/2+17, scoreY+60, 'Set background noise', {font: "16px Arial", fill: "#333"});
         this.group.add(measureText);
         
-        var bgMeasure = game.add.button(game.width/2+200, 315, 'noiseButton', this.measureNoise, this, 1, 1, 1);
+        var bgMeasure = game.add.button(game.width/2+200, scoreY+69, 'noiseButton', this.measureNoise, this, 1, 1, 1);
         bgMeasure.anchor.setTo (0.5, 0.5);
         this.group.add(bgMeasure);
 
