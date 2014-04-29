@@ -34,21 +34,16 @@ var Controller = {
         console.log('GAME FINISHED');
         UI.finish = new Finish();
 
-        this.clearGame();
+        this.clearGame(true);
     }
 
     , replayGame: function () {
         this.clearGame();
         this.startGame();
 //        UI.menu = new Menu( db.get('octave') );
-
-        if(UI.finish){
-            UI.finish.destroy();
-            UI.finish = null;
-        }
     }
 
-    , clearGame: function(){
+    , clearGame: function(leaveFinish){
         if(UI.pause){
             UI.pause.destroy();
             UI.pause = null;
@@ -72,6 +67,11 @@ var Controller = {
         if(sheet){
             sheet.destroy();
             sheet = null;
+        }
+
+        if(UI.finish && !leaveFinish){
+            UI.finish.destroy();
+            UI.finish = null;
         }
 
         // hack because oscillator is async

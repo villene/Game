@@ -13,11 +13,14 @@ var Finish = Class.extend({
         this.sprite.anchor.setTo(0.5, 0.5);
         this.group.add(this.sprite);
 
-        var play = game.add.button(game.width/7 * 3, 400, 'pauseButton', this.hide, this, 1, 1, 1);
-        play.anchor.setTo(0.5, 0.5);
-        this.group.add(play);
+//        var play = game.add.button(game.width/7 * 3, 400, 'pauseButton', this.hide, this, 1, 1, 1);
+//        play.anchor.setTo(0.5, 0.5);
+//        this.group.add(play);
+
+        this.group.add( new Home(game.width/7 * 3, 400).getPointer() );
 
         this.group.add( new Replay(game.width/7 * 4, 400).getPointer() );
+
     }
 
     , show: function () {
