@@ -14,7 +14,7 @@ var Menu = Class.extend({
         var bg = this.group.create(game.width / 2, game.height / 2, 'popup_bg');
         bg.anchor.setTo(0.5, 0.5);
 
-        var heading = game.add.text(game.width / 2, game.height/2-190, 'FortaNota', {font: "50px Arial", fill: "#fff"});
+        var heading = game.add.text(game.width / 2, game.height/2-190, 'Karaoke Bird', {font: "50px Arial", fill: "#fff"});
         heading.anchor.setTo(0.5, 0);
         this.group.add(heading);
 
