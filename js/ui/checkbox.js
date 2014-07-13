@@ -34,12 +34,14 @@ var Checkbox = Class.extend({
 
 var MusicCheck = Checkbox.extend({
     init: function(x, y){
-        this._super(x, y, sound.oscillator.get(), 'music');
+//        this._super(x, y, sound.oscillator.get(), 'music');
+        this._super(x, y, sound.midi.get(), 'music');
     }
 
     , toggle: function(){
         this._super();
-        sound.oscillator.toggle(this.isChecked);
+//        sound.oscillator.toggle(this.isChecked);
+        sound.midi.toggle(this.isChecked);
     }
 })
 

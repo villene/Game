@@ -5,6 +5,9 @@ var CONFIG = {
 CONFIG.gameWidth = 1024;
 CONFIG.gameHeight = 600;
 
+CONFIG.midiVolume = 200;
+CONFIG.midiVelocity = 200;
+
 //CONFIG.scores = [
 //    { title: 'Titanic' }
 //    ,

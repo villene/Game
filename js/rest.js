@@ -8,6 +8,7 @@ var Rest = Class.extend({
     , checkAccuracy: function () { }
 
     , playNote: function(){
-        oscillator.frequency.value = 0;
+//        oscillator.frequency.value = 0;
+        sound.midi.pause();
     }
 })

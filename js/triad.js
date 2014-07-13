@@ -11,7 +11,8 @@ var Triad = Class.extend({
             this.destroy();
         }
 
-        oscillator.frequency.value = this.hertzList[key];
+//        oscillator.frequency.value = this.hertzList[key];
+
         var self = this;
         setTimeout(function(){
             key++;
@@ -19,17 +20,10 @@ var Triad = Class.extend({
         }, 500);
     }
 
-//    , generateOscillator: function(){
-//        window.oscillator = audioContext.createOscillator();
-//        oscillator.type = 0; // Sine wave
-//        oscillator.frequency.value = 0; // Default frequency in hertz
-//        oscillator.connect(audioContext.destination); // Connect sound source 1 to output
-//        oscillator.start(0);
-//    }
-
     , destroy: function(){
-        oscillator.frequency.value = 0;
+//        oscillator.frequency.value = 0;
 //        this.oscillator.disconnect();
+        sound.midi.pause();
     }
 
 })

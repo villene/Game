@@ -7,6 +7,7 @@ var Sound = Class.extend({
         this.y = 60;
 
         this.metronome = new Metronome();
+        this.midi = new Midi();
     }
 
     , play: function(sound){
@@ -42,6 +43,46 @@ var Sound = Class.extend({
         }
     }
 });
+
+
+var Midi = Class.extend({
+    init: function(){
+        this.enabled = this.get();
+
+        MIDI.setVolume(0, CONFIG.midiVolume);
+    }
+
+    , play: function(midi){
+        if(this.enabled){
+            MIDI.noteOn(0, midi, CONFIG.midiVelocity, 0);
+            MIDI.noteOff(0, midi, 0.5);
+        }
+
+    }
+
+    , pause: function(){
+        MIDI.stopAllNotes();
+    }
+
+    , get: function(){
+        if(db.get('isMusic')){
+            var value = db.get('isMusic') === 'true' ? true : false;
+        } else {
+            var value = true;
+            db.set('isMusic', value);
+        }
+        return value;
+    }
+
+    , toggle: function(value){
+        db.set('isMusic', value);
+        this.enabled = value;
+
+        if(!this.enabled){
+            this.pause();
+        }
+    }
+})
 
 
 var Oscillator = Class.extend({

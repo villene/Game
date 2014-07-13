@@ -125,12 +125,14 @@ var Sheet = Class.extend({
         var newTime = new Date().getTime();
         this.time += newTime - this.timeSplit;
         this.timeSplit = newTime;
-        sound.oscillator.pause();
+//        sound.oscillator.pause();
+        sound.midi.pause();
     }
 
     , update: function () {
         if (this.status == 'finished') {
-            sound.oscillator.pause();
+//            sound.oscillator.pause();
+            sound.midi.pause();
             return;
         }
         if (this.playing) {

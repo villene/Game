@@ -34,7 +34,8 @@ var Score = Class.extend({
     },
 
     playNote: function (){
-        sound.oscillator.play(this.frequency);
+//        sound.oscillator.play(this.frequency);
+        sound.midi.play(this.midi);
     },
 
     checkAccuracyUnit: function (birdMidi) {

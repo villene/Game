@@ -55,7 +55,8 @@
                     MIDI.setVolume(0, 127);
                     MIDI.noteOn(0, note, velocity, delay);
                     setTimeout(function(){
-                        MIDI.noteOff(0, note, 0);
+//                        MIDI.noteOff(0, note, 0);
+                        MIDI.stopAllNotes();
                     }, 500);
 
                 }

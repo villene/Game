@@ -74,8 +74,9 @@ var Controller = {
             UI.finish = null;
         }
 
-        // hack because oscillator is async
-        setTimeout( function(){ sound.oscillator.pause() }, 100);
+//        // hack because oscillator is async
+//        setTimeout( function(){ sound.oscillator.pause() }, 100);
 
+        sound.midi.pause();
     }
 }

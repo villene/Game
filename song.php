@@ -43,6 +43,16 @@
     <script src="js/main.js"></script>
     <script src="js/windowing.js"></script>
 
+    <!-- MIDI.js -->
+    <script src="js/midijs/AudioDetect.js" type="text/javascript"></script>
+    <script src="js/midijs/LoadPlugin.js" type="text/javascript"></script>
+    <script src="js/midijs/Plugin.js" type="text/javascript"></script>
+    <script src="js/midijs/Player.js" type="text/javascript"></script>
+    <script src="js/midijs/DOMLoader.XMLHttp.js" type="text/javascript"></script>
+    <script src="js/midijs/Base64.js" type="text/javascript"></script>
+    <script src="js/midijs/base64binary.js" type="text/javascript"></script>
+    <!-- MIDI.js -->
+
 </head>
 <body>
     <div id="phaser"></div>

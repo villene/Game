@@ -2,6 +2,13 @@ document.addEventListener('touchmove', function (e) { e.preventDefault(); }, fal
 
 window.onload = function(){
     console.log('window onload');
+
+    MIDI.loadPlugin({
+        soundfontUrl: "js/midijs/soundfont/",
+        instrument: "acoustic_grand_piano",
+        callback: function() {}
+    });
+
     init();
 }
 
@@ -18,8 +25,7 @@ window.mobilecheck = function() {
 
 // global variables
 var game, bird, sheet, playlist, scaleRatio, songData;
-var db = new DB();
-var sound = new Sound();
+
 
 function init(){
     var innerWidth = window.innerWidth;
@@ -78,8 +84,11 @@ function preload() {
 }
 
 function create() {
+    db = new DB();
+    sound = new Sound();
+
     drawBg();
-    sound.createOscillator();
+//    sound.createOscillator();
     playlist = new Playlist();
     songData = new SongData('Put_vejini');
     Controller.lobby();
