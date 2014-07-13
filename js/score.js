@@ -1,16 +1,19 @@
 var prevFreq = 0;
 var Score = Class.extend({
-    init: function (midi, note, oct, step, bps, nr, text, freqGen) {
+    init: function (midi, note, oct, step, bps, text, frequency, duration, sequence) {
         this.midi = midi;
         this.note = note;
         this.oct = oct;
         this.step = step;
         this.bps = bps;
-        this.nr = nr;
+//        this.nr = nr;
         this.text = text;
         this.accuracyArr = [];
         this.accuracy = false;
-        this.frequency = freqGen;
+        this.frequency = frequency;
+
+        this.duration = duration;
+        this.sequence = sequence;
 
         this.sprite = game.add.sprite(0, 0, 'heart');
         this.sprite.anchor.setTo(0, 0.5);
@@ -21,13 +24,16 @@ var Score = Class.extend({
         this.lyric = game.add.text(this.sprite.x, game.height-30, this.text, style);
         this.lyric.anchor.setTo(0, 1);
 
+        this.hasPlayed = false;
+
         this.draw(0);
     }
 
     , draw: function (time) {
         var deltaX = Math.round((time / 1000) * this.bps * CONFIG.noteWidth);
-        var x = CONFIG.noteWidth * this.nr - deltaX;
+        var x = CONFIG.noteWidth * this.sequence - deltaX;
         var y = game.height - (this.midi - CONFIG.bottomMidi) * CONFIG.lineHeight;
+//        console.log(this.sequence, x);
         this.sprite.x = x;
         this.sprite.y = y;
         this.lyric.x = x;
@@ -35,7 +41,10 @@ var Score = Class.extend({
 
     playNote: function (){
 //        sound.oscillator.play(this.frequency);
-        sound.midi.play(this.midi);
+        if(!this.hasPlayed){
+            sound.midi.play(this.midi);
+            this.hasPlayed = true;
+        }
     },
 
     checkAccuracyUnit: function (birdMidi) {
@@ -65,7 +74,9 @@ var Score = Class.extend({
 //        console.log(this.accuracy + '%');
 
         return this.accuracy;
-    }, destroy: function () {
+    }
+
+    , destroy: function () {
         this.sprite.destroy(true);
     }
 

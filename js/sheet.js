@@ -37,6 +37,7 @@ var Sheet = Class.extend({
         }
 
         var notes = songData.xml.getElementsByTagName("note");
+        var noteSequence = 0;
 
         for (var i = 0, l = notes.length; i < l; i++) {
             if (notes[i].getElementsByTagName("step")[0]) {
@@ -84,22 +85,35 @@ var Sheet = Class.extend({
 //                console.log(freq, freq.midi, octave, step, alter);
             }
 
-            for (var j = 0; j < duration; j++) {
-                var nr = this.list.length;
-                if (rest) {
-                    this.list[nr] = new Rest();
-                } else {
-                    this.list[nr] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, this.bps, nr, text, freqGen);
-                    text = false; // add text only to first note
-                    this.group.add(this.list[nr].sprite);
-                    if(this.list[nr].lyric) this.group.add(this.list[nr].lyric);
-                }
 
-                if (octave) {
-                    this.octaveList[octave]++;
-                }
-
+            var nr = this.list.length;
+            if (rest) {
+                this.list[nr] = new Rest();
+            } else {
+                this.list[nr] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, this.bps, text, freqGen, duration, noteSequence);
+                text = false; // add text only to first note
+                this.group.add(this.list[nr].sprite);
+                if(this.list[nr].lyric) this.group.add(this.list[nr].lyric);
             }
+
+            noteSequence += duration;
+
+//            for (var j = 0; j < duration; j++) {
+//                var nr = this.list.length;
+//                if (rest) {
+//                    this.list[nr] = new Rest();
+//                } else {
+//                    this.list[nr] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, this.bps, nr, text, freqGen);
+//                    text = false; // add text only to first note
+//                    this.group.add(this.list[nr].sprite);
+//                    if(this.list[nr].lyric) this.group.add(this.list[nr].lyric);
+//                }
+//
+//                if (octave) {
+//                    this.octaveList[octave]++;
+//                }
+//
+//            }
 //            var nr = this.list.length;
 //            this.list[i] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, this.bps, nr, text);
 //            this.group.add(this.list[i].sprite);
@@ -148,9 +162,19 @@ var Sheet = Class.extend({
     }
 
     , playNote: function(){
-        var scoreNr = Math.floor(this.time / 1000 * this.bps);
-        if (scoreNr - 1 >= 0) {
-            this.list[scoreNr - 1].playNote();
+//        var scoreNr = Math.floor(this.time / 1000 * this.bps);
+//        if (scoreNr - 1 >= 0) {
+//            this.list[scoreNr - 1].playNote();
+//        }
+
+        var sequence = Math.floor(this.time / 1000 * this.bps);
+        var tmpSequence = 0;
+        for(var i= 0, l=this.list.length; i<l; i++){
+            tmpSequence += this.list[i].duration;
+            if(tmpSequence > sequence){
+                this.list[i].playNote();
+                break;
+            }
         }
     }
 

@@ -54,6 +54,7 @@ var Midi = Class.extend({
 
     , play: function(midi){
         if(this.enabled){
+            console.log(midi);
             MIDI.noteOn(0, midi, CONFIG.midiVelocity, 0);
             MIDI.noteOff(0, midi, 0.5);
         }
