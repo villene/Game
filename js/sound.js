@@ -63,7 +63,7 @@ var Oscillator = Class.extend({
     }
 
     , pause: function(){
-        oscillator.frequency.value = 0;
+        oscillator.frequency.value = 20000;
     }
 
     , get: function(){

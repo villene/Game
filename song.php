@@ -34,6 +34,7 @@
     <script src="js/ui/finish.js"></script>
     <script src="js/ui/sidebar.js"></script>
     <script src="js/ui/checkbox.js"></script>
+    <script src="js/ui/noteSlider.js"></script>
 
     <!-- DOM -->
     <script src="js/ui/playlist.js"></script>

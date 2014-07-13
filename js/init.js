@@ -53,6 +53,8 @@ function preload() {
     game.load.image('noiseButton', 'assets/noise_button.png', 40, 40);
     game.load.image('arrow', 'assets/arrow.png');
     game.load.spritesheet('checkbox', 'assets/checkbox.png', 32, 32);
+    game.load.image('noteSlider', 'assets/noteSlider.png');
+    game.load.image('noteSliderHover', 'assets/noteSliderHover.png');
 
     // gameplay assets
 //    game.load.image('bg', 'assets/bg.png');
