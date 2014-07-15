@@ -97,26 +97,6 @@ var Sheet = Class.extend({
             }
 
             noteSequence += duration;
-
-//            for (var j = 0; j < duration; j++) {
-//                var nr = this.list.length;
-//                if (rest) {
-//                    this.list[nr] = new Rest();
-//                } else {
-//                    this.list[nr] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, this.bps, nr, text, freqGen);
-//                    text = false; // add text only to first note
-//                    this.group.add(this.list[nr].sprite);
-//                    if(this.list[nr].lyric) this.group.add(this.list[nr].lyric);
-//                }
-//
-//                if (octave) {
-//                    this.octaveList[octave]++;
-//                }
-//
-//            }
-//            var nr = this.list.length;
-//            this.list[i] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, this.bps, nr, text);
-//            this.group.add(this.list[i].sprite);
         }
     }
 
@@ -154,28 +134,31 @@ var Sheet = Class.extend({
             this.time += newTime - this.timeSplit;
             this.timeSplit = newTime;
 
+            if(typeof this.currentScore === 'undefined'){
+                this.currentScore = 0;
+                this.duration = 0;
+            } else {
+                var sequence = Math.floor(this.time / 1000 * this.bps);
+                if(this.duration + this.list[this.currentScore].duration < sequence ){
+                    this.duration += this.list[this.currentScore].duration;
+                    this.checkAccuracy(this.currentScore);
+                    this.currentScore++;
+                    if(!this.list[this.currentScore]){
+                        this.finished();
+                        return;
+                    }
+                }
+            }
+
             this.draw();
-            this.checkAccuracy(bird.midi);
+            this.checkAccuracyUnit(bird.midi);
             this.playNote();
             this.playBeat();
         }
     }
 
     , playNote: function(){
-//        var scoreNr = Math.floor(this.time / 1000 * this.bps);
-//        if (scoreNr - 1 >= 0) {
-//            this.list[scoreNr - 1].playNote();
-//        }
-
-        var sequence = Math.floor(this.time / 1000 * this.bps);
-        var tmpSequence = 0;
-        for(var i= 0, l=this.list.length; i<l; i++){
-            tmpSequence += this.list[i].duration;
-            if(tmpSequence > sequence){
-                this.list[i].playNote();
-                break;
-            }
-        }
+        this.list[this.currentScore].playNote();
     }
 
     , playBeat: function(){
@@ -187,18 +170,12 @@ var Sheet = Class.extend({
         }
     }
 
-    ,checkAccuracy: function (midi) {
-        // calculate score being played
-        var scoreNr = Math.floor(this.time / 1000 * this.bps);
-        if (scoreNr - 1 >= 0) {
-            this.list[scoreNr - 1].checkAccuracy();
-        }
-        if (scoreNr < this.list.length) {
-            this.list[scoreNr].checkAccuracyUnit(midi);
-        } else {
-            this.finished();
-        }
+    , checkAccuracyUnit: function (midi) {
+        this.list[this.currentScore].checkAccuracyUnit(midi);
+    }
 
+    , checkAccuracy: function(scoreNr){
+        this.list[scoreNr].checkAccuracy();
     }
 
     , finished: function () {

@@ -209,7 +209,7 @@ function initAudio() {
         navigator.requestAnimationFrame = navigator.webkitRequestAnimationFrame || navigator.mozRequestAnimationFrame;
 
     navigator.getUserMedia({audio: true}, gotStream, function (e) {
-        alert('Error getting audio');
+//        alert('Error getting audio');
         console.log(e);
     });
 }

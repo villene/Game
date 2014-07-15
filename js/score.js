@@ -30,6 +30,8 @@ var Score = Class.extend({
     }
 
     , draw: function (time) {
+        // TODO draw squares instead of hearts
+
         var deltaX = Math.round((time / 1000) * this.bps * CONFIG.noteWidth);
         var x = CONFIG.noteWidth * this.sequence - deltaX;
         var y = game.height - (this.midi - CONFIG.bottomMidi) * CONFIG.lineHeight;
