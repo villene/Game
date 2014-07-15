@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa957a23-b4ca-49df-935e-447017a6a73a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/score.js" afterPath="$PROJECT_DIR$/js/score.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sheet.js" afterPath="$PROJECT_DIR$/js/sheet.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sound.js" afterPath="$PROJECT_DIR$/js/sound.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Game.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,19 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="sheet.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sheet.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/sheet.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="5" selection-start="3911" selection-end="3911" vertical-scroll-proportion="0.4733406" vertical-offset="1065" max-vertical-offset="4950">
+            <state line="104" column="51" selection-start="4040" selection-end="4040" vertical-scroll-proportion="0.0" vertical-offset="945" max-vertical-offset="4950">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="score.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="score.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/score.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="0" selection-start="2316" selection-end="2316" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1365">
+            <state line="32" column="48" selection-start="966" selection-end="966" vertical-scroll-proportion="0.51502144" vertical-offset="0" max-vertical-offset="1335">
               <folding />
             </state>
           </provider>
@@ -104,8 +100,8 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/js/sound.js" />
-        <option value="$PROJECT_DIR$/js/score.js" />
         <option value="$PROJECT_DIR$/js/sheet.js" />
+        <option value="$PROJECT_DIR$/js/score.js" />
       </list>
     </option>
   </component>
@@ -543,16 +539,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/score.js">
+    <entry file="file://$PROJECT_DIR$/js/sheet.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="0" selection-start="2316" selection-end="2316" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1365">
+        <state line="104" column="51" selection-start="4040" selection-end="4040" vertical-scroll-proportion="0.0" vertical-offset="945" max-vertical-offset="4950">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/sheet.js">
+    <entry file="file://$PROJECT_DIR$/js/score.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="5" selection-start="3911" selection-end="3911" vertical-scroll-proportion="0.4733406" vertical-offset="1065" max-vertical-offset="4950">
+        <state line="32" column="48" selection-start="966" selection-end="966" vertical-scroll-proportion="0.51502144" vertical-offset="0" max-vertical-offset="1335">
           <folding />
         </state>
       </provider>

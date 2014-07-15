@@ -1,12 +1,10 @@
 var prevFreq = 0;
 var Score = Class.extend({
-    init: function (midi, note, oct, step, bps, text, frequency, duration, sequence) {
+    init: function (midi, note, oct, step, text, frequency, duration, sequence) {
         this.midi = midi;
         this.note = note;
         this.oct = oct;
         this.step = step;
-        this.bps = bps;
-//        this.nr = nr;
         this.text = text;
         this.accuracyArr = [];
         this.accuracy = false;
@@ -26,13 +24,13 @@ var Score = Class.extend({
 
         this.hasPlayed = false;
 
-        this.draw(0);
+//        this.draw(0);
     }
 
-    , draw: function (time) {
+    , draw: function (time, bps) {
         // TODO draw squares instead of hearts
 
-        var deltaX = Math.round((time / 1000) * this.bps * CONFIG.noteWidth);
+        var deltaX = Math.round((time / 1000) * bps * CONFIG.noteWidth);
         var x = CONFIG.noteWidth * this.sequence - deltaX;
         var y = game.height - (this.midi - CONFIG.bottomMidi) * CONFIG.lineHeight;
 //        console.log(this.sequence, x);

@@ -90,7 +90,7 @@ var Sheet = Class.extend({
             if (rest) {
                 this.list[nr] = new Rest();
             } else {
-                this.list[nr] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, this.bps, text, freqGen, duration, noteSequence);
+                this.list[nr] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, text, freqGen, duration, noteSequence);
                 text = false; // add text only to first note
                 this.group.add(this.list[nr].sprite);
                 if(this.list[nr].lyric) this.group.add(this.list[nr].lyric);
@@ -102,7 +102,7 @@ var Sheet = Class.extend({
 
     , draw: function () {
         for (var i = 0, l = this.list.length; i < l; i++) {
-            this.list[i].draw(this.time);
+            this.list[i].draw(this.time, this.bps);
         }
         this.group.x = 200;
     }
