@@ -23,8 +23,6 @@ var Score = Class.extend({
         this.lyric.anchor.setTo(0, 1);
 
         this.hasPlayed = false;
-
-//        this.draw(0);
     }
 
     , draw: function (time, bps) {

@@ -6,10 +6,12 @@ window.onload = function(){
     MIDI.loadPlugin({
         soundfontUrl: "js/midijs/soundfont/",
         instrument: "acoustic_grand_piano",
-        callback: function() {}
+        callback: function() {
+
+            init();
+        }
     });
 
-    init();
 }
 
 window.mobilecheck = function() {
@@ -104,6 +106,10 @@ function update() {
 
     if (sheet) {
         sheet.update();
+    }
+
+    if(UI.noteSlider){
+        UI.noteSlider.update();
     }
 }
 

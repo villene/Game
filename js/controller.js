@@ -5,6 +5,7 @@ var Controller = {
         this.clearGame();
         UI.menu = new Menu( db.get('octave') );
         playlist.close();
+
     }
 
     , initGame: function(){
@@ -21,6 +22,7 @@ var Controller = {
 
         bird = new Bird( CONFIG.bottomMidi + 12 );
         sheet = new Sheet(songData.name, this.octave, this.tempo);
+        UI.noteSlider = new NoteSlider(sheet.getFirstNote(), 0, 0);
 
         new Triad();
         UI.pause = new Pause();

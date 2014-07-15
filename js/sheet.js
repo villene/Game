@@ -184,6 +184,10 @@ var Sheet = Class.extend({
         Controller.finishGame();
     }
 
+    , getFirstNote: function(){
+        return this.list[0].midi;
+    }
+
     , getScoreCount: function () {
         return this.list.length;
     }, destroy: function () {
