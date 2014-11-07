@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa957a23-b4ca-49df-935e-447017a6a73a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/config.js" afterPath="$PROJECT_DIR$/js/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controller.js" afterPath="$PROJECT_DIR$/js/controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/init.js" afterPath="$PROJECT_DIR$/js/init.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ui/noteSlider.js" afterPath="$PROJECT_DIR$/js/ui/noteSlider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/score.js" afterPath="$PROJECT_DIR$/js/score.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sheet.js" afterPath="$PROJECT_DIR$/js/sheet.js" />
-    </list>
+    <list default="true" id="fa957a23-b4ca-49df-935e-447017a6a73a" name="Default" comment="" />
     <ignored path="Game.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />

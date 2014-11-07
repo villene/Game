@@ -39,7 +39,7 @@ var Score = Class.extend({
 
     playNote: function (){
 //        sound.oscillator.play(this.frequency);
-        if(!this.hasPlayed){
+        if(!this.hasPlayed){            
             sound.midi.play(this.midi);
             this.hasPlayed = true;
         }

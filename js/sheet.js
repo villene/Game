@@ -88,7 +88,7 @@ var Sheet = Class.extend({
 
             var nr = this.list.length;
             if (rest) {
-                this.list[nr] = new Rest();
+                this.list[nr] = new Rest(duration);
             } else {
                 this.list[nr] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, text, freqGen, duration, noteSequence);
                 text = false; // add text only to first note
