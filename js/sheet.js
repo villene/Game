@@ -22,6 +22,8 @@ var Sheet = Class.extend({
         this.octaveList = [0, 0, 0, 0, 0, 0, 0, 0];
 
         this.group = game.add.group();
+        this.scoreLayer = game.add.graphics(200, 0);
+        this.scoreLayer.beginFill(0xFF3300);
 
         this.getXML();
         this.draw();
@@ -90,9 +92,9 @@ var Sheet = Class.extend({
             if (rest) {
                 this.list[nr] = new Rest(duration);
             } else {
-                this.list[nr] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, text, freqGen, duration, noteSequence);
+                this.list[nr] = new Score(Math.round(freq.midi), freq.note, freq.oct, freq.step, text, freqGen, duration, noteSequence, this);
                 text = false; // add text only to first note
-                this.group.add(this.list[nr].sprite);
+                // this.group.add(this.list[nr].sprite);
                 if(this.list[nr].lyric) this.group.add(this.list[nr].lyric);
             }
 
@@ -105,6 +107,9 @@ var Sheet = Class.extend({
             this.list[i].draw(this.time, this.bps);
         }
         this.group.x = 200;
+
+        var x = Math.round((this.time / 1000) * this.bps * CONFIG.noteWidth);
+        this.scoreLayer.x = 200-x;
     }
 
     , play: function () {
@@ -152,6 +157,7 @@ var Sheet = Class.extend({
 
             this.draw();
             this.checkAccuracyUnit(bird.midi);
+            bird.drawPitch();
             this.playNote();
             this.playBeat();
         }

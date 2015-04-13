@@ -22,7 +22,7 @@
 
 <?php
 
-    $songs = [];
+    $songs = array();
     if ($handle = opendir('xml/')) {
         while (false !== ($entry = readdir($handle))) {
             if ($entry != "." && $entry != "..") {

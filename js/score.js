@@ -1,6 +1,6 @@
 var prevFreq = 0;
 var Score = Class.extend({
-    init: function (midi, note, oct, step, text, frequency, duration, sequence) {
+    init: function (midi, note, oct, step, text, frequency, duration, sequence, sheet) {
         this.midi = midi;
         this.note = note;
         this.oct = oct;
@@ -13,13 +13,20 @@ var Score = Class.extend({
         this.duration = duration;
         this.sequence = sequence;
 
-        this.sprite = game.add.sprite(0, 0, 'heart');
-        this.sprite.anchor.setTo(0, 0.5);
-        this.sprite.scale.x = 1;
-        this.sprite.scale.y = 1;
+        // this.sprite = game.add.sprite(0, 0, 'heart');
+        // this.sprite.anchor.setTo(0, 0.5);
+        // this.sprite.scale.x = 1;
+        // this.sprite.scale.y = 1;
 
+        // score 
+        var x = CONFIG.noteWidth * this.sequence;
+        var y = game.height - (this.midi - CONFIG.bottomMidi + 0.5) * CONFIG.lineHeight;
+        sheet.scoreLayer.drawRect(x, y, CONFIG.noteWidth, CONFIG.lineHeight, 5);
+
+        // text
         var style = { font: "18px Arial", fill: "#ff0044"};
-        this.lyric = game.add.text(this.sprite.x, game.height-30, this.text, style);
+        // this.lyric = game.add.text(this.sprite.x, game.height-30, this.text, style);
+        this.lyric = game.add.text(x, game.height-30, this.text, style);
         this.lyric.anchor.setTo(0, 1);
 
         this.hasPlayed = false;
@@ -32,8 +39,8 @@ var Score = Class.extend({
         var x = CONFIG.noteWidth * this.sequence - deltaX;
         var y = game.height - (this.midi - CONFIG.bottomMidi) * CONFIG.lineHeight;
 //        console.log(this.sequence, x);
-        this.sprite.x = x;
-        this.sprite.y = y;
+        // this.sprite.x = x;
+        // this.sprite.y = y;
         this.lyric.x = x;
     },
 
@@ -75,7 +82,7 @@ var Score = Class.extend({
     }
 
     , destroy: function () {
-        this.sprite.destroy(true);
+        // this.sprite.destroy(true);
     }
 
 

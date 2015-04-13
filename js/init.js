@@ -92,7 +92,7 @@ function create() {
     drawBg();
 //    sound.createOscillator();
     playlist = new Playlist();
-    songData = new SongData('Put_vejini');
+    songData = new SongData('Laul_Põhjamaast');
     Controller.lobby();
 }
 
