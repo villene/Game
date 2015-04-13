@@ -13,35 +13,24 @@ var Score = Class.extend({
         this.duration = duration;
         this.sequence = sequence;
 
-        // this.sprite = game.add.sprite(0, 0, 'heart');
-        // this.sprite.anchor.setTo(0, 0.5);
-        // this.sprite.scale.x = 1;
-        // this.sprite.scale.y = 1;
-
         // score 
-        var x = CONFIG.noteWidth * this.sequence;
-        var y = game.height - (this.midi - CONFIG.bottomMidi + 0.5) * CONFIG.lineHeight;
-        var width = this.duration * CONFIG.noteWidth;
-        sheet.scoreLayer.drawRect(x, y, width, CONFIG.lineHeight, 5);
+        this.x = CONFIG.noteWidth * this.sequence;
+        this.y = game.height - (this.midi - CONFIG.bottomMidi + 0.5) * CONFIG.lineHeight;
+        this.width = this.duration * CONFIG.noteWidth;        
+        sheet.scoreLayer.drawRect(this.x, this.y, this.width, CONFIG.lineHeight, 5);
 
         // text
         var style = { font: "18px Arial", fill: "#ff0044"};
-        // this.lyric = game.add.text(this.sprite.x, game.height-30, this.text, style);
-        this.lyric = game.add.text(x, game.height-30, this.text, style);
+        this.lyric = game.add.text(this.x, game.height-30, this.text, style);
         this.lyric.anchor.setTo(0, 1);
 
         this.hasPlayed = false;
     }
 
     , draw: function (time, bps) {
-        // TODO draw squares instead of hearts
-
         var deltaX = Math.round((time / 1000) * bps * CONFIG.noteWidth);
-        var x = CONFIG.noteWidth * this.sequence - deltaX;
+        var x = this.x - deltaX;
         var y = game.height - (this.midi - CONFIG.bottomMidi) * CONFIG.lineHeight;
-//        console.log(this.sequence, x);
-        // this.sprite.x = x;
-        // this.sprite.y = y;
         this.lyric.x = x;
     },
 
@@ -77,7 +66,15 @@ var Score = Class.extend({
             UI.points.add(1);
             this.destroy();
         }
-//        console.log(this.accuracy + '%');
+
+        // console.log(this.accuracy + '%');
+        var style = { font: "16px Arial", fill: "#ff0044"};
+        // var text = this.accuracy + '%' + '\n' + this.accuracyArr.length;
+        var text = this.accuracy + '%';
+        var result = game.add.text(this.x, this.y-30, text, style);
+        sheet.resultLayer.add(result);
+        sheet.scoreLayer.beginFill(red2green(this.accuracy));
+        sheet.scoreLayer.drawRect(this.x, this.y, this.width, CONFIG.lineHeight, 5);
 
         return this.accuracy;
     }

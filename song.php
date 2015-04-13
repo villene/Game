@@ -21,6 +21,7 @@
     <script src="js/init.js"></script>
     <script src="js/bird.js"></script>
     <script src="js/triad.js"></script>
+    <script src="js/red2green.js"></script>
 
 
     <!-- UI -->

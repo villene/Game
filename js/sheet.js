@@ -24,6 +24,8 @@ var Sheet = Class.extend({
         this.group = game.add.group();
         this.scoreLayer = game.add.graphics(200, 0);
         this.scoreLayer.beginFill(0xFF3300);
+        this.scoreLayer.lineStyle(2, 0xA30000, 1);
+        this.resultLayer = game.add.group();
 
         this.getXML();
         this.draw();
@@ -110,6 +112,7 @@ var Sheet = Class.extend({
 
         var x = Math.round((this.time / 1000) * this.bps * CONFIG.noteWidth);
         this.scoreLayer.x = 200-x;
+        this.resultLayer.x = 200-x;
     }
 
     , play: function () {
