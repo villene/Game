@@ -1,7 +1,8 @@
 function red2green(percentage){
 	var stepCount = 34; // should be even number
 	var stepSize = 510/stepCount;
-	var stepNr = Math.round((stepCount * percentage) / 80);
+	var maxPercent = 80; // it is very hard to get 100% with voice. 50-60% is already good
+	var stepNr = Math.round((stepCount * percentage) / maxPercent);
 
 	var red = 0;
 	var green = 0;

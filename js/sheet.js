@@ -23,7 +23,7 @@ var Sheet = Class.extend({
 
         this.group = game.add.group();
         this.scoreLayer = game.add.graphics(200, 0);
-        this.scoreLayer.beginFill(0xFF3300);
+        this.scoreLayer.beginFill(0xFF0000);
         this.scoreLayer.lineStyle(2, 0xA30000, 1);
         this.resultLayer = game.add.group();
 
@@ -198,8 +198,21 @@ var Sheet = Class.extend({
     , getScoreCount: function () {
         return this.list.length;
     }, destroy: function () {
-        this.group.destroy();
-    }, noteToFrequency: function (oct, step, alter) {
+        if(this.group){
+            this.group.destroy(true);
+            this.group = null;
+        }
+        if(this.scoreLayer){
+            this.scoreLayer.destroy(true);
+            this.scoreLayer = null;
+        }
+        if(this.resultLayer){
+            this.resultLayer.destroy(true);
+            this.resultLayer = null;
+        }
+    }
+
+    , noteToFrequency: function (oct, step, alter) {
         var freq;
         switch (step) {
             case 'C':

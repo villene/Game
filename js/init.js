@@ -89,8 +89,7 @@ function create() {
     db = new DB();
     sound = new Sound();
 
-    drawBg();
-//    sound.createOscillator();
+    game.stage.backgroundColor = '#ffffff';
     playlist = new Playlist();
     songData = new SongData('Laul_Põhjamaast');
     Controller.lobby();
@@ -119,9 +118,4 @@ function render() {
         var rect = new Phaser.Rectangle(0, 0, 23, 20);
         game.debug.renderRectangle(rect, 0xffffff);
         game.debug.renderText(game.time.fps || '--', 2, 14, "#00ff00");
-}
-
-
-function drawBg() {
-    game.add.sprite(0, 0, 'bg');
 }
