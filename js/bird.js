@@ -17,7 +17,7 @@ var Bird = Class.extend({
         this.sprite.animations.play('eat', 8, true);
 
         this.pitchLayer = game.add.graphics(0, 0);
-        this.pitchLayer.lineStyle(1, 0xff0000, 1);
+        this.pitchLayer.lineStyle(1, 0x00D5FF, 1);
         this.pitchLayer.moveTo(0,100);
         this.count = 0;
     }
@@ -50,9 +50,10 @@ var Bird = Class.extend({
 
     }
 
-    , drawPitch: function(){          
+    , drawPitch: function(time, bps){          
         // console.log(this.count, this.midi);  
-        this.pitchLayer.x = -this.count + sheet.group.x;  
+        var x = Math.round((time / 1000) * bps * CONFIG.noteWidth);
+        this.pitchLayer.x = 200-x;  
         this.count++; 
 
         if(this.midi > CONFIG.upMidi || this.midi < CONFIG.bottomMidi){
@@ -62,10 +63,10 @@ var Bird = Class.extend({
             // var midi = this.prevMidi > this.midi ? this.midi + 1 : this.midi - 1;
             var midi = this.midi;
             var y = game.height - (midi - CONFIG.bottomMidi) * CONFIG.lineHeight;
-            this.pitchLayer.moveTo(this.count-1, y);
+            this.pitchLayer.moveTo(x, y);
         }
         var y = game.height - (this.midi - CONFIG.bottomMidi) * CONFIG.lineHeight; 
-        this.pitchLayer.lineTo(this.count, y);            
+        this.pitchLayer.lineTo(x, y);            
           
     }
 

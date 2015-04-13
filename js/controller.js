@@ -20,8 +20,8 @@ var Controller = {
         songData.setBottomMidi();
         CONFIG.bottomMidi += (this.octave - songData.octave) * 12;
 
-        bird = new Bird( CONFIG.bottomMidi + 12 );
         sheet = new Sheet(songData.name, this.octave, this.tempo);
+        bird = new Bird( CONFIG.bottomMidi + 12 );
         UI.noteSlider = new NoteSlider(sheet.getFirstNote(), 0, 0);
 
         new Triad();

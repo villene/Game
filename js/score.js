@@ -21,7 +21,8 @@ var Score = Class.extend({
         // score 
         var x = CONFIG.noteWidth * this.sequence;
         var y = game.height - (this.midi - CONFIG.bottomMidi + 0.5) * CONFIG.lineHeight;
-        sheet.scoreLayer.drawRect(x, y, CONFIG.noteWidth, CONFIG.lineHeight, 5);
+        var width = this.duration * CONFIG.noteWidth;
+        sheet.scoreLayer.drawRect(x, y, width, CONFIG.lineHeight, 5);
 
         // text
         var style = { font: "18px Arial", fill: "#ff0044"};

@@ -124,13 +124,11 @@ var Sheet = Class.extend({
         var newTime = new Date().getTime();
         this.time += newTime - this.timeSplit;
         this.timeSplit = newTime;
-//        sound.oscillator.pause();
         sound.midi.pause();
     }
 
     , update: function () {
         if (this.status == 'finished') {
-//            sound.oscillator.pause();
             sound.midi.pause();
             return;
         }
@@ -157,7 +155,7 @@ var Sheet = Class.extend({
 
             this.draw();
             this.checkAccuracyUnit(bird.midi);
-            bird.drawPitch();
+            bird.drawPitch(this.time, this.bps);
             this.playNote();
             this.playBeat();
         }

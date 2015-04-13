@@ -116,6 +116,9 @@ function update() {
 function render() {
         //game.debug.renderCameraInfo(game.camera, 500, 32);
         //game.debug.renderInputInfo(32,32);
+        var rect = new Phaser.Rectangle(0, 0, 23, 20);
+        game.debug.renderRectangle(rect, 0xffffff);
+        game.debug.renderText(game.time.fps || '--', 2, 14, "#00ff00");
 }
 
 
