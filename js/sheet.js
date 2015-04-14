@@ -148,23 +148,7 @@ var Sheet = Class.extend({
             var newTime = new Date().getTime();
             this.time += newTime - this.timeSplit;
             this.timeSplit = newTime;
-
-            // if(typeof this.currentScore === 'undefined'){
-            //     this.currentScore = 0;
-            //     this.duration = 0;
-            // } else {
-            //     var sequence = Math.floor(this.time / 1000 * this.bps);
-            //     if(this.duration + this.list[this.currentScore].duration < sequence ){
-            //         this.duration += this.list[this.currentScore].duration;
-            //         this.checkAccuracy(this.currentScore);
-            //         this.currentScore++;
-            //         if(!this.list[this.currentScore]){
-            //             this.finished();
-            //             return;
-            //         }
-            //     }
-            // }
-
+            
             this.currentScore = this.time2score(this.time);
             if(!this.list[this.currentScore]){
                 this.finished();
@@ -210,14 +194,6 @@ var Sheet = Class.extend({
             }            
         }
     }
-
-    // , checkAccuracyUnit: function (midi) {
-    //     this.list[this.currentScore].checkAccuracyUnit(bird.midi);
-    // }
-
-    // , checkAccuracy: function(scoreID){
-    //     this.list[scoreID].checkAccuracy();
-    // }
 
     , checkAccuracy: function(midi){
         if(this.list[this.currentScore]){

@@ -23,8 +23,10 @@ var Pause = Class.extend({
         if(this.state == 'play'){
             this.destroy();
             UI.sidebar.draw();
+            UI.timeline.show();
         } else {
             UI.sidebar.destroy();
+            UI.timeline.hide();
         }
     }
 

@@ -29,6 +29,7 @@ var Controller = {
         UI.points = new Points();
         UI.sidebar = new Sidebar();
         UI.timeline = new Timeline();
+        UI.timeline.hide();
 
         playlist.hide();
     }
