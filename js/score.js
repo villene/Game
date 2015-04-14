@@ -42,7 +42,7 @@ var Score = Class.extend({
     },
 
     checkAccuracy: function () {
-        if (this.accuracy !== false) {
+        if (this.accuracy !== false || this.accuracyArr.length === 0) {
             return;
         }
 

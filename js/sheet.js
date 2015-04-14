@@ -199,10 +199,15 @@ var Sheet = Class.extend({
 
     , playBeat: function(){
 //        console.log(this.beatTime, this.bps, this.tempo, this.divisions);
-        if(this.time >= this.lastBeat+this.beatTime){
-            this.lastBeat = Math.round(this.beatCount*this.beatTime);
-            this.beatCount++;
-            sound.metronome.play();
+        if(Math.abs(this.time - this.lastBeat) > this.beatTime){
+            if(Math.abs(this.time-this.lastBeat) > 4*this.beatTime){ // if scroll timeline
+                var beatCount = Math.floor(this.time/this.beatTime);
+                this.lastBeat = Math.round(beatCount*this.beatTime);
+            } else {
+                this.lastBeat = Math.round(this.beatCount*this.beatTime);
+                this.beatCount++;
+                sound.metronome.play();   
+            }            
         }
     }
 
