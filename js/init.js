@@ -52,6 +52,8 @@ function init(){
 
 
 function preload() {
+    game.time.advancedTiming = true;
+
     // UI
     game.load.spritesheet('pauseButton', 'assets/pause.png', 73, 73);
     game.load.image('replayButton', 'assets/replay.png');
@@ -71,14 +73,15 @@ function preload() {
     game.load.spritesheet('bird_eat', 'assets/bird_eat.png', 40, 424 / 8);
     game.load.image('banana', 'assets/banana.png');
     game.load.image('heart', 'assets/heart.png');
+    game.load.image('slider', 'assets/slider.png');
 
     // audio
     game.load.audio('metronome', ['assets/metronome.ogg']);
 
 
-    game.world.scale.x = scaleRatio;
-    game.world.scale.y = scaleRatio;
-    game.renderer.resize(CONFIG.gameWidth*scaleRatio, CONFIG.gameHeight*scaleRatio);
+    // game.world.scale.x = scaleRatio;
+    // game.world.scale.y = scaleRatio;
+    // game.renderer.resize(CONFIG.gameWidth*scaleRatio, CONFIG.gameHeight*scaleRatio);
 
 //    game.stage.scaleMode = Phaser.StageScaleMode.SHOW_ALL;
 //    game.stage.scale.setShowAll();
@@ -93,13 +96,14 @@ function create() {
     playlist = new Playlist();
     songData = new SongData('Laul_Põhjamaast');
     Controller.lobby();
+
 }
 
 function update() {
-    if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) {
+    if (game.input.keyboard.isDown(Phaser.Keyboard.UP) && bird) {
         bird.onKeyPressed(Phaser.Keyboard.UP);
     }
-    if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
+    if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN) && bird) {
         bird.onKeyPressed(Phaser.Keyboard.DOWN);
     }
 
@@ -116,6 +120,6 @@ function render() {
         //game.debug.renderCameraInfo(game.camera, 500, 32);
         //game.debug.renderInputInfo(32,32);
         var rect = new Phaser.Rectangle(0, 0, 23, 20);
-        game.debug.renderRectangle(rect, 0xffffff);
-        game.debug.renderText(game.time.fps || '--', 2, 14, "#00ff00");
+        game.debug.rectangle(rect, 0xffffff);
+        game.debug.text(game.time.fps || '--', 2, 14, "#00ff00");
 }

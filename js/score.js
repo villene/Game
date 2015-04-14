@@ -68,7 +68,7 @@ var Score = Class.extend({
         }
 
         // console.log(this.accuracy + '%');
-        var style = { font: "16px Arial", fill: "#ff0044"};
+        var style = { font: "16px Arial", fill: "#333"};
         // var text = this.accuracy + '%' + '\n' + this.accuracyArr.length;
         var text = this.accuracy + '%';
         var result = game.add.text(this.x, this.y-30, text, style);

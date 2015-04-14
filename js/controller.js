@@ -23,6 +23,7 @@ var Controller = {
         sheet = new Sheet(songData.name, this.octave, this.tempo);
         bird = new Bird( CONFIG.bottomMidi + 12 );
         UI.noteSlider = new NoteSlider(sheet.getFirstNote(), 0, 0);
+        timeline = new Timeline();
 
         new Triad();
         UI.pause = new Pause();

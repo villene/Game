@@ -18,7 +18,7 @@ var Menu = Class.extend({
         heading.anchor.setTo(0.5, 0);
         this.group.add(heading);
 
-        // scoresList
+//         // scoresList
         var scoreX = game.width/2-230;
         var scoreY = game.height/2-70;
         var lineHeight = 30;
@@ -47,6 +47,7 @@ var Menu = Class.extend({
         this.group.add(this.tempo.group);
 
         var play = game.add.button(game.width / 2, scoreY+150, 'pauseButton', this.startGame, this, 1, 1, 1);
+        // var play = game.add.button(game.width / 2, scoreY+150, 'pauseButton', function(){console.log(23423)}, this, 1, 1, 1);
         play.anchor.setTo(0.5, 0.5);
         this.group.add(play);
 
@@ -54,12 +55,15 @@ var Menu = Class.extend({
 
 
         
-        var measureText = game.add.text(game.width/2+17, scoreY+60, 'Set background noise', {font: "16px Arial", fill: "#333"});
-        this.group.add(measureText);
+        // var measureText = game.add.text(game.width/2+17, scoreY+60, 'Set background noise', {font: "16px Arial", fill: "#333"});
+        // this.group.add(measureText);
         
-        var bgMeasure = game.add.button(game.width/2+200, scoreY+69, 'noiseButton', this.measureNoise, this, 1, 1, 1);
-        bgMeasure.anchor.setTo (0.5, 0.5);
-        this.group.add(bgMeasure);
+        // var bgMeasure = game.add.button(game.width/2+200, scoreY+69, 'noiseButton', this.measureNoise, this, 1, 1, 1);
+        // bgMeasure.anchor.setTo (0.5, 0.5);
+        // this.group.add(bgMeasure);
+
+        // var b = game.add.button(100, 400, 'pauseButton', function(){console.log(111)}, this, 1, 1, 1);
+        // this.group.add(b);
 
     }
 
@@ -80,12 +84,18 @@ var Menu = Class.extend({
             setTimeout(function(){clearInterval(collect);}, 4050);
             setTimeout(function(){thresholdSilence/=80;},4055); console.log(thresholdSilence);            
         }         
-    }, toggle: function () {
+    }
 
-    }, show: function () {
+    , toggle: function () {
+
+    }
+
+    , show: function () {
         this.group.x = -game.width;
         game.add.tween(this.group).to({x: 0}, 300).start();
-    }, hide: function () {
+    }
+
+    , hide: function () {
         var tween = game.add.tween(this.group).to({x: game.width}, 300).start();
         tween.onComplete.add(this.destroy, this);
     }
