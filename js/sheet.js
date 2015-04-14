@@ -12,6 +12,7 @@ var Sheet = Class.extend({
         this.status = 'active';
 
         this.time = 0;
+        this.totalTime = 0;
         this.timeSplit = 0;
         this.playing = false;
 
@@ -102,6 +103,7 @@ var Sheet = Class.extend({
 
             noteSequence += duration;
         }
+        this.totalTime = (noteSequence / this.bps) * 1000; // in ms
     }
 
     , draw: function () {
@@ -130,6 +132,13 @@ var Sheet = Class.extend({
         sound.midi.pause();
     }
 
+    , scroll: function(percentage){
+        this.time = this.totalTime * percentage / 100;
+        this.timeSplit = this.time;
+        // console.log(this.time, percentage);
+        this.draw();
+    }
+
     , update: function () {
         if (this.status == 'finished') {
             sound.midi.pause();
@@ -140,32 +149,52 @@ var Sheet = Class.extend({
             this.time += newTime - this.timeSplit;
             this.timeSplit = newTime;
 
-            if(typeof this.currentScore === 'undefined'){
-                this.currentScore = 0;
-                this.duration = 0;
-            } else {
-                var sequence = Math.floor(this.time / 1000 * this.bps);
-                if(this.duration + this.list[this.currentScore].duration < sequence ){
-                    this.duration += this.list[this.currentScore].duration;
-                    this.checkAccuracy(this.currentScore);
-                    this.currentScore++;
-                    if(!this.list[this.currentScore]){
-                        this.finished();
-                        return;
-                    }
-                }
+            // if(typeof this.currentScore === 'undefined'){
+            //     this.currentScore = 0;
+            //     this.duration = 0;
+            // } else {
+            //     var sequence = Math.floor(this.time / 1000 * this.bps);
+            //     if(this.duration + this.list[this.currentScore].duration < sequence ){
+            //         this.duration += this.list[this.currentScore].duration;
+            //         this.checkAccuracy(this.currentScore);
+            //         this.currentScore++;
+            //         if(!this.list[this.currentScore]){
+            //             this.finished();
+            //             return;
+            //         }
+            //     }
+            // }
+
+            this.currentScore = this.time2score(this.time);
+            if(!this.list[this.currentScore]){
+                this.finished();
+                return;
             }
 
             this.draw();
-            this.checkAccuracyUnit(bird.midi);
+            this.checkAccuracy(bird.midi);
             bird.drawPitch(this.time, this.bps);
             this.playNote();
             this.playBeat();
         }
     }
 
+    , time2score: function(time){
+        var sequence = Math.floor(time / 1000 * this.bps);
+        var duration = 0;
+        for(var i=0, l=this.list.length; i<l; i++){
+            duration += this.list[i].duration;
+            if(sequence < duration) break;
+        }
+        return i;
+    }
+
     , playNote: function(){
-        this.list[this.currentScore].playNote();
+        if(this.prevScore !== this.currentScore){
+            // console.log(this.currentScore);
+            this.list[this.currentScore].playNote();
+            this.prevScore = this.currentScore;
+        }
     }
 
     , playBeat: function(){
@@ -177,12 +206,21 @@ var Sheet = Class.extend({
         }
     }
 
-    , checkAccuracyUnit: function (midi) {
-        this.list[this.currentScore].checkAccuracyUnit(midi);
-    }
+    // , checkAccuracyUnit: function (midi) {
+    //     this.list[this.currentScore].checkAccuracyUnit(bird.midi);
+    // }
 
-    , checkAccuracy: function(scoreNr){
-        this.list[scoreNr].checkAccuracy();
+    // , checkAccuracy: function(scoreID){
+    //     this.list[scoreID].checkAccuracy();
+    // }
+
+    , checkAccuracy: function(midi){
+        if(this.list[this.currentScore]){
+            this.list[this.currentScore].checkAccuracyUnit(midi);
+        }
+        if(this.list[this.currentScore-1]){
+            this.list[this.currentScore-1].checkAccuracy();
+        }
     }
 
     , finished: function () {

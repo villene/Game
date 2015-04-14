@@ -114,6 +114,10 @@ function update() {
     if(UI.noteSlider){
         UI.noteSlider.update();
     }
+
+    if(UI.timeline){
+        UI.timeline.update();
+    }
 }
 
 function render() {

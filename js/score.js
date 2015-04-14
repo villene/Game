@@ -23,8 +23,6 @@ var Score = Class.extend({
         var style = { font: "18px Arial", fill: "#ff0044"};
         this.lyric = game.add.text(this.x, game.height-30, this.text, style);
         this.lyric.anchor.setTo(0, 1);
-
-        this.hasPlayed = false;
     }
 
     , draw: function (time, bps) {
@@ -34,12 +32,8 @@ var Score = Class.extend({
         this.lyric.x = x;
     },
 
-    playNote: function (){
-//        sound.oscillator.play(this.frequency);
-        if(!this.hasPlayed){            
-            sound.midi.play(this.midi);
-            this.hasPlayed = true;
-        }
+    playNote: function (){       
+        sound.midi.play(this.midi);
     },
 
     checkAccuracyUnit: function (birdMidi) {

@@ -22,13 +22,13 @@ var Controller = {
 
         sheet = new Sheet(songData.name, this.octave, this.tempo);
         bird = new Bird( CONFIG.bottomMidi + 12 );
-        UI.noteSlider = new NoteSlider(sheet.getFirstNote(), 0, 0);
-        timeline = new Timeline();
+        UI.noteSlider = new NoteSlider(sheet.getFirstNote(), 0, 0);        
 
         new Triad();
         UI.pause = new Pause();
         UI.points = new Points();
         UI.sidebar = new Sidebar();
+        UI.timeline = new Timeline();
 
         playlist.hide();
     }
