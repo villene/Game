@@ -37,6 +37,7 @@ var Playlist = Class.extend({
 
     , select: function(song){
         console.log(song);
+        songData.destroy();
         songData = new SongData(song);
         Controller.clearGame();
         UI.menu.destroy();

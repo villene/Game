@@ -22,7 +22,7 @@ var Controller = {
 
         sheet = new Sheet(songData.name, this.octave, this.tempo);
         bird = new Bird( CONFIG.bottomMidi + 12 );
-        UI.noteSlider = new NoteSlider(sheet.getFirstNote(), 0, 0);        
+        // UI.noteSlider = new NoteSlider(sheet.getFirstNote(), 0, 0);        
 
         new Triad();
         UI.pause = new Pause();
@@ -78,8 +78,10 @@ var Controller = {
             UI.finish = null;
         }
 
-//        // hack because oscillator is async
-//        setTimeout( function(){ sound.oscillator.pause() }, 100);
+        if(UI.timeline){
+            UI.timeline.destroy();
+            UI.timeline = null;
+        }
 
         sound.midi.pause();
     }

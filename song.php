@@ -9,6 +9,7 @@
 
     <!-- <script src="js/phaser_min.1.1.5.js"></script> -->
     <script src="js/phaser.min.2.3.0.js"></script>
+    <script src="js/jquery-1.11.2.min.js"></script>    
     <script src="js/class.js"></script>
     <script src="js/config.js"></script>
     <script src="js/db.js"></script>
@@ -22,8 +23,7 @@
     <script src="js/init.js"></script>
     <script src="js/bird.js"></script>
     <script src="js/triad.js"></script>
-    <script src="js/red2green.js"></script>
-    <script src="js/timeline.js"></script>
+    <script src="js/red2green.js"></script>    
 
 
     <!-- UI -->
@@ -38,6 +38,7 @@
     <script src="js/ui/sidebar.js"></script>
     <script src="js/ui/checkbox.js"></script>
     <script src="js/ui/noteSlider.js"></script>
+    <script src="js/ui/timeline.js"></script>
 
     <!-- DOM -->
     <script src="js/ui/playlist.js"></script>

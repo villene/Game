@@ -7,16 +7,20 @@ var SongData = Class.extend({
             this.name = this.url.name;
         }
 
-        this.xml = this.getXML(this.name);
-        this.octaveData = this.getOctaveData(this.xml);
-        this.octave = this.getCommonOctave(this.octaveData);
-
         this.minMidi;
         this.maxMidi;
-        this.findMaxMinMidi(this.xml);
-        this.setBottomMidi();
+        this.getXML(this.name);
 
-        if (!this.xml) console.log('ERROR! XML file does not exist!');
+        // this.xml = this.getXML(this.name);
+        // this.octaveData = this.getOctaveData(this.xml);
+        // this.octave = this.getCommonOctave(this.octaveData);
+
+        // this.minMidi;
+        // this.maxMidi;
+        // this.findMaxMinMidi(this.xml);
+        // this.setBottomMidi();
+
+        // if (!this.xml) console.log('ERROR! XML file does not exist!');
     }
 
     , getOctaveData: function (xml) {
@@ -114,12 +118,37 @@ var SongData = Class.extend({
             url[tmp2[0]] = tmp2[1];
         }
         return url;
-    }, getXML: function (name) {
-        xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET", "xml/" + name + ".xml", false);
-        xmlhttp.send();
-        xmlDoc = xmlhttp.responseXML;
-        return xmlDoc;
+    }
+
+    , getXML: function (name) {
+    //     xmlhttp = new XMLHttpRequest();
+    //     xmlhttp.open("GET", "xml/" + name + ".xml", false);
+    //     xmlhttp.send();
+    //     xmlDoc = xmlhttp.responseXML;
+    //     return xmlDoc;
+        var self = this;
+        $.get( "xml/" + name + ".xml", function( xml ) {
+            self.parseXML(xml);
+        }, "xml"); 
+    }
+
+    , parseXML: function(xml){
+        if (!xml) {
+            console.log('ERROR! XML file does not exist!');
+            return;
+        }
+
+        this.xml = xml;
+        this.octaveData = this.getOctaveData(this.xml);
+        this.octave = this.getCommonOctave(this.octaveData);
+
+        this.findMaxMinMidi(this.xml);
+        this.setBottomMidi();        
+    }
+
+    , destroy: function(){
+        $(this.xml).remove();
+        this.xml = null;
     }
 
     , noteToFrequency: function (oct, step, alter) {

@@ -7,7 +7,6 @@ window.onload = function(){
         soundfontUrl: "js/midijs/soundfont/",
         instrument: "acoustic_grand_piano",
         callback: function() {
-
             init();
         }
     });
@@ -30,18 +29,18 @@ var game, bird, sheet, playlist, scaleRatio, songData;
 
 
 function init(){
-    var innerWidth = window.innerWidth;
-    var innerHeight = window.innerHeight;
+    // var innerWidth = window.innerWidth;
+    // var innerHeight = window.innerHeight;
 
-    var widthRatio = CONFIG.gameWidth / innerWidth;
-    var heightRatio = CONFIG.gameHeight / innerHeight;
-    if(widthRatio > heightRatio){
-        CONFIG.gameHeight = widthRatio * innerHeight;
-    } else {
-        CONFIG.gameWidth = heightRatio * innerWidth;
-    }
+    // var widthRatio = CONFIG.gameWidth / innerWidth;
+    // var heightRatio = CONFIG.gameHeight / innerHeight;
+    // if(widthRatio > heightRatio){
+    //     CONFIG.gameHeight = widthRatio * innerHeight;
+    // } else {
+    //     CONFIG.gameWidth = heightRatio * innerWidth;
+    // }
 
-    scaleRatio = innerWidth / CONFIG.gameWidth;
+    // scaleRatio = innerWidth / CONFIG.gameWidth;
 
     game = new Phaser.Game(CONFIG.gameWidth, CONFIG.gameHeight, Phaser.CANVAS, 'phaser', { preload: preload, create: create, update: update, render: render });
 }
@@ -95,6 +94,7 @@ function create() {
     game.stage.backgroundColor = '#ffffff';
     playlist = new Playlist();
     songData = new SongData('Laul_Põhjamaast');
+    // songData = new SongData('test');
     Controller.lobby();
 
 }
