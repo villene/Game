@@ -62,16 +62,7 @@
         <octave>4</octave>
         <alter></alter>
         <text>spīd</text>
-        <duration>4</duration>
-    </note>
-
-    <note>
-        <step>C</step>
-        <octave>4</octave>
-        <alter></alter>
-
-        <text></text>
-        <duration>4</duration>
+        <duration>8</duration>
     </note>
 
     <note>
@@ -79,15 +70,7 @@
         <octave>5</octave>
         <alter></alter>
         <text>Hej</text>
-        <duration>4</duration>
-    </note>
-
-    <note>
-        <step>C</step>
-        <octave>5</octave>
-        <alter></alter>
-        <text></text>
-        <duration>4</duration>
+        <duration>8</duration>
     </note>
 
 
@@ -113,15 +96,7 @@
         <octave>4</octave>
         <alter></alter>
         <text>pum</text>
-        <duration>4</duration>
-    </note>
-
-    <note>
-        <step>G</step>
-        <octave>4</octave>
-        <alter></alter>
-        <text></text>
-        <duration>4</duration>
+        <duration>8</duration>
     </note>
 
     <note>
@@ -129,15 +104,7 @@
         <octave>5</octave>
         <alter></alter>
         <text>pi</text>
-        <duration>4</duration>
-    </note>
-
-    <note>
-        <step>C</step>
-        <octave>5</octave>
-        <alter></alter>
-        <text></text>
-        <duration>4</duration>
+        <duration>8</duration>
     </note>
 
     <note>
@@ -247,32 +214,7 @@
         <octave>4</octave>
         <alter></alter>
         <text>lā</text>
-        <duration>4</duration>
-    </note>
-
-
-    <note>
-        <step>C</step>
-        <octave>4</octave>
-        <alter></alter>
-        <text></text>
-        <duration>4</duration>
-    </note>
-
-    <note>
-        <step>C</step>
-        <octave>4</octave>
-        <alter></alter>
-        <text></text>
-        <duration>4</duration>
-    </note>
-
-    <note>
-        <step>C</step>
-        <octave>4</octave>
-        <alter></alter>
-        <text></text>
-        <duration>4</duration>
+        <duration>16</duration>
     </note>
 
 </score-partwise>

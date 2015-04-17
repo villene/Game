@@ -63,6 +63,7 @@ var Sheet = Class.extend({
             }
             if (notes[i].getElementsByTagName("duration")[0]) {
                 var duration = notes[i].getElementsByTagName("duration")[0].childNodes[0].nodeValue;
+                duration = parseInt(duration); // for some musicXML it parses as string
                 if(this.divisions != 4){
                     // all elements are normalized to 1/16 notes
                     duration = Math.round(duration * 4/this.divisions);
