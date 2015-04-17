@@ -107,6 +107,7 @@ var SongData = Class.extend({
         var songLines = this.maxMidi - this.minMidi;
         var linesFromBottom = Math.round((visibleLines - songLines) / 2);
         CONFIG.bottomMidi = this.minMidi - linesFromBottom;
+        CONFIG.topMidi = CONFIG.bottomMidi + Math.floor(game.height/CONFIG.lineHeight);
     }
 
     , parseUrl: function () {

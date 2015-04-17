@@ -56,7 +56,7 @@ var Bird = Class.extend({
         this.pitchLayer.x = 200-x;  
         this.count++; 
 
-        if(this.midi > CONFIG.upMidi || this.midi < CONFIG.bottomMidi){
+        if(this.midi > CONFIG.topMidi || this.midi < CONFIG.bottomMidi){
             return; // don't draw pitch out of visible range
         }
         if(Math.abs(this.prevMidi - this.midi) > 3){
