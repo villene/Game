@@ -25,7 +25,7 @@ window.mobilecheck = function() {
 
 
 // global variables
-var game, bird, sheet, playlist, scaleRatio, songData;
+var game, bg, bird, sheet, playlist, scaleRatio, songData;
 
 
 function init(){

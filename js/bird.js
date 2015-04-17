@@ -8,6 +8,11 @@ var Bird = Class.extend({
     }
 
     , draw: function () {
+        this.line = game.add.graphics(0, 0);
+        this.line.lineStyle(1, 0x000000, 1);
+        this.line.moveTo(200, 0);
+        this.line.lineTo(200, game.height);
+
         this.sprite = game.add.sprite(200, game.height / 2, 'bird_eat');
         this.sprite.anchor.setTo(1, 0.5);
         this.sprite.scale.x = 1;
@@ -76,5 +81,8 @@ var Bird = Class.extend({
 
         this.pitchLayer.destroy();
         this.pitchLayer = null;
+
+        this.line.destroy();
+        this.line = null;
     }
 })

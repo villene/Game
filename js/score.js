@@ -21,7 +21,7 @@ var Score = Class.extend({
 
         // text
         var style = { font: "18px Arial", fill: "#ff0044"};
-        this.lyric = game.add.text(this.x, game.height-30, this.text, style);
+        this.lyric = game.add.text(this.x, game.height-20, this.text, style);
         this.lyric.anchor.setTo(0, 1);
     }
 

@@ -27,4 +27,8 @@ var Background = Class.extend({
 		this.bg.moveTo(0, y);
 		this.bg.lineTo(game.width, y);
 	}
+
+	, destroy: function(){
+		this.bg.destroy(true);
+	}
 })
