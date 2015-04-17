@@ -32,6 +32,7 @@ var Timeline = Class.extend ({
 
 	, show: function(){
 		this.group.visible = true;
+		this.slider.x = sheet.time * (this.endX-this.startX) / sheet.totalTime + this.startX;
 	}
 
 	, update: function(){
