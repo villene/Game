@@ -216,7 +216,9 @@ var Sheet = Class.extend({
 
     , getScoreCount: function () {
         return this.list.length;
-    }, destroy: function () {
+    }
+
+    , destroy: function () {
         if(this.group){
             this.group.destroy(true);
             this.group = null;

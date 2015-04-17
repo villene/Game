@@ -56,10 +56,12 @@ var Score = Class.extend({
 
 //        console.log(this.accuracy, accurateSamples, this.accuracyArr[0]);
 
-        if (this.accuracy >= CONFIG.accuracy) {
-            UI.points.add(1);
-            this.destroy();
-        }
+        // if (this.accuracy >= CONFIG.accuracy) {
+        //     UI.points.add(1, this.duration);
+        //     this.destroy();
+        // }
+
+        UI.points.draw();
 
         // console.log(this.accuracy + '%');
         var style = { font: "16px Arial", fill: "#333"};
